@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let d = new Date();
-    d = new Date(2024, 7, 10, 0, 0, 0) - d; // Countdown to 10 August 2024
-    const l = Array.from(document.querySelectorAll('#countdown .counter span')).reverse();
+    d = new Date(2024, 7, 10, 0, 0, 0) - d; // scene to 10 August 2024
+    const l = Array.from(document.querySelectorAll('#scene .counter span')).reverse();
     const s = [1000, 60, 60, 24];
 
     const vset = (e, t, c) => {
@@ -36,4 +36,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.error('No elements found to update'); // Debugging
         }
     }, d % 1000);
+
+    // var scene = document.getElementById('scene');
+    // var parallaxInstance = new Parallax(scene);
+
+    // parallaxInstance.friction(0.2, 0.2);
+//     var scene = document.getElementById('counters');
+// var parallaxInstance = new Parallax(scene, {
+//     clipRelativeInput: true
+// });
+
+    
 });

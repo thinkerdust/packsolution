@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Template</title>
+    <title>Parallax-JS</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
 </head>
 <body>
     
-    <div id="countdown">
-        <div class="counter"><span b="--"></span><b>Days</b></div>
-        <div class="counter"><span b="--"></span><b>Hrs</b></div>
-        <div class="counter"><span b="--"></span><b>Min</b></div>
-        <div class="counter"><span b="--"></span><b>Sec</b></div>
+    <div class="bg">
+        <div id="scene" class="scene">
+            <p class="title" id="title">Coming Soon</p>
+            <div class="counters">
+                <div class="counter" id="counter-days" data-depth="0.2"><span b="--"></span><b>Days</b></div>
+                <div class="counter" id="counter-hours" data-depth="0.2"><span b="--"></span><b>Hours</b></div>
+                <div class="counter" id="counter-mins" data-depth="0.2"><span b="--"></span><b>Minutes</b></div>
+                <div class="counter" id="counter-secs" data-depth="0.2"><span b="--"></span><b>Seconds</b></div>
+            </div>
+        </div>
     </div>
 
 </body>
