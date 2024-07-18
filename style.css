@@ -74,7 +74,7 @@ body {
 #scene .counter span::before, #title {
     content: attr(b);
     display: inline-block;
-    text-shadow: 0 0 12px rgba(238, 238, 238, 0.5), 0 0 32px rgba(238, 238, 238, 0.3), 0 24px 48px rgba(238, 238, 238, 0.1), 0 -24px 48px rgba(238, 238, 238, 0.1);
+    /* text-shadow: 0 0 12px rgba(238, 238, 238, 0.5), 0 0 32px rgba(238, 238, 238, 0.3), 0 24px 48px rgba(238, 238, 238, 0.1), 0 -24px 48px rgba(238, 238, 238, 0.1); */
 }
 
 #scene .counter span.ping::before {
