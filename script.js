@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let d = new Date();
-    d = new Date(2024, 7, 10, 0, 0, 0) - d; // scene to 10 August 2024
+    d = new Date(2024, 7, 25, 0, 0, 0) - d; // scene to 25 August 2024
     const l = Array.from(document.querySelectorAll('#scene .counter span')).reverse();
     const s = [1000, 60, 60, 24];
 
