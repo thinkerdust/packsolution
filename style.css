@@ -35,10 +35,15 @@ body {
     letter-spacing: 5px;
 }
 
+.logo {
+    width: 300px;
+    margin-top: 15%;
+}
+
 #scene {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 60%;
     transform: translate(-50%, -50%);
     /* background-color: #22225a; */
     display: flex;
@@ -81,7 +86,7 @@ body {
     animation: pingEffect 0.4s 1 forwards;
 }
 
-#scene .counter b {
+#scene .counter b, #counter-days, #counter-hours, #counter-mins, #counter-secs {
     color: #2f2211  ;
     font-size: 1.75rem;
     position: absolute;
@@ -152,7 +157,10 @@ body {
 }
 
 /* media query hd */
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 1250px) and (max-width: 1440px) {
+    #scene {
+        top: 60%;
+    }
 
     #scene .counter {
         width: 8rem;
@@ -162,14 +170,49 @@ body {
     #scene .counter b {
         font-size: 1.25rem;
     }
+
+    .logo {
+        width: 15rem;
+        margin-top: 20%;
+    }
 }
 
+/* media query tablet */
+@media (min-width: 769px) and (max-width: 1249px) {
+    .bg {
+        background-image: url('bg-mobile-2.png');
+    }
+
+    #scene {
+        top: 52%;
+    }
+
+    #scene .counter {
+        width: 12rem;
+        font-size: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    #scene .counter b {
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        width: 20rem;
+        margin-top: 25%;
+    }
+}
 
 /* media query mobile */
 @media (max-width: 768px) {
+    .bg {
+        background-image: url('bg-mobile-3.png');
+        /* scale: 1.5; */
+    }
+
     #scene {
         width: 65%;
-        top: 55%;
+        top: 51%;
     }
 
     #title {
@@ -181,12 +224,17 @@ body {
     }
 
     #scene .counter {
-        font-size: 5rem;
+        font-size: 4rem;
         margin-bottom: 2rem;
         width: 45%;
     }
 
     #scene .counter b {
         font-size: 1rem;
+    }
+
+    .logo {
+        width: 10rem;
+        margin-top: 15%;
     }
 }
