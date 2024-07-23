@@ -48,21 +48,6 @@
         }
     }
 
-    if(!function_exists('css_croppie')) {
-        function css_croppie() {
-            // return '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
-            return '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />';
-        }
-    }
-
-    if(!function_exists('js_croppie')) {
-        function js_croppie() {
-            // return '<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js" integrity="sha512-vUJTqeDCu0MKkOhuI83/MEX5HSNPW+Lw46BA775bAWIp1Zwgz3qggia/t2EnSGB9GoS2Ln6npDmbJTdNhHy1Yw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>';
-            return '<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>';
-        }
-    }
-
-
     if (!function_exists('validation_message')) {
         function validation_message()
         {
@@ -109,21 +94,4 @@
             return $nomor_fix;
         }
     }
-
-    if(!function_exists('upload_file_name')) {
-        function upload_file_name($val, $name)
-        {
-            $filename = explode('.', $name);
-            $response = Http::attach(
-                'file', file_get_contents($val), $name       
-            )->post(env('MINIO_URL'), ['filename' => $filename[0]]);
-
-            $result = $response->body();
-            $parse = json_decode($result);
-
-            return $parse;
-        }
-    }
-    
-
 ?>

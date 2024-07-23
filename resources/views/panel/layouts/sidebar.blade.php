@@ -2,9 +2,9 @@
     <div class="nk-sidebar-element nk-sidebar-head">
         <div class="nk-sidebar-brand">
             <a href="/dashboard" class="logo-link nk-sidebar-logo">
-                <img class="logo-light logo-img" src="{{ asset('images/logo-for-you.png') }}" srcset="{{ asset('images/logo-for-you.png 2x') }}" alt="logo">
-                <img class="logo-dark logo-img" src="{{ asset('images/logo-for-you.png') }}" srcset="{{ asset('images/logo-for-you.png 2x') }}" alt="logo-dark">
-                <img class="logo-small logo-img logo-img-small" src="{{ asset('images/icon-bag-small-2.png') }}" srcset="{{ asset('images/icon-bag-small-2.png 2x') }}" alt="logo-small">
+                <img class="logo-light logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo">
+                <img class="logo-dark logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo-dark">
+                <img class="logo-small logo-img logo-img-small" src="{{ asset('panel/images/icon-bag-small-2.png') }}" srcset="{{ asset('panel/images/icon-bag-small-2.png 2x') }}" alt="logo-small">
             </a>
         </div>
         <div class="nk-menu-trigger me-n2">
@@ -22,7 +22,6 @@
                             <span class="nk-menu-text">Dashboard</span>
                         </a>
                     </li><!-- .nk-menu-item -->
-                    {!! session()->get('menu')[0] !!}
                 </ul>
             </div><!-- .nk-sidebar-menu -->
         </div><!-- .nk-sidebar-content -->
