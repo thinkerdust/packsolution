@@ -4,17 +4,17 @@
 <head>
     <base href="../">
     <meta charset="utf-8">
-    <meta name="author" content="ForYou by Sinarmas land">
+    <meta name="author" content="PackSolutionID">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="ForYou by Sinarmas land">
+    <meta name="description" content="PackSolutionID">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="{{ asset('images/icon-bag-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('panel/images/icon-bag-small.png') }}">
     <!-- Page Title  -->
     <title>Login | {{ config('app.name', 'Laravel') }}</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="{{ asset('assets/css/dashlite.css?ver=3.1.0') }}">
-    <link id="skin-default" rel="stylesheet" href="{{ asset('assets/css/theme.css?ver=3.1.0') }}">
+    <link rel="stylesheet" href="{{ asset('panel/assets/css/dashlite.css?ver=3.1.0') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ asset('panel/assets/css/theme.css?ver=3.1.0') }}">
 </head>
 
 <body class="nk-body bg-white npc-default pg-auth">
@@ -28,8 +28,8 @@
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
                             <a href="/" class="logo-link">
-                                <img class="logo-light logo-img logo-img-lg" src="{{ asset('images/logo-for-you-sml-2.png') }}" srcset="{{ asset('images/logo-for-you-sml-2.png 2x') }}" alt="logo">
-                                <img class="logo-dark logo-img logo-img-lg" src="{{ asset('images/logo-for-you-sml-2.png') }}" srcset="{{ asset('images/logo-for-you-sml.png 2x') }}" alt="logo-dark">
+                                <img class="logo-light logo-img logo-img-lg" src="{{ asset('panel/images/logo-for-you-sml-2.png') }}" srcset="{{ asset('panel/images/logo-for-you-sml-2.png 2x') }}" alt="logo">
+                                <img class="logo-dark logo-img logo-img-lg" src="{{ asset('panel/images/logo-for-you-sml-2.png') }}" srcset="{{ asset('panel/images/logo-for-you-sml.png 2x') }}" alt="logo-dark">
                             </a>
                         </div>
                         <div class="card">
@@ -81,8 +81,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{ asset('assets/js/bundle.js?ver=3.1.0') }}"></script>
-    <script src="{{ asset('assets/js/scripts.js?ver=3.1.0') }}"></script>
+    <script src="{{ asset('panel/assets/js/bundle.js?ver=3.1.0') }}"></script>
+    <script src="{{ asset('panel/assets/js/scripts.js?ver=3.1.0') }}"></script>
 
     <script type="text/javascript">
         const token = $("meta[name='csrf-token']").attr("content");
