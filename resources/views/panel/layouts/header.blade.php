@@ -5,7 +5,7 @@
                 <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
             </div>
             <div class="nk-header-brand d-xl-none">
-                <a href="/dashboard" class="logo-link">
+                <a href="/admin/dashboard" class="logo-link">
                     <img class="logo-light logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo">
                     <img class="logo-dark logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo-dark">
                 </a>
@@ -38,13 +38,13 @@
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="/change-password"><em class="icon ni ni-lock"></em><span>Change Password</span></a></li>
+                                    <li><a href="/admin/change-password"><em class="icon ni ni-lock"></em><span>Change Password</span></a></li>
                                     <li hidden><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
                                 </ul>
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="/logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                    <li><a href="/admin/logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                 </ul>
                             </div>
                         </div>

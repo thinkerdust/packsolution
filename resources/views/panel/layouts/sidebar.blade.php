@@ -17,7 +17,7 @@
             <div class="nk-sidebar-menu" data-simplebar>
                 <ul class="nk-menu">
                     <li class="nk-menu-item active">
-                        <a href="/dashboard" class="nk-menu-link">
+                        <a href="/admin/dashboard" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-layers-fill"></em></span>
                             <span class="nk-menu-text">Dashboard</span>
                         </a>
