@@ -30,18 +30,18 @@
         <!-- main @s -->
         <div class="nk-main ">
                 <!-- sidebar @s -->
-                @include('layouts.sidebar')
+                @include('panel.layouts.sidebar')
                 <!-- sidebar @e -->
             <!-- wrap @s -->
             <div class="nk-wrap ">
                 <!-- main header @s -->
-                @include('layouts.header')
+                @include('panel.layouts.header')
                 <!-- main header @e -->
                 <!-- content @s -->
                 @yield('content')
                 <!-- content @e -->
                 <!-- footer @s -->
-                @include('layouts.footer')
+                @include('panel.layouts.footer')
                 <!-- footer @e -->
             </div>
             <!-- wrap @e -->

@@ -4,7 +4,7 @@ $('#form-data').submit(function(e) {
     var btn = $('#btn-submit');
 
     $.ajax({
-        url : "/authenticate",  
+        url : "/admin/authenticate",  
         data : formData,
         type : "POST",
         dataType : "JSON",
@@ -20,7 +20,7 @@ $('#form-data').submit(function(e) {
             if(response.status){
                 NioApp.Toast(response.message, 'success', {position: 'top-right'});
                 setTimeout(function() {
-                    window.location.href = '/dashboard';
+                    window.location.href = '/admin/dashboard';
                 }, 2000)
             }else{
                 btn.attr('disabled', false);

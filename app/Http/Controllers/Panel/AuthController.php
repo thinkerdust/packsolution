@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Panel;
 use App\Http\Controllers\Panel\BaseController as BaseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 
 class AuthController extends BaseController
@@ -17,7 +20,7 @@ class AuthController extends BaseController
     public function login()
     {
         $js = 'panel/js/apps/auth/login.js?_='.rand();
-        return view('panel/auth/login', compact('js'));
+        return view('panel.auth.login', compact('js'));
     }
 
     public function authenticate(Request $request)
@@ -32,11 +35,7 @@ class AuthController extends BaseController
         }
 
         $credential = $request->only('username', 'password');
-        $credential['status'] = 1;
         if(Auth::attempt($credential)){
-            $menu = $this->menu->menu();
-            $request->session()->push('menu', $menu);
-
             return $this->ajaxResponse(true, 'Sign In Successfully');
         }else{
             return $this->ajaxResponse(false, 'Incorrect username or password. Please try again');
@@ -46,8 +45,36 @@ class AuthController extends BaseController
 
     public function logout(Request $request)
     {
-        $request->session()->flush();
         Auth::logout();
         return redirect('admin/login');
+    }
+
+    public function change_password()
+    {
+        $title = 'Change Password';
+        $js = 'panel/js/apps/auth/change-password.js?_='.rand();
+        return view('panel.auth.change_password', compact('js','title'));
+    }
+
+    public function process_change_password(Request $request)
+    {
+        $validator = Validator::make($request->all(), 
+            [
+                'password'     => 'required|min:4|max:255',
+                're_password'  => 'required|same:password',
+            ]
+        );
+
+        if($validator->stopOnFirstFailure()->fails()){
+            return $this->ajaxResponse(false, $validator->errors()->first());        
+        }
+
+        if(Hash::check($request->old_password, auth()->user()->password)){ 
+            User::find(auth()->user()->id)->update(['password'=> bcrypt($request->password)]);
+            return $this->ajaxResponse(true, 'Password save successfully');
+        } 
+        else{ 
+            return $this->ajaxResponse(false, 'Incorrect Current Password');
+        }
     }
 }
