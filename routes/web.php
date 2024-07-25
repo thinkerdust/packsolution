@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+// Load Controller
+use App\Http\Controllers\Frontend\HomeController;
+
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
 });
