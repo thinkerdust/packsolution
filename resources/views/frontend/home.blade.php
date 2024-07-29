@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Linoor - DIgital Agency HTML Template | Home 03</title>
+    <title>Packsolution.id - Custom Packaging Solutions</title>
     <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -21,6 +21,11 @@
     <link href="{{ asset('frontend/css/custom-animate.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/css/jarallax.css') }}">
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+    
+    <!-- Custom Packsolution -->
+    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <!-- End Custom Packsolution -->
+    
     <!-- rtl css -->
     <link href="{{ asset('frontend/css/rtl.css') }}" rel="stylesheet">
     <!-- Responsive File -->
@@ -30,7 +35,7 @@
     <link rel="stylesheet" id="jssDefault" href="{{ asset('frontend/css/colors/color-default.css') }}">
 
     <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" id="fav-shortcut" type="image/x-icon">
-    <link rel="icon" href="{{ asset('frontend/images/favicon.png') }}" id="fav-icon" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 
     <!-- Responsive Settings -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +49,7 @@
     <div class="page-wrapper">
 
         <!-- style switcher -->
-        <div class="style-switcher">
+        {{-- <div class="style-switcher">
             <a href="#" id="switcher-toggler"><i class="fa fa-cog"></i></a>
             <h3>Color Skins</h3>
             <ul id="styleOptions" title="Switch Color">
@@ -87,7 +92,7 @@
                 <a href="#" class="dark-switcher">Dark</a>
                 <button class="boxed-switcher">Boxed</button><!-- /.ltr-switcher -->
             </div><!-- /.language-feature -->
-        </div>
+        </div> --}}
         <!-- Preloader -->
         <div class="preloader">
             <div class="icon"></div>
@@ -580,7 +585,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="about.html">Test</a>
+                                        <a href="about.html">Tipe Kemasan</a>
                                         <ul>
                                             <li><a href="about-2.html">About Two </a></li>
                                             <li><a href="about-me.html">About Me </a></li>
@@ -598,13 +603,46 @@
                                             <li><a href="partners.html">Our Partner</a></li>
                                         </ul>
                                     </li>
-                                    <li class="scrollToLink"><a href="#about">About</a></li>
-                                    <li class="scrollToLink"><a href="#services">Services</a></li>
-                                    <li class="scrollToLink"><a href="#portfolio">Portfolio</a></li>
-                                    <li class="scrollToLink"><a href="#team">Team</a></li>
-                                    <li class="scrollToLink"><a href="#testimonials">Testimonials</a></li>
-                                    <li class="scrollToLink"><a href="#blog">Blog</a></li>
-                                    <li class="scrollToLink"><a href="#contact">Contact</a></li>
+                                    <li class="dropdown">
+                                        <a href="about.html">Katalog</a>
+                                        <ul>
+                                            <li><a href="about-2.html">About Two </a></li>
+                                            <li><a href="about-me.html">About Me </a></li>
+                                            <li><a href="mission.html">Our Mission </a></li>
+                                            <li><a href="history.html">Our History </a></li>
+                                            <li class="dropdown">
+                                                <a href="team.html">Our Team </a>
+                                                <ul>
+                                                    <li><a href="team.html">Team 01</a></li>
+                                                    <li><a href="team-2.html">Team 02</a></li>
+                                                    <li><a href="team-3.html">Team 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="process.html">Our Process </a></li>
+                                            <li><a href="partners.html">Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="about.html">Tentang Kami</a>
+                                        <ul>
+                                            <li><a href="about-2.html">About Two </a></li>
+                                            <li><a href="about-me.html">About Me </a></li>
+                                            <li><a href="mission.html">Our Mission </a></li>
+                                            <li><a href="history.html">Our History </a></li>
+                                            <li class="dropdown">
+                                                <a href="team.html">Our Team </a>
+                                                <ul>
+                                                    <li><a href="team.html">Team 01</a></li>
+                                                    <li><a href="team-2.html">Team 02</a></li>
+                                                    <li><a href="team-3.html">Team 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="process.html">Our Process </a></li>
+                                            <li><a href="partners.html">Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    {{-- <li class="scrollToLink"><a href="#about">About</a></li>
+                                    <li class="scrollToLink"><a href="#services">Services</a></li> --}}
                                 </ul>
                             </div>
                         </nav>
@@ -617,16 +655,16 @@
                                     class="flaticon-shopping-cart"></span></a>
                         </div>
                         <!--Search Btn-->
-                        <div class="search-btn">
+                        {{-- <div class="search-btn">
                             <button type="button" class="theme-btn search-toggler"><span
                                     class="flaticon-loupe"></span></button>
-                        </div>
+                        </div> --}}
                         <div class="link-box">
                             <div class="call-us">
                                 <a class="link" href="tel:6668880000">
                                     <span class="icon"></span>
-                                    <span class="sub-text">Call Anytime</span>
-                                    <span class="number">666 888 0000</span>
+                                    <span class="sub-text">Hubungi Kami</span>
+                                    <span class="number">0819 5272 7888</span>
                                 </a>
                             </div>
                         </div>
@@ -696,26 +734,19 @@
             <div class="banner-carousel owl-theme owl-carousel">
                 <!-- Slide Item -->
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image: url(images/main-slider/2-1.jpg);"></div>
+                    <div class="image-layer" style="background-image: url(images/carousel/carousel-1.png);"></div>
 
                     <div class="auto-container">
                         <div class="content-box">
                             <div class="content">
                                 <div class="inner text-center">
-                                    <div class="sub-title">welcome to Linoor agency</div>
                                     <h1>Discover <br> <span>new linoor agency</span></h1>
+                                    <div class="sub-title">welcome to Carousel 1</div>
                                     <div class="link-box">
                                         <a class="theme-btn btn-style-one" href="about.html">
                                             <i class="btn-curve"></i>
-                                            <span class="btn-title">Discover More</span>
+                                            <span class="btn-title">Buat Pesanan</span>
                                         </a>
-                                        <div class="vid-link">
-                                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
-                                                class="lightbox-image">
-                                                <div class="icon"><span class="flaticon-play-button-1"></span><i
-                                                        class="ripple"></i></div>
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -731,20 +762,13 @@
                         <div class="content-box">
                             <div class="content">
                                 <div class="inner text-center">
-                                    <div class="sub-title">welcome to Linoor agency</div>
                                     <h1>Discover <br> <span>new linoor agency</span></h1>
+                                    <div class="sub-title">welcome to Carousel 1</div>
                                     <div class="link-box">
                                         <a class="theme-btn btn-style-one" href="about.html">
                                             <i class="btn-curve"></i>
-                                            <span class="btn-title">Discover More</span>
+                                            <span class="btn-title">Buat Pesanan</span>
                                         </a>
-                                        <div class="vid-link">
-                                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
-                                                class="lightbox-image">
-                                                <div class="icon"><span class="flaticon-play-button-1"></span><i
-                                                        class="ripple"></i></div>
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -764,16 +788,16 @@
                     <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                         <div class="inner">
                             <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
-                                    src="{{ asset('frontend/images/resource/featured-image-1.jpg') }}" alt=""></div>
+                                    src="{{ asset('frontend/images/about/about-1.png') }}" alt=""></div>
                             <div class="image-block wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms"><img
-                                    src="{{ asset('frontend/images/resource/featured-image-2.jpg') }}" alt=""></div>
+                                    src="{{ asset('frontend/images/about/about-2.png') }}" alt=""></div>
                         </div>
                     </div>
                     <!--Text Column-->
                     <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                         <div class="inner">
                             <div class="sec-title">
-                                <h2>We’re the best agency <br>in downtown<span class="dot">.</span></h2>
+                                <h2>Solusi Kemasan untuk produk<span class="dot">.</span></h2>
                                 <div class="lower-text">We are committed to providing our customers with exceptional
                                     service while offering our employees the best training.</div>
                             </div>
@@ -783,16 +807,16 @@
                             </div>
                             <div class="text clearfix">
                                 <ul>
-                                    <li>Suspe ndisse suscipit sagittis leo.</li>
-                                    <li>Entum estibulum dignissim posuere.</li>
-                                    <li>If you are going to use a passage.</li>
+                                    <li>Pengerjaan 10 hari kerja.</li>
+                                    <li>Desain tidak terbatas.</li>
+                                    <li>Menggunakan bahan food grade.</li>
                                 </ul>
                                 <div class="since"><span class="txt">Since <br>2008</span></div>
                             </div>
                             <div class="link-box">
                                 <a class="theme-btn btn-style-one" href="about.html">
                                     <i class="btn-curve"></i>
-                                    <span class="btn-title">Discover More</span>
+                                    <span class="btn-title">Buat Pesanan</span>
                                 </a>
                             </div>
                         </div>
@@ -806,7 +830,7 @@
         <section class="services-section-three services-section-three__one-page" id="services">
             <div class="auto-container">
                 <div class="sec-title centered">
-                    <h2>What we’re offering<span class="dot">.</span></h2>
+                    <h2>Produk Kami</h2>
                 </div>
                 <div class="services">
                     <div class="row clearfix">
@@ -814,9 +838,9 @@
                         <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="bottom-curve"></div>
-                                <div class="icon-box"><span class="flaticon-vector"></span></div>
-                                <h5><a href="#">Modern <br>Designing</a></h5>
-                                <div class="text">Lorem ipsum is are many variations of pass of majority.</div>
+                                <div class="icon-box"><img src="{{ asset('frontend/images/icons/gusset.png') }}" alt=""></div>
+                                <h5><a href="#">Gusset</a></h5>
+                                {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
                                 <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
                             </div>
                         </div>
@@ -825,10 +849,10 @@
                         <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="bottom-curve"></div>
-                                <div class="icon-box"><span class="flaticon-digital"></span></div>
-                                <h5><a href="#">MARKETING <br>STRATEGY</a></h5>
-                                <div class="text">Lorem ipsum is are many variations of pass of majority.</div>
-                                <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
+                                <div class="icon-box"><img src="{{ asset('frontend/images/icons/standing-pouch.png') }}" alt=""></div>
+                                <h5><a href="#">Standing Pouch</a></h5>
+                                {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
+                                <div class="link-box mt-3"><a href="#"><span class="fa fa-angle-right"></span></a></div>
                             </div>
                         </div>
 
@@ -836,9 +860,9 @@
                         <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                                 <div class="bottom-curve"></div>
-                                <div class="icon-box"><span class="flaticon-instant-camera"></span></div>
-                                <h5><a href="#">Digital <br>Products</a></h5>
-                                <div class="text">Lorem ipsum is are many variations of pass of majority.</div>
+                                <div class="icon-box"><img src="{{ asset('frontend/images/icons/central-seal.png') }}" alt=""></div>
+                                <h5><a href="#">Central Seal</a></h5>
+                                {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
                                 <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
                             </div>
                         </div>
@@ -847,9 +871,9 @@
                         <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
                                 <div class="bottom-curve"></div>
-                                <div class="icon-box"><span class="flaticon-monitor"></span></div>
-                                <h5><a href="#">Website <br>Development</a></h5>
-                                <div class="text">Lorem ipsum is are many variations of pass of majority.</div>
+                                <div class="icon-box"><img src="{{ asset('frontend/images/icons/sachet.png') }}" alt=""></div>
+                                <h5><a href="#">Sachet</a></h5>
+                                {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
                                 <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
                             </div>
                         </div>
@@ -860,7 +884,103 @@
         </section>
 
 
+        <!--Why Section-->
+        <section class="why-section" id="why">
+            <div class="auto-container">
+                <div class="sec-title centered">
+                    <h2>Mengapa Packsolution ?</h2>
+                    <div class="lower-text">Kelebihan menggunakan produk kami.</div>
+                </div>
+                <div class="row clearfix image-right">
+                    <!--Text Column-->
+                    <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h3>Menggunakan Material Food Grade<span class="dot">.</span></h3>
+                                <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Image Column-->
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
+                                    src="{{ asset('frontend/images/why/why-1.png') }}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="why-border"></div>
+                </div>
+
+                <div class="row clearfix image-left">
+                    <!--Image Column-->
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
+                                    src="{{ asset('frontend/images/why/why-2.png') }}" alt=""></div>
+                        </div>
+                    </div>
+                    <!--Text Column-->
+                    <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h3>Pencetakan 10 hari kerja<span class="dot">.</span></h3>
+                                <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="why-border"></div>
+                </div>
+
+                <div class="row clearfix image-right">
+                    <!--Text Column-->
+                    <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h3>Pilihan Desain Tak Terbatas Gratis Revisi<span class="dot">.</span></h3>
+                                <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Image Column-->
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
+                                    src="{{ asset('frontend/images/why/why-3.png') }}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="why-border"></div>
+                </div>
+
+                <div class="row clearfix image-left">
+                    <!--Image Column-->
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
+                                    src="{{ asset('frontend/images/why/why-4.png') }}" alt=""></div>
+                        </div>
+                    </div>
+                    <!--Text Column-->
+                    <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h3>Apalagi Ya Aku Bingung, Ngarang Ngarang<span class="dot">.</span></h3>
+                                <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!--Live Section-->
         <section class="live-section live-section__one-page">
@@ -970,6 +1090,80 @@
             </div>
         </section>
 
+        <!-- Funfacts Section -->
+        <section class="facts-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
+            <!-- <div class="image-layer" style="background-image: url(images/background/image-1.jpg);"></div> -->
+            <img src="{{ asset('frontend/images/parallax.png') }}" alt="" class="jarallax-img">
+            <div class="auto-container">
+                <div class="inner-container">
+
+                    <!-- Fact Counter -->
+                    <div class="fact-counter">
+                        <div class="row clearfix d-flex justify-content-center">
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="content">
+                                        {{-- <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="4000" data-stop="8705">0</span>
+                                        </div> --}}
+                                        <img src="{{ asset('frontend/images/icons/pesan.png') }}" style="width: 190px; height: 190px;" alt="">
+                                        <div class="counter-title">Pesan</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- <div class="column column-line counter-column col-lg-1 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="content">
+                                        <img src="{{ asset('frontend/images/icons/line.png') }}" class="w-100" alt="">
+                                    </div>
+                                </div>
+                            </div> --}}
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="content">
+                                        {{-- <div class="count-outer count-box alternate">
+                                            <span class="count-text" data-speed="3000" data-stop="480">0</span>
+                                        </div> --}}
+                                        <img src="{{ asset('frontend/images/icons/persetujuan.png') }}" style="width: 190px; height: 190px;" alt="">
+                                        <div class="counter-title">Persetujuan</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- <div class="column column-line counter-column col-lg-2 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="content">
+                                        <img src="{{ asset('frontend/images/icons/line.png') }}" class="w-100" alt="">
+                                    </div>
+                                </div>
+                            </div> --}}
+
+                            <!--Column-->
+                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                                <div class="inner">
+                                    <div class="content">
+                                        {{-- <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="3000" data-stop="626">0</span>
+                                        </div> --}}
+                                        <img src="{{ asset('frontend/images/icons/kirim.png') }}" style="width: 190px; height: 190px;" alt="">
+                                        <div class="counter-title">Kirim</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Funfacts Section -->
+
         <!-- Gallery Section -->
         <section class="gallery-section" id="portfolio">
             <div class="auto-container">
@@ -998,7 +1192,7 @@
                         <!-- Gallery Item -->
                         <div class="gallery-item mix all web-design col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/1.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-1.png') }}" alt=""></figure>
                                 <a href="images/gallery/1.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1015,7 +1209,7 @@
                         <!-- Gallery Item -->
                         <div class="gallery-item mix all photography web-design col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/2.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-2.png') }}" alt=""></figure>
                                 <a href="images/gallery/2.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1032,7 +1226,7 @@
                         <!-- Gallery Item -->
                         <div class="gallery-item mix all branding web-design col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/3.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-3.png') }}" alt=""></figure>
                                 <a href="images/gallery/3.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1049,7 +1243,7 @@
                         <!-- Gallery Item -->
                         <div class="gallery-item mix all branding illustration col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/4.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-4.png') }}" alt=""></figure>
                                 <a href="images/gallery/4.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1067,7 +1261,7 @@
                         <div
                             class="gallery-item mix all branding illustration photography web-design col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/5.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-5.png') }}" alt=""></figure>
                                 <a href="images/gallery/5.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1084,7 +1278,7 @@
                         <!-- Gallery Item -->
                         <div class="gallery-item mix all illustration photography col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
-                                <figure class="image"><img src="{{ asset('frontend/images/gallery/6.jpg') }}" alt=""></figure>
+                                <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-6.png') }}" alt=""></figure>
                                 <a href="images/gallery/6.jpg" class="lightbox-image overlay-box"
                                     data-fancybox="gallery"></a>
                                 <div class="cap-box">
@@ -1104,133 +1298,60 @@
 
             </div>
         </section>
+        <!-- End Gallery Section -->
+        
+        <!--Sponsors Section-->
+        <section class="sponsors-section sponsors-section__one-page">
+            <div class="sponsors-outer">
+                <!--Sponsors-->
+                <div class="auto-container">
 
-
-        <!-- Funfacts Section -->
-        <section class="facts-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
-            <!-- <div class="image-layer" style="background-image: url(images/background/image-1.jpg);"></div> -->
-            <img src="{{ asset('frontend/images/background/image-1.jpg') }}" alt="" class="jarallax-img">
-            <div class="auto-container">
-                <div class="inner-container">
-
-                    <!-- Fact Counter -->
-                    <div class="fact-counter">
-                        <div class="row clearfix">
-
-                            <!--Column-->
-                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                                <div class="inner">
-                                    <div class="content">
-                                        <div class="count-outer count-box">
-                                            <span class="count-text" data-speed="4000" data-stop="8705">0</span>
-                                        </div>
-                                        <div class="counter-title">Projects Completed</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Column-->
-                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                                <div class="inner">
-                                    <div class="content">
-                                        <div class="count-outer count-box alternate">
-                                            <span class="count-text" data-speed="3000" data-stop="480">0</span>
-                                        </div>
-                                        <div class="counter-title">Active clients</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Column-->
-                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                                <div class="inner">
-                                    <div class="content">
-                                        <div class="count-outer count-box">
-                                            <span class="count-text" data-speed="3000" data-stop="626">0</span>
-                                        </div>
-                                        <div class="counter-title">cups of coffee</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--Column-->
-                            <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
-                                <div class="inner">
-                                    <div class="content">
-                                        <div class="count-outer count-box">
-                                            <span class="count-text" data-speed="4000" data-stop="9704">0</span>
-                                        </div>
-                                        <div class="counter-title">happy clients</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="sec-title centered">
+                        <h2>Customer Kami</h2>
                     </div>
 
-                </div>
-            </div>
-        </section>
-        <!-- End Funfacts Section -->
-
-        <!-- Trusted Section -->
-        <section class="trusted-section">
-            <div class="auto-container">
-                <div class="outer-container">
-                    <div class="row clearfix">
-                        <div class="left-col col-xl-5 col-lg-6 col-md-12 col-sm-12">
-                            <div class="inner">
-                                <div class="col-header">
-                                    <div class="header-inner">
-                                        <span>We’re Committed To Deliver High Quality Projects .</span>
-                                    </div>
-                                </div>
-                                <div class="features">
-                                    <div class="feature">
-                                        <div class="count"><span>01</span></div>
-                                        <h5>TOTAL DESIGN FREEDOM FOR EVERYONE</h5>
-                                        <div class="sub-text">core features</div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="count"><span>02</span></div>
-                                        <h5>BASIC RULES OF RUNNING WEB AGENCY</h5>
-                                        <div class="sub-text">core features</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!--Sponsors Carousel-->
+                    <div class="sponsors-carousel owl-theme owl-carousel">
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
                         </div>
-                        <div class="right-col col-xl-7 col-lg-6 col-md-12 col-sm-12">
-                            <div class="inner">
-                                <div class="sec-title">
-                                    <h2>We’re trusted by more <br>than 6260 clients<span class="dot">.</span></h2>
-                                    <div class="lower-text">There are many variations of passages of Lorem Ipsum
-                                        available, but the majority have suffered alteration in some form, simply free
-                                        text by injected humour, or randomised.</div>
-                                </div>
-                                <div class="featured-block-two clearfix">
-                                    <div class="image"><img src="{{ asset('frontend/images/resource/featured-image-5.jpg') }}" alt=""></div>
-                                    <div class="text">
-                                        <ul>
-                                            <li> Suspe ndisse sagittis leo.</li>
-                                            <li>Entum estibulum is posuere.</li>
-                                            <li>If you are going to use passage.</li>
-                                            <li>Lorem Ipsum on the tend to repeat.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
                         </div>
-
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
+                        </div>
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Team Section -->
-        <section class="team-section no-padd-top" id="team">
+        {{-- <section class="team-section" id="team">
             <div class="auto-container">
                 <div class="sec-title centered">
-                    <h2>Meet the expert team<span class="dot">.</span></h2>
+                    <h2>Showcase<span class="dot">.</span></h2>
                 </div>
             </div>
             <div class="auto-container">
@@ -1299,10 +1420,10 @@
                     </div>
                 </div>
             </div><!-- /.auto-container -->
-        </section>
+        </section> --}}
 
         <!-- Parallax Section -->
-        <section class="parallax-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
+        {{-- <section class="parallax-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
             <!-- <div class="image-layer" style="background-image: url(images/background/image-2.jpg);"></div> -->
             <img src="{{ asset('frontend/images/background/image-2.jpg') }}" alt="" class="jarallax-img">
             <div class="auto-container">
@@ -1312,7 +1433,7 @@
                             people.</span></h2>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- End Funfacts Section -->
 
         <!--Testimonials Section-->
@@ -1412,52 +1533,8 @@
             </div>
         </section>
 
-
-
-        <!--Sponsors Section-->
-        <section class="sponsors-section sponsors-section__one-page">
-            <div class="sponsors-outer">
-                <!--Sponsors-->
-                <div class="auto-container">
-                    <!--Sponsors Carousel-->
-                    <div class="sponsors-carousel owl-theme owl-carousel">
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- News Section -->
-        <section class="news-section" id="blog">
+        {{-- <section class="news-section" id="blog">
             <div class="auto-container">
                 <div class="sec-title centered">
                     <h2>Latest news & articles<span class="dot">.</span></h2>
@@ -1532,7 +1609,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!--Get Quote Section-->
         <section class="get-quote-two get-quote-two__one-page" id="contact">
@@ -1542,7 +1619,7 @@
                     <div class="left-col col-lg-6 col-md-12 col-sm-12">
                         <div class="inner">
                             <div class="sec-title">
-                                <h2>We are always here to help you<span class="dot">.</span></h2>
+                                <h2>Buat Pesanan Anda Sekarang<span class="dot">.</span></h2>
                             </div>
                             <div class="text">There are many variatns of passages the majority have suffered alteration
                                 in some foor randomised words believable.</div>
@@ -1550,18 +1627,18 @@
                                 <ul>
                                     <li class="address">
                                         <span class="icon flaticon-pin-1"></span>
-                                        <strong>Visit Us</strong>
-                                        66 Broklyn Street, New York. USA
+                                        <strong>Kunjungi Kami</strong>
+                                        Jl. Agus Salim (Ruko Laweyan Square no 8), Sondakan, Laweyan, Surakarta
                                     </li>
                                     <li>
                                         <span class="icon flaticon-email-2"></span>
-                                        <strong>Email address</strong>
-                                        <a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a>
+                                        <strong>Email</strong>
+                                        <a href="mailto:needhelp@linoor.com">packsolution.id@gmail.com</a>
                                     </li>
                                     <li>
                                         <span class="icon flaticon-call"></span>
-                                        <strong>Call now</strong>
-                                        <a href="tel:666888000">666 888 000</a>
+                                        <strong>Hubungi Kami</strong>
+                                        <a href="tel:081952727888">0819 5272 7888</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1621,13 +1698,13 @@
             </div>
         </section>
 
-        <div class="map-section map-section__one-page">
+        {{-- <div class="map-section map-section__one-page">
             <div class="map-container">
                 <iframe class="map-iframe"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230899.1642407818!2d145.06327708904033!3d-37.792102974783376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65cd0db468a97%3A0xb61fde84306fc38a!2sMelbourne%20Zoo!5e0!3m2!1sen!2s!4v1592307685926!5m2!1sen!2s"
                     style="border:0;" aria-hidden="false" tabindex="0"></iframe>
             </div>
-        </div>
+        </div> --}}
 
         <!--Contact Section-->
         <section class="contact-section contact-section__one-page">
@@ -1706,11 +1783,11 @@
                 <div class="inner clearfix">
                     <div class="shape-1 wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                     <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
-                    <h2>Let's Get Your Project <br>Started!</h2>
+                    <h2>Mari Mulai Proyek Anda <br>Sekarang !</h2>
                     <div class="link-box">
                         <a class="theme-btn btn-style-two" href="about.html">
                             <i class="btn-curve"></i>
-                            <span class="btn-title">Contact with us</span>
+                            <span class="btn-title">Hubungi Kami</span>
                         </a>
                     </div>
                 </div>
@@ -1818,7 +1895,7 @@
             <div class="footer-bottom">
                 <div class="auto-container">
                     <div class="inner clearfix">
-                        <div class="copyright">&copy; Copyright 2022 by Layerdrops.com</div>
+                        <div class="copyright">&copy; Copyright 2024 by packsolution.id</div>
                     </div>
                 </div>
             </div>
