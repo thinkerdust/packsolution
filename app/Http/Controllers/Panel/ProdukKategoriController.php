@@ -88,7 +88,7 @@ class ProdukKategoriController extends BaseController
     public function delete_produk_kategori(Request $request)
     {
         $uid = $request->uid;
-        $process = DB::table('produk_kategori')->where('uid', $uid)
+        $process = DB::table('produk_kategori')->where('id', $uid)
             ->update(['status' => 0, 'updated_at' => Carbon::now()]);
 
         if($process) {
