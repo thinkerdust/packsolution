@@ -4,50 +4,27 @@ var table = NioApp.DataTable('#dt-table', {
     responsive: true,
     searchDelay: 500,
     ajax: {
-        url: '/absensi/datatable-setting-wifi',
-        type: 'POST',
-        data: function(d) {
-            d._token = token;
-        }
+        url: '/admin/produk-kategori/datatable'
     },
     columns: [
         {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-        {data: 'ssid'},
-        {data: 'mac_address'},
-        {data: 'ip_public'},
-        {data: 'status'},
+        {data: 'nama'},
         {data: 'action', orderable: false, searchable: false},
     ],
-    columnDefs: [
-        {
-            targets: -2,
-            orderable: false,
-            searchable: false,
-            render: function(data, type, full, meta) {
-                
-                var status = {
-                    0: {'title': 'Non-Aktif', 'class': ' bg-danger'},
-                    1: {'title': 'Aktif', 'class': ' bg-success'},
-                };
-                if (typeof status[full['status']] === 'undefined') {
-                    return data;
-                }
-                return '<span class="badge '+ status[full['status']].class +'">'+ status[full['status']].title +'</span>';
-            }
-        },
-    ] 
+    columnDefs: [] 
 });
 
-function hapus(kode) {
+function hapus(uid) {
     Swal.fire({
-        title: 'Apakah anda yakin akan menghapus data?',
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Ya, hapus data.'
+        confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.value) {
             $.ajax({
-                url: '/absensi/delete-setting-wifi/'+kode,
+                url: '/admin/produk-kategori/delete/'+uid,
                 dataType: 'JSON',
                 success: function(response) {
                     if(response.status){
@@ -67,9 +44,9 @@ function hapus(kode) {
 }
 
 function tambah() {
-    $('#modalForm').modal('show');
     $('#form-data')[0].reset();
-    $('#kode').val('');
+    $('#uid').val('');
+    $('#modalForm').modal('show');
 }
 
 $('#form-data').submit(function(e) {
@@ -78,7 +55,7 @@ $('#form-data').submit(function(e) {
     var btn = $('#btn-submit');
 
     $.ajax({
-        url : "/absensi/store-setting-wifi",  
+        url : "/admin/produk-kategori/store",  
         data : formData,
         type : "POST",
         dataType : "JSON",
@@ -111,18 +88,16 @@ $('#form-data').submit(function(e) {
     });
 });
 
-function edit(kode) {
+function edit(uid) {
     $.ajax({
-        url: '/absensi/edit-setting-wifi/'+kode,
+        url: '/admin/produk-kategori/edit/'+uid,
         dataType: 'JSON',
         success: function(response) {
             if(response.status) {
                 $('#modalForm').modal('show');
                 let data = response.data;
-                $('#kode').val(kode);
-                $('#ssid').val(data.ssid);
-                $('#mac_address').val(data.mac_address);
-                $('#ip_public').val(data.ip_public);
+                $('#uid').val(uid);
+                $('#nama').val(data.nama);
             }
         },
         error: function(error) {

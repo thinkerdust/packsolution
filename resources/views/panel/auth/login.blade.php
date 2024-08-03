@@ -38,7 +38,7 @@
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Sign-In</h4>
                                         <div class="nk-block-des">
-                                            <p>Welcome to ForYou by Sinarmas Land</p>
+                                            <p>Welcome to Panel | PackSolution.id</p>
                                         </div>
                                     </div>
                                 </div>
