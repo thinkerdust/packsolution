@@ -18,8 +18,14 @@
                 <ul class="nk-menu">
                     <li class="nk-menu-item active">
                         <a href="/admin/dashboard" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-layers-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
                             <span class="nk-menu-text">Dashboard</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item active">
+                        <a href="/admin/produk-kategori" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-link-group"></em></span>
+                            <span class="nk-menu-text">Produk Kategori</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                 </ul>
