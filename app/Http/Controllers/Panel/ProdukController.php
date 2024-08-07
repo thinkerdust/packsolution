@@ -4,29 +4,32 @@ namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Panel\BaseController as BaseController;
 use Illuminate\Http\Request;
-use App\Models\ProdukKategori;
+use App\Models\Produk;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
-class ProdukKategoriController extends BaseController
+class ProdukController extends BaseController
 {
     function __construct()
     {
-        $this->produk_kategori = new ProdukKategori();
+        $this->produk = new Produk();
     }
 
     public function index()
     {
-        $title = 'Produk Kategori';
-        $js = 'panel/js/apps/produk-kategori/index.js?_='.rand();
-        return view('panel.produk_kategori.index', compact('js', 'title'));
+        $js_library = js_summernote();
+        $css_library = css_summernote();
+        $title = 'Produk';
+        $js = 'panel/js/apps/produk/index.js?_='.rand();
+        return view('panel.produk.index', compact('js', 'title', 'js_library', 'css_library'));
     }
 
-    public function datatable_produk_kategori(Request $request)
+    public function datatable_produk(Request $request)
     {
-        $data = $this->produk_kategori->dataTableProdukKategori();
+        $data = $this->produk->dataTableProduk();
         return Datatables::of($data)->addIndexColumn()
             ->addColumn('action', function($row) {
                 
@@ -44,12 +47,14 @@ class ProdukKategoriController extends BaseController
             ->make(true);
     }
 
-    public function store_produk_kategori(Request $request)
+    public function store_produk(Request $request)
     {
         $uid = $request->input('uid');
 
         $validator = Validator::make($request->all(), [
-            'nama' => 'required',
+            'kategori_produk' => 'required',
+            'judul' => 'required',
+            'deskripsi' => 'required',
         ]);
 
         if($validator->stopOnFirstFailure()->fails()){
@@ -57,7 +62,9 @@ class ProdukKategoriController extends BaseController
         }
 
         $data = [
-            'nama' => $request->nama,
+            'produk_kategori_id' => $request->kategori_produk,
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi
         ];
 
         if(!empty($uid)) {
@@ -66,7 +73,38 @@ class ProdukKategoriController extends BaseController
             $data['created_at'] = Carbon::now();
         }
 
-        $process = DB::table('produk_kategori')->updateOrInsert(
+        // remove old file
+        if(!empty($uid) && $request->file('gambar')) {
+            $data_produk = Produk::where('id', $uid)->first();
+            $oldFile = $data_produk->gambar;
+
+            if(!empty($oldFile)) {
+                if (Storage::disk('public')->exists($oldFile)) {
+                    // Delete the file
+                    Storage::disk('public')->delete($oldFile);
+                }
+            }
+            
+        }
+
+        // upload gambar
+        if($request->file('gambar')) {
+
+            $file = $request->file('gambar');
+            $fileName = $file->getClientOriginalName();
+            $fileName = str_replace(' ', '', $fileName);
+
+            // Define a file path
+            $filePath = 'uploads/produk/gambar/' . uniqid() . '_' . $fileName;
+
+            // Store the file in the local storage
+            $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
+            if ($upload) {
+                $data['gambar'] = $filePath;
+            } 
+        }
+
+        $process = DB::table('produk')->updateOrInsert(
             ['id' => $uid],
             $data
         );
@@ -78,17 +116,17 @@ class ProdukKategoriController extends BaseController
         }
     }
 
-    public function edit_produk_kategori(Request $request) 
+    public function edit_produk(Request $request) 
     {
         $uid = $request->uid;
-        $data = ProdukKategori::where('id', $uid)->first();
+        $data = $this->produk->editProduk($uid);
         return $this->ajaxResponse(true, 'Success!', $data);
     }
 
-    public function delete_produk_kategori(Request $request)
+    public function delete_produk(Request $request)
     {
         $uid = $request->uid;
-        $process = DB::table('produk_kategori')->where('id', $uid)
+        $process = DB::table('produk')->where('id', $uid)
             ->update(['status' => 0, 'updated_at' => Carbon::now()]);
 
         if($process) {
@@ -96,12 +134,5 @@ class ProdukKategoriController extends BaseController
         }else{
             return $this->ajaxResponse(false, 'Failed to save data');
         }
-    }
-
-    public function list_data_produk_kategori(Request $request)
-    {
-        $q = $request->get('q');
-        $data = $this->produk_kategori->listDataProdukKategori($q);
-        return response()->json($data);
     }
 }

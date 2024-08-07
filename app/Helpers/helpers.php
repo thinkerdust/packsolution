@@ -14,37 +14,25 @@
 
     if(!function_exists('css_tree')) {
         function css_tree() {
-            return '<link rel="stylesheet" href="'. asset('assets/css/libs/jstree.css?ver=3.1.0') .'">';
+            return '<link rel="stylesheet" href="'. asset('panel/assets/css/libs/jstree.css?ver=3.1.0') .'">';
         }
     }
     
     if(!function_exists('js_summernote')) {
         function js_summernote() {
-            return '<script src="'. asset('assets/js/libs/editors/summernote.js?ver=3.1.0').'"></script>';
+            return '<script src="'. asset('panel/assets/js/libs/editors/summernote.js?ver=3.1.0').'"></script>';
         }
     }
 
     if(!function_exists('css_summernote')) {
         function css_summernote() {
-            return '<link rel="stylesheet" href="'. asset('assets/css/editors/summernote.css?ver=3.1.0') .'">';
-        }
-    }
-
-    if(!function_exists('js_qrcode')) {
-        function js_qrcode() {
-            return '<script src="'. asset('assets/js/libs/html5qrcode.js').'"></script>';
-        }
-    }
-
-    if(!function_exists('js_webcam')) {
-        function js_webcam() {
-            return '<script src="'. asset('assets/js/libs/webcam.min.js').'"></script>';
+            return '<link rel="stylesheet" href="'. asset('panel/assets/css/editors/summernote.css?ver=3.1.0') .'">';
         }
     }
 
     if(!function_exists('js_datatable_button')) {
         function js_datatable_button() {
-            return '<script src="'. asset('assets/js/libs/datatable-btns.js') .'"></script>';
+            return '<script src="'. asset('panel/assets/js/libs/datatable-btns.js') .'"></script>';
         }
     }
 
