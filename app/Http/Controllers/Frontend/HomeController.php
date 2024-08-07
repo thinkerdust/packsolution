@@ -20,7 +20,7 @@ class HomeController extends Controller
     public function produk() {
 
         $data = [
-            'css'       => '<link href="'.asset('frontend/css/produk.css').'" rel="stylesheet">',
+            'css'       => '<link href="'.asset('frontend/css/produk.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/produk.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk'
         ];
@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function katalog() {
 
         $data = [
-            'css'       => '<link href="'.asset('frontend/css/katalog.css').'" rel="stylesheet">',
+            'css'       => '<link href="'.asset('frontend/css/katalog.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/katalog.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'katalog'
         ];
@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function about() {
 
         $data = [
-            'css'       => '<link href="'.asset('frontend/css/about.css').'" rel="stylesheet">',
+            'css'       => '<link href="'.asset('frontend/css/about.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/about.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'about'
         ];
