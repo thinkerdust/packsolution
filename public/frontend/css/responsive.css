@@ -520,6 +520,11 @@
     padding-bottom: 20px;
   }
 
+  .fact-counter .column .inner .counter-title {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
   .trusted-section .outer-container {
     margin-top: 80px;
   }
@@ -961,6 +966,30 @@
   .sec-title h2 {
     font-size: 36px;
     line-height: 1.15em;
+  }
+
+  .sec-title h3 {
+    font-size: 32px;
+    line-height: 1.15em;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .why-section .sec-title .lower-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .why-section .sec-title.centered {
+    margin-bottom: 50px;
+  }
+
+  .why-section .sec-title {
+    margin-bottom: 25px;
+  }
+
+  .why-section .why-border {
+    margin: 50px auto;
   }
 
   .trusted-section .featured-block-two,

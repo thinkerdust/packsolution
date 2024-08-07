@@ -1,0 +1,11 @@
+.main-header .header-upper {
+    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-section {
+    padding: 250px 0 90px;
+}
+
+.gallery-item .inner-box .image img {
+    filter: none !important; 
+}
