@@ -24,7 +24,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::group(['prefix' => 'produk-kategori'], function () {
         Route::controller(ProdukKategoriController::class)->group(function () {
-            Route::get('/', 'index')->name('produk-kategori');
+            Route::get('/', 'index');
             Route::get('/datatable', 'datatable_produk_kategori');
             Route::get('/add', 'add_produk_kategori');
             Route::post('/store', 'store_produk_kategori');
@@ -35,7 +35,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::group(['prefix' => 'produk'], function () {
         Route::controller(ProdukController::class)->group(function () {
-            Route::get('/', 'index')->name('produk');
+            Route::get('/', 'index');
             Route::get('/datatable', 'datatable_produk');
             Route::get('/add', 'add_produk');
             Route::post('/store', 'store_produk');
