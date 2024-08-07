@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
 
 class ProdukKategori extends Model
 {
@@ -18,5 +17,14 @@ class ProdukKategori extends Model
         $query = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'status');
 
         return $query;
+    }
+
+    public function listDataProdukKategori($q)
+    {
+        $data = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama');
+        if($q) {
+            $data = $data->where('nama', 'like', '%'.$q.'%');
+        }
+        return $data->get();
     }
 }
