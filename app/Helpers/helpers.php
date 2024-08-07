@@ -94,4 +94,26 @@
             return $nomor_fix;
         }
     }
+
+    function generateRandomString($length = 6) {
+    
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+    
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+    
+        return $randomString;
+    }
+
+    function base_asset($path) {
+        $base_url = env('APP_URL');
+        return (env('APP_ENV') == 'development') ? asset($base_url . $path) : secure_asset($base_url . $path);
+    }
+    
+    function base_url($base_url = '') {
+        return (env('APP_ENV') == 'development') ? url($base_url) : secure_url($base_url);
+    }
 ?>

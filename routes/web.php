@@ -6,5 +6,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\HomeController;
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
+    Route::get('/', 'index')->name('/');
+
+    Route::get('/produk', 'produk')->name('produk');
+    Route::get('/produk-detail/{kategori}', 'produkDetail')->name('produkDetail');
+
+    Route::get('/katalog', 'katalog')->name('katalog');
+    Route::get('/about', 'about')->name('about');
 });
