@@ -110,7 +110,7 @@
                     <!--Logo-->
                     <div class="logo-box">
                         <div class="logo"><a href="index.html" title="Linoor - DIgital Agency HTML Template"><img
-                                    src="{{ base_asset('frontend/images/logo-white.png') }}" id="dLogo" class="main-logo"
+                                    src="{{ base_asset('/frontend/images/logo-white.png') }}" id="dLogo" class="main-logo"
                                     alt="Linoor - DIgital Agency HTML Template"
                                     title="Linoor - DIgital Agency HTML Template"></a></div>
                     </div>
@@ -208,10 +208,9 @@
                 </nav>
                 <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
                 <div class="side-menu__content">
-                    <p>Linoor is a premium Template for Digital Agencies, Start Ups, Small Business and a wide range of
-                        other agencies.</p>
-                    <p><a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a> <br> <a href="tel:888-999-0000">888
-                            999 0000</a></p>
+                    <p>Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</p>
+                    {{-- <p><a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a> <br> <a href="tel:888-999-0000">888
+                            999 0000</a></p> --}}
                     <div class="side-menu__social">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -250,10 +249,9 @@
                             <div class="footer-widget logo-widget">
                                 <div class="widget-content">
                                     <div class="logo">
-                                        <a href="index.html"><img id="fLogo" src="{{ asset('frontend/images/logo-white.png') }}" alt="" /></a>
+                                        <a href="index.html"><img id="fLogo" src="{{ base_asset('/frontend/images/logo-white.png') }}" alt="" /></a>
                                     </div>
-                                    <div class="text">Welcome to our web design agency. Lorem ipsum simply free text
-                                        dolor sited amet cons cing elit.</div>
+                                    <div class="text">Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</div>
                                     {{-- <ul class="social-links clearfix">
                                         <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
                                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
@@ -265,7 +263,7 @@
                         </div>
 
                         <!--Column-->
-                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        {{-- <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget links-widget">
                                 <div class="widget-content">
                                     <h6>Tentang</h6>
@@ -277,10 +275,10 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <!--Column-->
-                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12 offset-lg-3 offset-0">
                             <div class="footer-widget info-widget">
                                 <div class="widget-content">
                                     <h6>Contact</h6>

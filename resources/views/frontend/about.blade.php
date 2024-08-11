@@ -4,7 +4,7 @@
 
 <!-- Banner Section -->
 <section class="page-banner">
-    <div class="image-layer" style="background-image: url('frontend/images/background/parallax-bg-1-2.jpg');"></div>
+    <div class="image-layer" style=""></div>
     <div class="shape-1"></div>
     <div class="shape-2"></div>
     <div class="banner-inner">
@@ -29,8 +29,11 @@
         <div class="sec-title centered">
             <h2>Offices near you<span class="dot">.</span></h2>
         </div>
+        <div class="footer-text">Packsolution adalah perusahaan produksi packaging yang sudah berpengalaman kurang lebih (...) tahun dan mengedepankan kualitas serta kepuasan customer kami. 
+            Packsolution menjadi partner terpercaya untuk (...) customer pelaku usaha dalam skala besar maupun kecil. Kami senantiasa membantu UMKM dalam segi presentasi packaging yang lebih menarik.
+        </div>
 
-        <div class="upper-info">
+        {{-- <div class="upper-info">
             <div class="row clearfix">
                 <div class="info-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0ms"
                     data-wow-duration="1500ms">
@@ -89,7 +92,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> --}}
 
         <div class="map-box">
             <iframe class="map-iframe"

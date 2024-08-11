@@ -94,12 +94,11 @@
                     <div class="inner">
                         <div class="sec-title">
                             <h2>Solusi Kemasan untuk produk<span class="dot">.</span></h2>
-                            <div class="lower-text">We are committed to providing our customers with exceptional
-                                service while offering our employees the best training.</div>
+                            {{-- <div class="lower-text">We are committed to providing our customers with exceptional
+                                service while offering our employees the best training.</div> --}}
                         </div>
                         <div class="text">
-                            <p>Lorem Ipsum is simply dummy text of free available in market the printing and
-                                typesetting industry has been the industry's standard dummy text ever.</p>
+                            <p>Kami hadir sebagai solusi terpercaya untuk semua kebutuhan kemasan Anda. Dengan berbagai pilihan material berkualitas tinggi dan desain yang inovatif, kami siap membantu Anda menciptakan kemasan yang tidak hanya melindungi produk, tetapi juga memperkuat citra merek Anda.</p>
                         </div>
                         <div class="text clearfix">
                             <ul>
@@ -191,7 +190,7 @@
                     <div class="inner">
                         <div class="sec-title">
                             <h4>Menggunakan Material Food Grade<span class="dot">.</span></h4>
-                            <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            <div class="lower-text">Bahan yang kami gunakan adalah bahan yang aman digunakan untuk pengemasan makanan.</div>
                         </div>
                     </div>
                 </div>
@@ -220,8 +219,8 @@
                 <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="sec-title">
-                            <h4>Pencetakan 10 hari kerja<span class="dot">.</span></h4>
-                            <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            <h4>Pencetakan Yang Cepat<span class="dot">.</span></h4>
+                            <div class="lower-text">Pencetakan yang relatif cepat. Kami akan mengerjakan kemasan anda 10 Hari kerja.</div>
                         </div>
                     </div>
                 </div>
@@ -237,7 +236,7 @@
                     <div class="inner">
                         <div class="sec-title">
                             <h4>Pilihan Desain Tak Terbatas Gratis Revisi<span class="dot">.</span></h4>
-                            <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            <div class="lower-text">Banyak pilihan desain yang kami sediakan agar kemasan anda semakin menarik</div>
                         </div>
                     </div>
                 </div>
@@ -266,8 +265,8 @@
                 <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="sec-title">
-                            <h4>Apalagi Ya Aku Bingung, Ngarang Ngarang<span class="dot">.</span></h4>
-                            <div class="lower-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit maximus, feugiat dolor a, maximus nulla. Aenean quis lacus ex.</div>
+                            <h4>Material Berkualitas Dan Banyak Pilihan<span class="dot">.</span></h4>
+                            <div class="lower-text">Kami menggunakan material yang berkualitas dan memiliki banyak varian material seperti alumunium, paper, metalize paper</div>
                         </div>
                     </div>
                 </div>
@@ -464,10 +463,10 @@
             <div class="mixitup-gallery">
                 <div class="upper-row clearfix">
                     <div class="sec-title">
-                        <h2>work showcase<span class="dot">.</span></h2>
+                        <h2>Katalog Showcase<span class="dot">.</span></h2>
                     </div>
                     <!--Filter-->
-                    <div class="filters clearfix">
+                    {{-- <div class="filters clearfix">
                         <ul class="filter-tabs filter-btns clearfix">
                             <li class="active filter" data-role="button" data-filter="all">All<sup>[6]</sup></li>
                             <li class="filter" data-role="button" data-filter=".branding">Branding<sup>[3]</sup>
@@ -479,7 +478,7 @@
                             <li class="filter" data-role="button" data-filter=".web-design">Web Design<sup>[4]</sup>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="filter-list row">
                     <!-- Gallery Item -->
@@ -533,56 +532,11 @@
                         </div>
                     </div>
 
-                    <!-- Gallery Item -->
-                    <div class="gallery-item mix all branding illustration col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-4.png') }}" alt=""></figure>
-                            <a href="images/gallery/4.jpg" class="lightbox-image overlay-box"
-                                data-fancybox="gallery"></a>
-                            <div class="cap-box">
-                                <div class="cap-inner">
-                                    <div class="cat"><span>Graphic</span></div>
-                                    <div class="title">
-                                        <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item -->
-                    <div
-                        class="gallery-item mix all branding illustration photography web-design col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-5.png') }}" alt=""></figure>
-                            <a href="images/gallery/5.jpg" class="lightbox-image overlay-box"
-                                data-fancybox="gallery"></a>
-                            <div class="cap-box">
-                                <div class="cap-inner">
-                                    <div class="cat"><span>Graphic</span></div>
-                                    <div class="title">
-                                        <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gallery Item -->
-                    <div class="gallery-item mix all illustration photography col-lg-4 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-6.png') }}" alt=""></figure>
-                            <a href="images/gallery/6.jpg" class="lightbox-image overlay-box"
-                                data-fancybox="gallery"></a>
-                            <div class="cap-box">
-                                <div class="cap-inner">
-                                    <div class="cat"><span>Graphic</span></div>
-                                    <div class="title">
-                                        <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="more-box">
+                        <a class="theme-btn btn-style-one" href="{{ route('katalog') }}">
+                            <i class="btn-curve"></i>
+                            <span class="btn-title">Load more work</span>
+                        </a>
                     </div>
 
                 </div>
