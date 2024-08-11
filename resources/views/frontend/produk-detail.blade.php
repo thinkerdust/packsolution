@@ -4,7 +4,7 @@
 
 <!-- Banner Section -->
 <section class="page-banner">
-    <div class="image-layer" style="background-image: url('frontend/images/background/parallax-bg-1-2.jpg');"></div>
+    <div class="image-layer" style=""></div>
     <div class="shape-1"></div>
     <div class="shape-2"></div>
     <div class="banner-inner">
@@ -26,138 +26,171 @@
 <section class="service-nine">
     <div class="auto-container">
         <div class="row">
+            
             <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-1.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-responsive"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="ui-designing.html">modern designing</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
+                    <div class="service-nine__card__inner row justify-content-center">
+                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h3 class="service-nine__title">
+                                        <a href="ui-designing.html">STANDING POUCH</a>
+                                    </h3>
+
+                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-1.png") }}" alt="" class="produk-detail-image-1 d-none">
+
+                                    <p class="service-nine__text service-nine__text-1 fw-bold">METALIZE HB 52 | GLOSSY/DOFF | PAPER | OPP</p>
+                                    <p class="service-nine__text service-nine__text-2">Kemasan standing pouch berbahan paper Alufoil, salah satu solusi kemasan produk dengan harga murah yang kami sediakan untuk skala UMKM dengan tanpa menggunakan klip/zipper</p>
+                                
+                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <ul>
+                                            <li>Warna : Full Color</li>
+                                            <li>Ukuran Custom : Ya</li>
+                                            <li>Lamonasi : Glossy/Doff</li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-nine__image col-lg-3">
+                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-1.png") }}" class="produk-detail-image-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-2.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-computer"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="ui-designing.html">graphic designing</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
+                    <div class="service-nine__card__inner row justify-content-center">
+                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h3 class="service-nine__title">
+                                        <a href="ui-designing.html">STANDING POUCH ZIPLOCK</a>
+                                    </h3>
+
+                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-2.png") }}" alt="" class="produk-detail-image-1 d-none">
+
+                                    <p class="service-nine__text service-nine__text-1 fw-bold">METALIZE HB 52 | GLOSSY/DOFF | PAPER | OPP | ZIPLOCK</p>
+                                    <p class="service-nine__text service-nine__text-2">Kemasan standing pouch berbahan paper Alufoil, salah satu solusi kemasan produk dengan harga murah yang kami sediakan untuk skala UMKM dengan tanpa menggunakan klip/zipper</p>
+                                
+                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <ul>
+                                            <li>Warna : Full Color</li>
+                                            <li>Ukuran Custom : Ya</li>
+                                            <li>Lamonasi : Glossy/Doff</li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-nine__image col-lg-3">
+                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-2.png") }}" class="produk-detail-image-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-3.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-global"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="digital-marketing.html">digital marketing</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
+                    <div class="service-nine__card__inner row justify-content-center">
+                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h3 class="service-nine__title">
+                                        <a href="ui-designing.html">STANDING POUCH ALM</a>
+                                    </h3>
+
+                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-3.png") }}" alt="" class="produk-detail-image-1 d-none">
+
+                                    <p class="service-nine__text service-nine__text-1 fw-bold">ALUMINIUM HB 80 | GLOSSY/DOFF | PAPER | OPP</p>
+                                    <p class="service-nine__text service-nine__text-2">Kemasan Standing pouch berbahan paper Alufoil salah satu kemasan  yang memiliki kualitas terbaik yang kami sediakan untuk skala UMKM .  dengan  tanpa menggunakan klip/zipper.</p>
+                                
+                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <ul>
+                                            <li>Warna : Full Color</li>
+                                            <li>Ukuran Custom : Ya</li>
+                                            <li>Lamonasi : Glossy/Doff</li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-nine__image col-lg-3">
+                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-3.png") }}" class="produk-detail-image-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-4.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-development"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="seo.html">Content Writting</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
+                    <div class="service-nine__card__inner row justify-content-center">
+                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h3 class="service-nine__title">
+                                        <a href="ui-designing.html">STANDING POUCH ALm. ZIPLOCK</a>
+                                    </h3>
+
+                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-4.png") }}" alt="" class="produk-detail-image-1 d-none">
+
+                                    <p class="service-nine__text service-nine__text-1 fw-bold">ALUMINIUM HB 80 | GLOSSY/DOFF | PAPER | OPP | ZIPLOCK</p>
+                                    <p class="service-nine__text service-nine__text-2">Kemasan Standing pouch berbahan paper Alufoil salah satu kemasan  yang memiliki kualitas terbaik yang kami sediakan untuk skala UMKM . dengan dilengkapi ziplock/zipper untuk memudahkan menutup kembali pada kemasan  produk.</p>
+                                
+                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <ul>
+                                            <li>Warna : Full Color</li>
+                                            <li>Ukuran Custom : Ya</li>
+                                            <li>Lamonasi : Glossy/Doff</li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-nine__image col-lg-3">
+                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-4.png") }}" class="produk-detail-image-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-5.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-app-development"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="app-development.html">App Development</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
-            <div class="col-md-6 col-lg-12">
-                <div class="service-nine__card">
-                    <div class="service-nine__card__inner">
-                        <div class="service-nine__image">
-                            <img src="images/update-01-10-2021/services/service-9-6.jpg" alt="">
-                        </div><!-- /.service-nine__image -->
-                        <div class="service-nine__content">
-                            <div class="service-nine__icon">
-                                <i class="flaticon-planning"></i>
-                            </div><!-- /.service-nine__icon -->
-                            <h3 class="service-nine__title">
-                                <a href="ui-designing.html">ui / ux designing</a>
-                            </h3><!-- /.service-nine__title -->
-                            <p class="service-nine__text">Lorem ipsum is simply free sed qui magni dolores eos
-                                qui
-                                voptam.</p><!-- /.service-nine__text -->
-                            <a href="ui-designing.html" class="service-nine__link"><i
-                                    class="fa fa-angle-right"></i></a>
-                        </div><!-- /.service-nine__content -->
-                    </div><!-- /.service-nine__card__inner -->
-                </div><!-- /.service-nine__card -->
-            </div><!-- /.col-md-6 col-lg-12 -->
+                    <div class="service-nine__card__inner row justify-content-center">
+                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h3 class="service-nine__title">
+                                        <a href="ui-designing.html">STANDING POUCH TRAPESIUM</a>
+                                    </h3>
+
+                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-5.png") }}" alt="" class="produk-detail-image-1 d-none">
+
+                                    <p class="service-nine__text service-nine__text-1 fw-bold">ALUMINIUM HB 80 | GLOSSY/DOFF | PAPER | OPP | ZIPLOC</p>
+                                    <p class="service-nine__text service-nine__text-2">Kemasan Standing Pouch ini sangat cocok untuk produk yang padat contohnya. (bubuk, biji-bijian, chips, dll) untuk produk non-food pun bisa selama bukan cairan.</p>
+                                
+                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <ul>
+                                            <li>Warna : Full Color</li>
+                                            <li>Ukuran Custom : Ya</li>
+                                            <li>Lamonasi : Glossy/Doff</li>
+                                        </ul>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-nine__image col-lg-3">
+                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-5.png") }}" class="produk-detail-image-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div><!-- /.row -->
     </div><!-- /.auto-container -->

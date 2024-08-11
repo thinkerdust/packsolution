@@ -86,6 +86,8 @@
  ***/
 :root {
   --thm-font: "Teko", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-anton: "Anton", sans-serif;
   --thm-b-font: "Rubik", sans-serif;
   /* --thm-base: #ffaa17; */
   /* --thm-base: #CE1717; */
@@ -3883,7 +3885,7 @@ img.lazy-image.loaded {
 }
 
 .why-section .sec-title h4 {
-  font-size: 45px !important;
+  font-size: 50px !important;
 }
 
 .why-section .sec-title .lower-text {
@@ -3893,7 +3895,7 @@ img.lazy-image.loaded {
   line-height: 1.5em;
   font-weight: 400;
   color: var(--thm-text);
-  font-family: var(--thm-font);
+  font-family: var(--font-montserrat);
   padding: 0px;
 }
 
@@ -6718,7 +6720,7 @@ img.lazy-image.loaded {
 
 .main-footer .widgets-section {
   position: relative;
-  padding: 170px 0px 70px;
+  padding: 120px 0px 70px;
 }
 
 .main-footer.normal-padding .widgets-section {
@@ -23200,6 +23202,7 @@ img.lazy-image.loaded {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .service-nine__card:hover {
@@ -23214,19 +23217,26 @@ img.lazy-image.loaded {
 
 .service-nine__image {
   background-color: var(--thm-black);
+  background-color: #CE1717;
 }
 
 .service-nine__image img {
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  left: 60%;
 }
 
 .service-nine__content {
   padding-left: 50px;
   padding-right: 50px;
-  border: 1px solid #e9ebee;
-  border-top: 0;
-  padding-top: 35px;
-  padding-bottom: 50px;
+  border: 2px solid #D3D3D3;
+  border-right: 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  min-height: 600px;
 }
 
 .service-nine__icon {
@@ -23236,7 +23246,7 @@ img.lazy-image.loaded {
 
 .service-nine__title {
   margin: 0;
-  font-size: 34px;
+  font-size: 100px;
   color: var(--thm-black);
   line-height: 1.05;
   text-transform: uppercase;
@@ -23256,8 +23266,8 @@ img.lazy-image.loaded {
 
 .service-nine__text {
   margin: 0;
-  font-size: 16px;
-  line-height: 2.125;
+  font-size: 20px;
+  line-height: 1.5;
   color: var(--thm-text);
   margin-bottom: 20px;
 }

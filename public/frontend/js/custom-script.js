@@ -292,7 +292,7 @@
   //       headerUpper.addClass("nav-white");
   //       sticky_header.addClass("animated slideInDown");
 
-  //       $('#dLogo').attr('src', 'frontend/images/logo-dark.png');
+  //       $('#dLogo').attr('src', '/frontend/images/logo-dark.png');
 
   //     } else {
   //       siteHeader.removeClass("fixed-header");
@@ -300,7 +300,7 @@
   //       sticky_header.removeClass("animated slideInDown");
 
   //       // change navbar logo
-  //       $('#dLogo').attr('src', 'frontend/images/logo-white.png');
+  //       $('#dLogo').attr('src', '/frontend/images/logo-white.png');
   //     }
   //   }
   // }

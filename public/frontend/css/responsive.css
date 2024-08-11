@@ -401,7 +401,7 @@
   }
 
   .we-do-section {
-    padding: 210px 0px 60px;
+    padding: 120px 0px 60px;
   }
 
   .page-banner .inner-container {
@@ -1323,6 +1323,47 @@
 
   .main-footer__three .bottom-footer .social-links {
     margin-top: 10px;
+  }
+
+  .service-nine__content {
+    border: 2px solid #D3D3D3 !important;
+    padding: 20px 15px 50px 15px !important;
+  }
+
+  .service-nine__title {
+    text-align: center;
+    margin-top: 0;
+    line-height: 0.5;
+    margin-bottom: 30px;
+  }
+
+  .service-nine__title a {
+    font-size: 50px;
+  }
+
+  .produk-detail-image-1 {
+    display: block !important;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+   
+  .produk-detail-image-2 {
+    display: none;
+  }
+
+  .service-nine__text-1 {
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .service-nine__text-2 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  .footer-text {
+    font-size: 16px !important;
   }
 }
 
