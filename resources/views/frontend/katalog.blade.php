@@ -279,12 +279,12 @@
                 </div>
 
             </div>
-            <div class="more-box">
+            {{-- <div class="more-box">
                 <a class="theme-btn btn-style-one" href="portfolio.html">
                     <i class="btn-curve"></i>
                     <span class="btn-title">Load more work</span>
                 </a>
-            </div>
+            </div> --}}
         </div>
 
     </div>

@@ -17,7 +17,7 @@
                                 <h1>Discover <br> <span>new linoor agency</span></h1>
                                 <div class="sub-title">welcome to Carousel 1</div>
                                 <div class="link-box">
-                                    <a class="theme-btn btn-style-one" href="about.html">
+                                    <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
                                         <i class="btn-curve"></i>
                                         <span class="btn-title">Buat Pesanan</span>
                                     </a>
@@ -39,7 +39,7 @@
                                 <h1>Discover <br> <span>new linoor agency</span></h1>
                                 <div class="sub-title">welcome to Carousel 2</div>
                                 <div class="link-box">
-                                    <a class="theme-btn btn-style-one" href="about.html">
+                                    <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
                                         <i class="btn-curve"></i>
                                         <span class="btn-title">Buat Pesanan</span>
                                     </a>
@@ -61,7 +61,7 @@
                                 <h1>Discover <br> <span>new linoor agency</span></h1>
                                 <div class="sub-title">welcome to Carousel 3</div>
                                 <div class="link-box">
-                                    <a class="theme-btn btn-style-one" href="about.html">
+                                    <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
                                         <i class="btn-curve"></i>
                                         <span class="btn-title">Buat Pesanan</span>
                                     </a>
@@ -106,10 +106,10 @@
                                 <li>Desain tidak terbatas.</li>
                                 <li>Menggunakan bahan food grade.</li>
                             </ul>
-                            <div class="since"><span class="txt">Since <br>2008</span></div>
+                            <div class="since"><span class="txt">Sejak <br>2020</span></div>
                         </div>
                         <div class="link-box">
-                            <a class="theme-btn btn-style-one" href="about.html">
+                            <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
                                 <i class="btn-curve"></i>
                                 <span class="btn-title">Buat Pesanan</span>
                             </a>
@@ -128,49 +128,8 @@
             </div>
             <div class="services">
                 <div class="row clearfix">
-                    <!--Service Block-->
-                    <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="bottom-curve"></div>
-                            <div class="icon-box"><img src="{{ asset('frontend/images/icons/gusset.png') }}" alt=""></div>
-                            <h5><a href="#">Gusset</a></h5>
-                            {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
-                            <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                        </div>
-                    </div>
 
-                    <!--Service Block-->
-                    <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="bottom-curve"></div>
-                            <div class="icon-box"><img src="{{ asset('frontend/images/icons/standing-pouch.png') }}" alt=""></div>
-                            <h5><a href="#">Standing Pouch</a></h5>
-                            {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
-                            <div class="link-box mt-3"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                        </div>
-                    </div>
 
-                    <!--Service Block-->
-                    <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="bottom-curve"></div>
-                            <div class="icon-box"><img src="{{ asset('frontend/images/icons/central-seal.png') }}" alt=""></div>
-                            <h5><a href="#">Central Seal</a></h5>
-                            {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
-                            <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                        </div>
-                    </div>
-
-                    <!--Service Block-->
-                    <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1500ms">
-                            <div class="bottom-curve"></div>
-                            <div class="icon-box"><img src="{{ asset('frontend/images/icons/sachet.png') }}" alt=""></div>
-                            <h5><a href="#">Sachet</a></h5>
-                            {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
-                            <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -401,7 +360,7 @@
                                         <span class="count-text" data-speed="4000" data-stop="8705">0</span>
                                     </div> --}}
                                     <img src="{{ asset('frontend/images/icons/pesan.png') }}" style="width: 190px; height: auto;" alt="">
-                                    <div class="counter-title">Pesan</div>
+                                    <div class="counter-title">1. Pesan</div>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +381,7 @@
                                         <span class="count-text" data-speed="3000" data-stop="480">0</span>
                                     </div> --}}
                                     <img src="{{ asset('frontend/images/icons/persetujuan.png') }}" style="width: 190px; height: auto;" alt="">
-                                    <div class="counter-title">Persetujuan</div>
+                                    <div class="counter-title">2. Persetujuan</div>
                                 </div>
                             </div>
                         </div>
@@ -443,7 +402,7 @@
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
                                     <img src="{{ asset('frontend/images/icons/kirim.png') }}" style="width: 190px; height: auto;" alt="">
-                                    <div class="counter-title">Kirim</div>
+                                    <div class="counter-title">3. Kirim</div>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +444,7 @@
                     <div class="gallery-item mix all web-design col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-1.png') }}" alt=""></figure>
-                            <a href="images/gallery/1.jpg" class="lightbox-image overlay-box"
+                            <a href="{{ asset('frontend/images/showcase/showcase-1.png') }}" class="lightbox-image overlay-box"
                                 data-fancybox="gallery"></a>
                             <div class="cap-box">
                                 <div class="cap-inner">
@@ -502,7 +461,7 @@
                     <div class="gallery-item mix all photography web-design col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-2.png') }}" alt=""></figure>
-                            <a href="images/gallery/2.jpg" class="lightbox-image overlay-box"
+                            <a href="{{ asset('frontend/images/showcase/showcase-2.png') }}" class="lightbox-image overlay-box"
                                 data-fancybox="gallery"></a>
                             <div class="cap-box">
                                 <div class="cap-inner">
@@ -519,7 +478,7 @@
                     <div class="gallery-item mix all branding web-design col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <figure class="image"><img src="{{ asset('frontend/images/showcase/showcase-3.png') }}" alt=""></figure>
-                            <a href="images/gallery/3.jpg" class="lightbox-image overlay-box"
+                            <a href="{{ asset('frontend/images/showcase/showcase-3.png') }}" class="lightbox-image overlay-box"
                                 data-fancybox="gallery"></a>
                             <div class="cap-box">
                                 <div class="cap-inner">
@@ -691,90 +650,161 @@
             </div>
             <div class="carousel-box">
                 <div class="testimonials-carousel owl-theme owl-carousel">
+
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-1.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Shirley Smith</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Andi Wijaya</div>
+                                <div class="designation">Mellynd Care</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Packsolution.id selalu memberikan solusi terbaik untuk kebutuhan kemasan kami. Dengan desain inovatif dan kualitas material yang tinggi, produk kami selalu tampil lebih menarik dan terlindungi dengan baik.</div>
                         </div>
                     </div>
+                    
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-2.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Mike hardson</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Siti Rahma</div>
+                                <div class="designation">Seblak Baraka</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Kami sangat puas dengan layanan dari packsolution.id. Desain kemasan yang mereka buat selalu sesuai dengan yang kami inginkan, dan free design untuk pesanan besar sangat membantu bisnis kami.</div>
                         </div>
                     </div>
+                    
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-3.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Sarah albert</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Budi Santoso</div>
+                                <div class="designation">Aroma Biji</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Packsolution.id telah menjadi mitra terpercaya kami dalam menyediakan kemasan berkualitas tinggi. Mereka benar-benar mengerti bagaimana membuat kemasan yang menarik dan fungsional.</div>
                         </div>
                     </div>
+                    
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-1.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Shirley Smith</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Rina Amelia</div>
+                                <div class="designation">Teh Nusantara</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Kerjasama dengan packsolution.id selalu memuaskan. Kualitas kemasan yang mereka sediakan sangat bagus, dan layanan desainnya sangat membantu kami dalam memperkuat brand kami.</div>
                         </div>
                     </div>
+                    
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-2.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Mike hardson</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Dedi Kurniawan</div>
+                                <div class="designation">Croma</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Kami sangat merekomendasikan packsolution.id. Desain kemasan yang mereka buat selalu sesuai dengan konsep kami, dan kualitasnya selalu konsisten.</div>
                         </div>
                     </div>
+                    
                     <div class="testi-block">
                         <div class="inner">
                             <div class="icon"><span>“</span></div>
                             <div class="info">
-                                <div class="image"><a href="team.html"><img src="{{ asset('frontend/images/resource/author-3.jpg') }}"
-                                            alt=""></a></div>
-                                <div class="name">Sarah albert</div>
-                                <div class="designation">Director</div>
+                                <div class="name">Fitri Sari</div>
+                                <div class="designation">Potami</div>
                             </div>
-                            <div class="text">There are many variations of passages of lorem ipsum available but the
-                                majority have suffered alteration in some form, by injected humour, or randomised
-                                words which don't look even slightly believable.</div>
+                            <div class="text">Packsolution.id selalu memberikan yang terbaik dalam setiap pesanan kami. Kami sangat puas dengan kemasan yang inovatif dan pelayanan yang mereka tawarkan.</div>
                         </div>
                     </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Irwan Setiawan</div>
+                                <div class="designation">Makripau</div>
+                            </div>
+                            <div class="text">Packsolution.id selalu menjadi pilihan utama kami untuk kebutuhan kemasan. Kualitas dan desainnya luar biasa, sangat membantu kami dalam menjaga kualitas produk.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Yulia Pratama</div>
+                                <div class="designation">Solok Radjo</div>
+                            </div>
+                            <div class="text">Kami sangat senang dengan hasil kerja packsolution.id. Kemasan yang mereka buat tidak hanya melindungi produk kami, tetapi juga memperkuat brand kami di mata konsumen.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Arif Hidayat</div>
+                                <div class="designation">Sensa Coffee</div>
+                            </div>
+                            <div class="text">Layanan dari packsolution.id sangat memuaskan. Desain kemasan yang mereka sediakan sangat profesional dan membantu kami dalam memasarkan produk dengan lebih baik.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Dian Kartika</div>
+                                <div class="designation">Dika Bakery</div>
+                            </div>
+                            <div class="text">Kami sangat puas dengan kemasan yang dibuat oleh packsolution.id. Mereka selalu memahami kebutuhan kami dan memberikan hasil yang sesuai dengan ekspektasi.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Agus Saputra</div>
+                                <div class="designation">Joy Bakery</div>
+                            </div>
+                            <div class="text">Packsolution.id selalu memberikan solusi kemasan yang tepat. Desain yang mereka buat sangat menarik dan selalu on time.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Tika Ramadhani</div>
+                                <div class="designation">Gujati</div>
+                            </div>
+                            <div class="text">Kami sangat menghargai kerja sama dengan packsolution.id. Kemasan yang mereka buat sangat membantu kami dalam meningkatkan citra produk kami.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Anwar Fahmi</div>
+                                <div class="designation">Susu Almond</div>
+                            </div>
+                            <div class="text">Packsolution.id memberikan layanan yang luar biasa. Kami sangat puas dengan kualitas kemasan dan desain yang mereka tawarkan.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testi-block">
+                        <div class="inner">
+                            <div class="icon"><span>“</span></div>
+                            <div class="info">
+                                <div class="name">Indah Lestari</div>
+                                <div class="designation">Susu Etawa</div>
+                            </div>
+                            <div class="text">Packsolution.id selalu menghadirkan kemasan berkualitas tinggi yang sesuai dengan kebutuhan kami. Desainnya kreatif dan materialnya tahan lama.</div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -1031,7 +1061,7 @@
                 <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                 <h2>Mari Mulai Proyek Anda <br>Sekarang !</h2>
                 <div class="link-box">
-                    <a class="theme-btn btn-style-two" href="about.html">
+                    <a class="theme-btn btn-style-two" href="https://wa.me/081952727888">
                         <i class="btn-curve"></i>
                         <span class="btn-title">Hubungi Kami</span>
                     </a>

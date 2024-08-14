@@ -50,6 +50,22 @@
     bottom: 70px;
     left: -70px;
   }
+
+  .main-header .header-upper .logo-box {
+    padding: 33px 0px !important;
+  }
+
+  .main-header .header-upper .logo-box .logo img {
+    max-height: 35px !important;
+  }
+
+  .main-menu .navigation>li {
+    padding: 23px 0px !important;
+  }
+
+  .main-header .other-links .link-box {
+    padding: 27px 0px !important;
+  }
 }
 
 @media only screen and (max-width: 1340px) {

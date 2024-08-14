@@ -10,8 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Teko:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/fontawesome-all.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/owl.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="{{ asset('frontend/css/owl.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/flaticon.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/linoor-icons-2.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/animate.css') }}" rel="stylesheet">
@@ -109,7 +108,7 @@
                 <div class="inner-container clearfix">
                     <!--Logo-->
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html" title="Linoor - DIgital Agency HTML Template"><img
+                        <div class="logo"><a href="{{ route('/') }}" title="Linoor - DIgital Agency HTML Template"><img
                                     src="{{ base_asset('/frontend/images/logo-white.png') }}" id="dLogo" class="main-logo"
                                     alt="Linoor - DIgital Agency HTML Template"
                                     title="Linoor - DIgital Agency HTML Template"></a></div>
@@ -171,7 +170,7 @@
                         </div> --}}
                         <div class="link-box">
                             <div class="call-us">
-                                <a class="link" href="tel:6668880000">
+                                <a class="link" href="https://wa.me/081952727888">
                                     <span class="icon"></span>
                                     <span class="sub-text">Hubungi Kami</span>
                                     <span class="number">0819 5272 7888</span>
@@ -252,12 +251,11 @@
                                         <a href="index.html"><img id="fLogo" src="{{ base_asset('/frontend/images/logo-white.png') }}" alt="" /></a>
                                     </div>
                                     <div class="text">Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</div>
-                                    {{-- <ul class="social-links clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                                    </ul> --}}
+                                    <ul class="social-links clearfix">
+                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><span class="fab fa-facebook-square"></span></a></li>
+                                        <li><a href="https://www.instagram.com/packsolution.id/"><span class="fab fa-instagram"></span></a></li>
+                                        <li><a href="https://www.tiktok.com/@packsolution.id"><span class="fab fa-tiktok"></span></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
