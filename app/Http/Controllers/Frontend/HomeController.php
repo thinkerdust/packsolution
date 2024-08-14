@@ -4,14 +4,24 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
     public function index() {
 
+        // $kategori   = DB::table('produk_kategori')->where('status', 1)->limit(4)->orderBy('id', 'asc')->get();
+        // $katalog    = DB::table('produk_katalog')->where('status', 1)->limit(3)->orderBy('id', 'asc')->get();
+        // $customer   = DB::table('customer')->where('status', 1)->orderBy('id', 'asc')->get();
+        // $feedback   = DB::table('feedback')->where('status', 1)->orderBy('id', 'asc')->get();
+
         $data = [
             'js'        => '<script src="'.asset('frontend/js/home.js?ver='.generateRandomString(5).'').'"></script>',
-            'page'      => 'home'
+            'page'      => 'home',
+            // 'kategori'  => $kategori,
+            // 'katalog'   => $katalog,
+            // 'customer'  => $customer,
+            // 'feedback'  => $feedback
         ];
 
         return view('frontend.home', $data);
