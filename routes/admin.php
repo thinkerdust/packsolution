@@ -5,6 +5,7 @@ use App\Http\Controllers\Panel\AuthController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\ProdukKategoriController;
 use App\Http\Controllers\Panel\ProdukController;
+use App\Http\Controllers\Panel\CarouselController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/', 'login')->name('login');
@@ -43,4 +44,17 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             Route::get('/delete/{uid}', 'delete_produk');
         });
     });
+
+    Route::group(['prefix' => 'carousel'], function () {
+        Route::controller(CarouselController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('/datatable', 'datatable_carousel');
+            Route::get('/add', 'add_carousel');
+            Route::post('/store', 'store_carousel');
+            Route::get('/edit/{uid}', 'edit_carousel');
+            Route::get('/delete/{uid}', 'delete_carousel');
+            Route::post('/aktivasi', 'aktivasi_carousel');
+        });
+    });
+
 });

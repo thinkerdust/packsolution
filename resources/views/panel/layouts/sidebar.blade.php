@@ -2,9 +2,9 @@
     <div class="nk-sidebar-element nk-sidebar-head">
         <div class="nk-sidebar-brand">
             <a href="/dashboard" class="logo-link nk-sidebar-logo">
-                <img class="logo-light logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo">
-                <img class="logo-dark logo-img" src="{{ asset('panel/images/logo-for-you.png') }}" srcset="{{ asset('panel/images/logo-for-you.png 2x') }}" alt="logo-dark">
-                <img class="logo-small logo-img logo-img-small" src="{{ asset('panel/images/icon-bag-small-2.png') }}" srcset="{{ asset('panel/images/icon-bag-small-2.png 2x') }}" alt="logo-small">
+                <img class="logo-light logo-img" src="{{ asset('panel/images/logo-panel-psd.png') }}" srcset="{{ asset('panel/images/logo-panel-psd.png') }}" alt="logo">
+                <img class="logo-dark logo-img" src="{{ asset('panel/images/logo-panel-psd.png') }}" srcset="{{ asset('panel/images/logo-panel-psd.png') }}" alt="logo-dark">
+                <img class="logo-small logo-img logo-img-small" src="{{ asset('panel/images/icon-psd.png') }}" srcset="{{ asset('panel/images/icon-psd.png 2x') }}" alt="logo-small">
             </a>
         </div>
         <div class="nk-menu-trigger me-n2">
@@ -32,6 +32,12 @@
                         <a href="/admin/produk" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-package-fill"></em></span>
                             <span class="nk-menu-text">Produk</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="/admin/carousel" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-img-fill"></em></span>
+                            <span class="nk-menu-text">Carousel</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                 </ul>

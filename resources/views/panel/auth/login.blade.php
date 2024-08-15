@@ -9,7 +9,7 @@
     <meta name="description" content="PackSolutionID">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="{{ asset('panel/images/icon-bag-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('panel/images/icon-psd.png') }}">
     <!-- Page Title  -->
     <title>Login | {{ config('app.name', 'Laravel') }}</title>
     <!-- StyleSheets  -->
@@ -28,8 +28,8 @@
                     <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
                         <div class="brand-logo pb-4 text-center">
                             <a href="/" class="logo-link">
-                                <img class="logo-light logo-img logo-img-lg" src="{{ asset('panel/images/logo-for-you-sml-2.png') }}" srcset="{{ asset('panel/images/logo-for-you-sml-2.png 2x') }}" alt="logo">
-                                <img class="logo-dark logo-img logo-img-lg" src="{{ asset('panel/images/logo-for-you-sml-2.png') }}" srcset="{{ asset('panel/images/logo-for-you-sml.png 2x') }}" alt="logo-dark">
+                                <img class="logo-light logo-img logo-img-lg" src="{{ asset('panel/images/logo-panel-psd.png') }}" srcset="{{ asset('panel/images/logo-panel-psd.png 2x') }}" alt="logo">
+                                <img class="logo-dark logo-img logo-img-lg" src="{{ asset('panel/images/logo-panel-psd.png') }}" srcset="{{ asset('panel/images/logo-panel-psd.png 2x') }}" alt="logo-dark">
                             </a>
                         </div>
                         <div class="card">

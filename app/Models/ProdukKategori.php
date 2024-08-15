@@ -14,7 +14,7 @@ class ProdukKategori extends Model
 
     public function dataTableProdukKategori()
     {
-        $query = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'status');
+        $query = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'gambar', 'status');
 
         return $query;
     }
