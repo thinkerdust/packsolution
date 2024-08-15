@@ -9,9 +9,19 @@ var table = NioApp.DataTable('#dt-table', {
     columns: [
         {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
         {data: 'nama'},
+        {data: 'gambar'},
         {data: 'action', orderable: false, searchable: false},
     ],
-    columnDefs: [] 
+    columnDefs: [
+        {
+            targets: 2,
+            orderable: false,
+            searchable: false,
+            render: function(data, type, full, meta) {
+                return `<a target="_blank" href="storage/${full['gambar']}" class="btn btn-outline-info btn-sm">File</a>`;
+            }
+        },
+    ] 
 });
 
 function hapus(uid) {
@@ -98,6 +108,10 @@ function edit(uid) {
                 let data = response.data;
                 $('#uid').val(uid);
                 $('#nama').val(data.nama);
+
+                if(data.gambar) {
+                    $('#preview_image').attr('src', 'storage/'+data.gambar);
+                }
             }
         },
         error: function(error) {
@@ -106,3 +120,54 @@ function edit(uid) {
         }
     })
 }
+
+$('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
+
+const readURL = (input,el) => {
+	if (input.files && input.files[0]) {
+		const reader = new FileReader()
+		reader.onload = (e) => {
+			$('#'+el).removeAttr('src')
+			$('#'+el).attr('src', e.target.result)
+		}
+		reader.readAsDataURL(input.files[0])
+	}
+}
+
+$('#gambar').on('change', function() {
+
+    // The recommended plugin to animate custom file input: bs-custom-file-input, is what bootstrap using currently
+    // bsCustomFileInput.init();
+
+    // Set maximum filesize
+    var maxSizeMb = 10;
+
+    // Get the file by using JQuery's selector
+    var file = $('#gambar')[0].files[0];
+
+    // Make sure that a file has been selected before attempting to get its size.
+    if(file !== undefined) {
+
+        // Get the filesize
+        var totalSize = file.size;
+
+        // Convert bytes into MB
+        var totalSizeMb = totalSize  / Math.pow(1024,2);
+
+        // Check to see if it is too large.
+        if(totalSizeMb > maxSizeMb) {
+
+            // Create an error message
+            var errorMsg = 'File too large. Maximum file size is ' + maxSizeMb + ' MB. Selected file is ' + totalSizeMb.toFixed(2) + ' MB';
+            toastr.warning(errorMsg);
+
+            // Clear the value
+            $('#gambar').val('');
+            $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
+            $('#gambar').next('label').html('Choose file');
+        }else{
+        	readURL(this,'preview_image');
+        }
+    }
+
+});

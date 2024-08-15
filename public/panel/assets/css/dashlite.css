@@ -2955,8 +2955,8 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
 
 .btn-theme-sml {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #C90025;
-  --bs-btn-border-color: #C90025;
+  --bs-btn-bg: #CE1717;
+  --bs-btn-border-color: #CE1717;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #A4181A;
   --bs-btn-hover-border-color: #A4181A;
@@ -2966,8 +2966,8 @@ div.dataTables_wrapper div.dataTables_filter .input-group.has-validation > .form
   --bs-btn-active-border-color: #A4181A;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(16, 25, 36, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #C90025;
-  --bs-btn-disabled-border-color: #C90025;
+  --bs-btn-disabled-bg: #CE1717;
+  --bs-btn-disabled-border-color: #CE1717;
 }
 
 .btn-light, .dual-listbox .dual-listbox__button {
@@ -32517,7 +32517,7 @@ h6 .badge, .h6 .badge {
 }
 
 .icon[class*=bg-theme-sml-dim] {
-  color: #C90025;
+  color: #CE1717;
 }
 
 .icon[class*=bg-primary-dim] {
