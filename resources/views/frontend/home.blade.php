@@ -6,29 +6,34 @@
     <section class="banner-section banner-one banner-one-page" id="home">
 
         <div class="banner-carousel owl-theme owl-carousel">
-            <!-- Slide Item -->
-            <div class="slide-item">
-                <div class="image-layer" style="background-image: url('frontend/images/carousel/carousel-1.png');"></div>
+        
+            @foreach ($carousel as $c)
+                <!-- Slide Item -->
+                <div class="slide-item">
+                    <div class="image-layer" style="background-image: url('storage/{{ $c->gambar }}');"></div>
 
-                <div class="auto-container">
-                    <div class="content-box">
-                        <div class="content">
-                            <div class="inner text-center">
-                                <h1>Discover <br> <span>new linoor agency</span></h1>
-                                <div class="sub-title">welcome to Carousel 1</div>
-                                <div class="link-box">
-                                    <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
-                                        <i class="btn-curve"></i>
-                                        <span class="btn-title">Buat Pesanan</span>
-                                    </a>
+                    <div class="auto-container">
+                        <div class="content-box">
+                            <div class="content">
+                                <div class="inner text-center">
+                                    <h1>{!! $c->judul !!}</h1>
+                                    <div class="sub-title">{!! $c->deskripsi !!}</div>
+                                    @if ($c->link_button)
+                                        <div class="link-box">
+                                            <a class="theme-btn btn-style-one" href="{{ $c->link_button }}">
+                                                <i class="btn-curve"></i>
+                                                <span class="btn-title">Pesan Sekarang</span>
+                                            </a>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <!-- Slide Item -->
+            {{-- <!-- Slide Item -->
             <div class="slide-item">
                 <div class="image-layer" style="background-image: url('frontend/images/carousel/carousel-2.png');"></div>
 
@@ -70,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </section>
@@ -129,7 +134,18 @@
             <div class="services">
                 <div class="row clearfix">
 
-
+                    @foreach ($kategori as $k)
+                        <!--Service Block-->
+                        <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="bottom-curve"></div>
+                                <div class="icon-box"><img src="{{ asset('storage') . '/' . $k->gambar }}" alt=""></div>
+                                <h5><a href="#">{{ $k->nama }}</a></h5>
+                                {{-- <div class="text">Lorem ipsum is are many variations of pass of majority.</div> --}}
+                                <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
+                            </div>
+                        </div>
+                    @endforeach
 
                 </div>
             </div>

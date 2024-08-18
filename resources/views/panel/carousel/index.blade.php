@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
+                <div class="components-preview mx-auto">
                     <div class="nk-block-head nk-block-head-lg wide-sm">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">{{ $title }}</h3>
@@ -57,7 +57,8 @@
                     <div class="form-group">
                         <label class="form-label">Judul</label>
                         <div class="form-control-wrap">
-                            <textarea class="form-control" id="judul" name="judul" rows="5" required></textarea>
+                            {{-- <textarea class="form-control" id="judul" name="judul" rows="5" required></textarea> --}}
+                            <input type="text" class="form-control" name="judul" id="judul" required>
                         </div>
                     </div>
                     <div class="form-group">

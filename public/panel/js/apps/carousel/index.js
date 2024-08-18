@@ -1,7 +1,8 @@
 var table = NioApp.DataTable('#dt-table', {
     serverSide: true,
     processing: true,
-    responsive: true,
+    responsive: false,
+    scrollX: true,
     searchDelay: 500,
     ajax: {
         url: '/admin/carousel/datatable'
@@ -41,11 +42,10 @@ var table = NioApp.DataTable('#dt-table', {
     ] 
 });
 
-$('#judul').summernote({
-    tabsize: 2,
-    height: 120,
-});
-
+// $('#judul').summernote({
+//     tabsize: 2,
+//     height: 120,
+// });
 
 $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
 
@@ -130,6 +130,7 @@ function hapus(uid) {
 function tambah() {
     $('#form-data')[0].reset();
     $('#uid').val('');
+    $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
     $('#modalForm').modal('show');
 }
 
@@ -183,7 +184,9 @@ function edit(uid) {
                 $('#uid').val(uid);
                 $('#deskripsi').val(data.deskripsi);
                 $('#link_button').val(data.link_button);
-                $('#judul').summernote('code', data.judul);
+
+                $('#judul').val(data.judul);
+                // $('#judul').summernote('code', data.judul);
                 
                 if(data.gambar) {
                     $('#preview_image').attr('src', 'storage/'+data.gambar);
