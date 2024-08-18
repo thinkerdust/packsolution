@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Panel\AuthController;
+use App\Http\Controllers\Panel\CarouselController;
 use App\Http\Controllers\Panel\DashboardController;
 use App\Http\Controllers\Panel\ProdukKategoriController;
 use App\Http\Controllers\Panel\ProdukController;
-use App\Http\Controllers\Panel\CarouselController;
+use App\Http\Controllers\Panel\PelangganController;
+use App\Http\Controllers\Panel\TentangKamiController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/', 'login')->name('login');
@@ -54,6 +57,29 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             Route::get('/edit/{uid}', 'edit_carousel');
             Route::get('/delete/{uid}', 'delete_carousel');
             Route::post('/aktivasi', 'aktivasi_carousel');
+        });
+    });
+
+    Route::group(['prefix' => 'pelanggan'], function () {
+        Route::controller(PelangganController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('/datatable', 'datatable_pelanggan');
+            Route::get('/add', 'add_pelanggan');
+            Route::post('/store', 'store_pelanggan');
+            Route::get('/edit/{uid}', 'edit_pelanggan');
+            Route::get('/delete/{uid}', 'delete_pelanggan');
+        });
+    });
+
+    Route::group(['prefix' => 'tentang-kami'], function () {
+        Route::controller(TentangKamiController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('/datatable', 'datatable_tentang_kami');
+            Route::get('/add', 'add_tentang_kami');
+            Route::post('/store', 'store_tentang_kami');
+            Route::get('/edit/{uid}', 'edit_tentang_kami');
+            Route::get('/delete/{uid}', 'delete_tentang_kami');
+            Route::post('/aktivasi', 'aktivasi_tentang_kami');
         });
     });
 

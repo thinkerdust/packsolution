@@ -4,42 +4,26 @@ var table = NioApp.DataTable('#dt-table', {
     responsive: true,
     searchDelay: 500,
     ajax: {
-        url: '/admin/produk/datatable'
+        url: '/admin/pelanggan/datatable'
     },
     columns: [
         {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-        {data: 'kategori', name: 'pk.nama'},
-        {data: 'judul', name: 'p.judul'},
+        {data: 'nama'},
+        {data: 'alamat', orderable: false},
+        {data: 'gambar'},
         {data: 'action', orderable: false, searchable: false},
     ],
-    columnDefs: [] 
+    columnDefs: [
+        {
+            targets: 3,
+            orderable: false,
+            searchable: false,
+            render: function(data, type, full, meta) {
+                return `<a target="_blank" href="storage/${full['gambar']}" class="btn btn-outline-info btn-sm">File</a>`;
+            }
+        },
+    ] 
 });
-
-$('#kategori_produk').select2({
-    placeholder: 'Pilih Kategori',
-    allowClear: true,
-    dropdownParent: $('#modalForm'),
-    ajax: {
-        url: '/admin/data-produk-kategori',
-        dataType: "json",
-        type: "GET",
-        delay: 250,
-        data: function (params) {
-            return { q: params.term };
-        },
-        processResults: function (data, params) {
-            return {
-                results: $.map(data, function (item) {
-                    return {
-                        text: item.nama,
-                        id: item.id
-                    }
-                })
-            };
-        },
-        cache: true
-    }
-})
 
 $('#deskripsi').summernote({
     tabsize: 2,
@@ -108,7 +92,7 @@ function hapus(uid) {
     }).then((result) => {
         if (result.value) {
             $.ajax({
-                url: '/admin/produk/delete/'+uid,
+                url: '/admin/pelanggan/delete/'+uid,
                 dataType: 'JSON',
                 success: function(response) {
                     if(response.status){
@@ -130,7 +114,6 @@ function hapus(uid) {
 function tambah() {
     $('#form-data')[0].reset();
     $('#uid').val('');
-    $("#produk_kategori").val('').change();
     $("#deskripsi").summernote('code', '');
     $('#modalForm').modal('show');
 }
@@ -141,7 +124,7 @@ $('#form-data').submit(function(e) {
     var btn = $('#btn-submit');
 
     $.ajax({
-        url : "/admin/produk/store",  
+        url : "/admin/pelanggan/store",  
         data : formData,
         type : "POST",
         dataType : "JSON",
@@ -176,19 +159,19 @@ $('#form-data').submit(function(e) {
 
 function edit(uid) {
     $.ajax({
-        url: '/admin/produk/edit/'+uid,
+        url: '/admin/pelanggan/edit/'+uid,
         dataType: 'JSON',
         success: function(response) {
             if(response.status) {
                 $('#modalForm').modal('show');
                 let data = response.data;
                 $('#uid').val(uid);
-                $('#judul').val(data.judul);
-                $("#deskripsi").summernote('code', data.deskripsi);
-                $("#kategori_produk").empty().append(`<option value="${data.produk_kategori_id}">${data.kategori}</option>`).val(data.produk_kategori_id).trigger('change');
-
-                if(data.gambar) {
-                    $('#preview_image').attr('src', 'storage/'+data.gambar);
+                $('#nama').val(data.nama);
+                $('#alamat').val(data.alamat);
+                $('#deskripsi').summernote('code', data.deskripsi);
+                
+                if(data.logo) {
+                    $('#preview_image').attr('src', 'storage/'+data.logo);
                 }
             }
         },
