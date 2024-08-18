@@ -130,6 +130,7 @@ function hapus(uid) {
 function tambah() {
     $('#form-data')[0].reset();
     $('#uid').val('');
+    $("#judul").summernote('code', '');
     $('#modalForm').modal('show');
 }
 

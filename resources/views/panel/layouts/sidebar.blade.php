@@ -40,6 +40,18 @@
                             <span class="nk-menu-text">Carousel</span>
                         </a>
                     </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="/admin/pelanggan" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-text">Pelanggan</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="/admin/tentang-kami" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-share-alt"></em></span>
+                            <span class="nk-menu-text">Tentang Kami</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
                 </ul>
             </div><!-- .nk-sidebar-menu -->
         </div><!-- .nk-sidebar-content -->
