@@ -10,7 +10,7 @@
     <div class="banner-inner">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>{{ strtoupper($kategori) }}</h1>
+                <h1>{{ strtoupper($kategori->nama) }}</h1>
                 <div class="page-nav">
                     <ul class="bread-crumb clearfix">
                         <li><a href="index-main.html">Home</a></li>
@@ -27,40 +27,50 @@
     <div class="auto-container">
         <div class="row">
             
-            <div class="col-md-6 col-lg-12">
-                <div class="service-nine__card">
-                    <div class="service-nine__card__inner row justify-content-center">
-                        <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <h3 class="service-nine__title">
-                                        <a href="ui-designing.html">STANDING POUCH</a>
-                                    </h3>
+            @foreach ($produk as $p)                
+                <div class="col-md-6 col-lg-12 my-5">
+                    <div class="service-nine__card">
+                        <div class="service-nine__card__inner row justify-content-center">
 
-                                    <img src="{{ base_asset("/frontend/images/produk-detail/detail-1.png") }}" alt="" class="produk-detail-image-1 d-none">
+                            <div class="shape-1"></div>
+                            <div class="shape-2"></div>
 
-                                    <p class="service-nine__text service-nine__text-1 fw-bold">METALIZE HB 52 | GLOSSY/DOFF | PAPER | OPP</p>
-                                    <p class="service-nine__text service-nine__text-2">Kemasan standing pouch berbahan paper Alufoil, salah satu solusi kemasan produk dengan harga murah yang kami sediakan untuk skala UMKM dengan tanpa menggunakan klip/zipper</p>
-                                
-                                    <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
-                                        <ul>
-                                            <li>Warna : Full Color</li>
-                                            <li>Ukuran Custom : Ya</li>
-                                            <li>Lamonasi : Glossy/Doff</li>
-                                        </ul>
+                            <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
+
+                                <div class="shape-1"></div>
+                                <div class="shape-2"></div>
+
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h3 class="service-nine__title">
+                                            <a href="#">{{ $p->kategori_judul }}</a>
+                                        </h3>
+
+                                        <img src="{{ base_asset("/storage/" . $p->gambar) }}" alt="" class="produk-detail-image-1 d-none">
+
+                                        <p class="service-nine__text service-nine__text-1 fw-bold">{{ $p->judul }}</p>
+                                        <p class="service-nine__text service-nine__text-2">{{ $p->deskripsi }}</p>
+                                    
+                                        <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                            <ul>
+                                                <li>Warna : Full Color</li>
+                                                <li>Ukuran Custom : Ya</li>
+                                                <li>Lamonasi : Glossy/Doff</li>
+                                            </ul>
+                                        </div>
+                                    
                                     </div>
-                                
                                 </div>
                             </div>
-                        </div>
-                        <div class="service-nine__image col-lg-3">
-                            <img src="{{ base_asset("/frontend/images/produk-detail/detail-1.png") }}" class="produk-detail-image-2" alt="">
+                            <div class="service-nine__image col-lg-3">
+                                <img src="{{ base_asset("/storage/" . $p->gambar) }}" class="produk-detail-image-2" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-md-6 col-lg-12">
+            {{-- <div class="col-md-6 col-lg-12">
                 <div class="service-nine__card">
                     <div class="service-nine__card__inner row justify-content-center">
                         <div class="service-nine__content col-11 col-lg-9 mx-1 mx-md-0">
@@ -190,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div><!-- /.row -->
     </div><!-- /.auto-container -->

@@ -58,7 +58,8 @@ class ProdukKategoriController extends BaseController
         }
 
         $data = [
-            'nama' => $request->nama,
+            'nama'      => $request->nama,
+            'deskripsi' => $request->deskripsi
         ];
 
         if(!empty($uid)) {

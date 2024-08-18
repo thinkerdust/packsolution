@@ -17,7 +17,7 @@ class Produk extends Model
         $query = DB::table('produk as p')
                     ->join('produk_kategori as pk', 'p.produk_kategori_id', '=', 'pk.id')
                     ->where([['p.status', 1], ['pk.status', 1]])
-                    ->select('p.id', 'p.produk_kategori_id', 'p.judul', 'p.status', 'pk.nama as kategori');
+                    ->select('p.id', 'p.produk_kategori_id', 'p.judul', 'p.kategori_judul', 'p.status', 'pk.nama as kategori');
 
         return $query;
     }
@@ -27,7 +27,7 @@ class Produk extends Model
         $data = DB::table('produk as p')
                     ->join('produk_kategori as pk', 'p.produk_kategori_id', '=', 'pk.id')
                     ->where([['p.status', 1], ['pk.status', 1], ['p.id', $id]])
-                    ->select('p.id', 'p.produk_kategori_id', 'p.judul', 'p.status', 'pk.nama as kategori', 'p.gambar', 'p.deskripsi')
+                    ->select('p.id', 'p.produk_kategori_id', 'p.judul', 'p.kategori_judul', 'p.status', 'pk.nama as kategori', 'p.gambar', 'p.deskripsi')
                     ->first();
 
         return $data;

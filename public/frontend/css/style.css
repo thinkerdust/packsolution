@@ -2676,7 +2676,7 @@ img.lazy-image.loaded {
 
 .banner-carousel .content-box .sub-title {
   display: block;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.5em;
   color: #ffffff;
   font-weight: 400;
@@ -3612,10 +3612,26 @@ img.lazy-image.loaded {
   margin: 0 0 20px;
 }
 
+.jarallax .sec-title h2 {
+  font-size: 115px;
+}
+
+.contact-section .sec-title h2 {
+  font-size: 100px;
+}
+
+.about-section .sec-title h2 {
+  font-size: 65px;
+}
+
+.why-section .sec-title h2 {
+  font-size: 115px;
+}
+
 .sec-title h2 {
   position: relative;
   display: block;
-  font-size: 70px;
+  font-size: 125px;
   line-height: 0.9em;
   text-transform: uppercase;
   color: var(--thm-black);
@@ -3640,6 +3656,11 @@ img.lazy-image.loaded {
   font-weight: 400;
   color: var(--thm-text);
   padding: 30px 0px 0px;
+}
+
+.faqs-section .sec-title .lower-text {
+  padding: 0px 0px 0px;
+  font-size: 22px;
 }
 
 /* section title two */
@@ -5026,10 +5047,11 @@ img.lazy-image.loaded {
 
 .fact-counter .column .inner {
   position: relative;
-  padding: 70px 0px 0px;
+  /* padding: 70px 0px 0px; */
 }
 
-.fact-counter .column .inner:before {
+/* animasi border */
+/* .fact-counter .column .inner:before {
   position: absolute;
   content: "";
   left: -15px;
@@ -5041,7 +5063,7 @@ img.lazy-image.loaded {
   transform: scaleX(0);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-}
+} */
 
 .fact-counter .column:hover .inner:before {
   -webkit-transform: scaleX(1);
@@ -6717,7 +6739,10 @@ img.lazy-image.loaded {
 .main-footer {
   position: relative;
   color: #999b9f;
-  background: var(--thm-black) url(../images/background/footer-bg.png) center top no-repeat;
+  /* background: var(--thm-black) url(../images/background/footer-bg.png) center top no-repeat; */
+
+  background-color: var(--thm-black);
+  background-image: url(../images/background/contact-bg-1-1.png);
 }
 
 .main-footer .widgets-section {
@@ -11212,7 +11237,7 @@ img.lazy-image.loaded {
 ***/
 .faqs-section {
   position: relative;
-  padding: 120px 0px 100px;
+  padding: 0px 0px 100px;
   background: #ffffff url(../images/background/pattern-2.png) left top repeat;
   overflow: hidden;
 }
@@ -23219,7 +23244,7 @@ img.lazy-image.loaded {
 
 .service-nine__image {
   background-color: var(--thm-black);
-  background-color: #CE1717;
+  /* background-color: #CE1717; */
 }
 
 .service-nine__image img {
@@ -26534,4 +26559,8 @@ img.lazy-image.loaded {
 .megamenu-popup-active .main-header .other-links,
 .megamenu-popup-active .main-header .header-upper .logo-box {
   display: none;
+}
+
+.section-alur {
+  padding: 30px 65px;
 }

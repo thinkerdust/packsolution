@@ -43,16 +43,18 @@ class HomeController extends Controller
         return view('frontend.produk', $data);
     }
 
-    public function produkDetail($kategori) {
+    public function produkDetail($idKategori) {
 
         // get data kategori
         // query kategori
-        $kategori = DB::table('produk_kategori')->where('slug', $kategori)->first();
+        $kategori   = DB::table('produk_kategori')->where('id', $idKategori)->first();
+        $produk     = DB::table('produk')->where('produk_kategori_id', $idKategori)->where('status', 1)->orderBy('id', 'asc')->get();
 
         $data = [
             'js'        => '<script src="'.asset('frontend/js/produk-detail.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk',
-            'kategori'  => $kategori
+            'kategori'  => $kategori,
+            'produk'    => $produk
         ];
 
         return view('frontend.produk-detail', $data);
@@ -71,10 +73,13 @@ class HomeController extends Controller
 
     public function about() {
 
+        $about = DB::table('tentang_kami')->where('status', 1)->where('flag', 1)->orderBy('id', 'asc')->first();
+
         $data = [
             'css'       => '<link href="'.asset('frontend/css/about.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/about.js?ver='.generateRandomString(5).'').'"></script>',
-            'page'      => 'about'
+            'page'      => 'about',
+            'about'     => $about
         ];
 
         return view('frontend.about', $data);

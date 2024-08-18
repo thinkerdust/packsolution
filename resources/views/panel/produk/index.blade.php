@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
+                <div class="components-preview mx-auto">
                     <div class="nk-block-head nk-block-head-lg wide-sm">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">{{ $title }}</h3>
@@ -24,6 +24,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Kategori</th> 
+                                            <th>Kategori Judul</th> 
                                             <th>Judul</th> 
                                             <th>Action</th> 
                                         </tr>
@@ -57,6 +58,12 @@
                         <label class="form-label">Kategori Produk</label>
                         <div class="form-control-wrap">
                             <select class="form-control" name="kategori_produk" id="kategori_produk" required></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Kategori Judul</label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" name="kategori_judul" id="kategori_judul" required>
                         </div>
                     </div>
                     <div class="form-group">

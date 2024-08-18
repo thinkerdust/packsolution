@@ -9,7 +9,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('/');
 
     Route::get('/produk', 'produk')->name('produk');
-    Route::get('/produk-detail/{kategori}', 'produkDetail')->name('produkDetail');
+    Route::get('/produk-detail/{id}', 'produkDetail')->name('produkDetail');
 
     Route::get('/katalog', 'katalog')->name('katalog');
     Route::get('/about', 'about')->name('about');
