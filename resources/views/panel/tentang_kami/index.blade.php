@@ -2,11 +2,20 @@
 
 @section('content')
 
+<style>
+    .deskripsi-column {
+    max-width: 1000px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</style>
+
 <div class="nk-content ">
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
+                <div class="components-preview mx-auto">
                     <div class="nk-block-head nk-block-head-lg wide-sm">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">{{ $title }}</h3>
@@ -23,9 +32,8 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Deskripsi</th>
-                                            <th>Gambar</th> 
+                                            <th>Deskripsi</th> 
+                                            <th>Flag</th> 
                                             <th>Action</th> 
                                         </tr>
                                     </thead>
@@ -42,47 +50,25 @@
 
 <!-- Modal Content Code -->
 <div class="modal fade" tabindex="-1" id="modalForm">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <em class="icon ni ni-cross"></em>
             </a>
             <div class="modal-header">
-                <h5 class="modal-title">Form Produk Kategori</h5>
+                <h5 class="modal-title">Form Pelanggan</h5>
             </div>
             <div class="modal-body">
                 <form class="form-validate is-alter" id="form-data">
                     @csrf
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
-                        <label class="form-label">Nama</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="nama" id="nama" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="form-label">Deskripsi</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="deskripsi" id="deskripsi">
+                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" required></textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Upload Gambar</label>
-                        <label class="cabinet center-block">
-                            <figure>
-                                <img src="" class="img-responsive img-thumbnail" id="preview_image" />
-                                <figcaption>
-                                    <ul>
-                                        <li>*)Leave blank if you don't want to replace</li>
-                                        <li>*)Max size file 10 MB</li>
-                                    </ul>
-                                </figcaption>
-                            </figure>
-                            <input type="file" class="item-img file center-block" id="gambar" name="gambar" accept=".png,.jpg,.jpeg" />
-                        </label>
-                    </div>
                     
-                    <hr class="preview-hr">
                     <button type="submit" class="btn btn-theme-sml" id="btn-submit">Save</button>
                 </form>
             </div>
@@ -112,5 +98,8 @@
         object-fit: contain;
     }
     
+    .modal.show .select2-container {
+        position: inherit !important;
+    }
 </style>
 @endsection

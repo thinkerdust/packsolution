@@ -14,14 +14,14 @@ class ProdukKategori extends Model
 
     public function dataTableProdukKategori()
     {
-        $query = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'gambar', 'status');
+        $query = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'deskripsi', 'gambar', 'status');
 
         return $query;
     }
 
     public function listDataProdukKategori($q)
     {
-        $data = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama');
+        $data = DB::table('produk_kategori')->where('status', 1)->select('id', 'nama', 'deskripsi');
         if($q) {
             $data = $data->where('nama', 'like', '%'.$q.'%');
         }

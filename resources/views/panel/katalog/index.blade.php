@@ -23,9 +23,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Deskripsi</th>
-                                            <th>Gambar</th> 
+                                            <th>Nama</th> 
+                                            <th>Alamat</th> 
+                                            <th>Logo</th> 
                                             <th>Action</th> 
                                         </tr>
                                     </thead>
@@ -42,32 +42,38 @@
 
 <!-- Modal Content Code -->
 <div class="modal fade" tabindex="-1" id="modalForm">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <a href="#" class="close" data-bs-dismiss="modal" aria-label="Close">
                 <em class="icon ni ni-cross"></em>
             </a>
             <div class="modal-header">
-                <h5 class="modal-title">Form Produk Kategori</h5>
+                <h5 class="modal-title">Form Pelanggan</h5>
             </div>
             <div class="modal-body">
                 <form class="form-validate is-alter" id="form-data">
                     @csrf
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
-                        <label class="form-label">Nama</label>
-                        <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="nama" id="nama" required>
+                        <div class="form-group">
+                            <label class="form-label">Nama</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" name="nama" id="nama">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="form-label">Alamat</label>
+                            <div class="form-control-wrap">
+                                <textarea class="form-control" id="alamat" name="alamat" rows="5" required></textarea>
+                            </div>
+                        </div>
                         <label class="form-label">Deskripsi</label>
                         <div class="form-control-wrap">
-                            <input type="text" class="form-control" name="deskripsi" id="deskripsi">
+                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Upload Gambar</label>
+                        <label>Upload Gambar Logo</label>
                         <label class="cabinet center-block">
                             <figure>
                                 <img src="" class="img-responsive img-thumbnail" id="preview_image" />
@@ -112,5 +118,8 @@
         object-fit: contain;
     }
     
+    .modal.show .select2-container {
+        position: inherit !important;
+    }
 </style>
 @endsection

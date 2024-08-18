@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class TentangKami extends Model
+class Pelanggan extends Model
 {
     use HasFactory;
 
-    protected $table = 'tentang_kami';
+    protected $table = 'pelanggan';
 
-    public function dataTableTentangKami()
+    public function dataTablePelanggan()
     {
-        $query = DB::table('tentang_kami')->where('status', 1)->select('id', 'deskripsi', 'flag', 'status');
+        $query = DB::table('pelanggan')->select('id', 'nama', 'alamat', 'deskripsi', 'logo', 'status');
 
         return $query;
     }

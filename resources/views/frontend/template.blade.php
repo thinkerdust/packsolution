@@ -126,7 +126,7 @@
                                         <a href="{{ route('/') }}">Home</a>
                                     </li>
                                     <li class="dropdown {{ $page == 'produk' ? 'current' : '' }}">
-                                        <a href="{{ route('produk') }}">Produk</a>
+                                        <a href="{{ route('produk') }}">Kategori</a>
                                     </li>
                                     <li class="dropdown {{ $page == 'katalog' ? 'current' : '' }}">
                                         <a href="{{ route('katalog') }}">Katalog</a>
