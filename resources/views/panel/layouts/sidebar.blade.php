@@ -41,6 +41,12 @@
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
+                        <a href="/admin/katalog" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-package-fill"></em></span>
+                            <span class="nk-menu-text">Katalog</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
                         <a href="/admin/pelanggan" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
                             <span class="nk-menu-text">Pelanggan</span>
