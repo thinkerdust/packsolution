@@ -130,7 +130,7 @@
                 <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
-                                src="{{ asset('frontend/images/why/why-1.png') }}" alt=""></div>
+                                src="{{ asset('frontend/images/why/why-1.1.png') }}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                 <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft text-end" data-wow-delay="0ms" data-wow-duration="1500ms"><img
-                                src="{{ asset('frontend/images/why/why-2.png') }}" alt=""></div>
+                                src="{{ asset('frontend/images/why/why-2.1.png') }}" alt=""></div>
                     </div>
                 </div>
                 <!--Text Column-->
@@ -176,7 +176,7 @@
                 <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
-                                src="{{ asset('frontend/images/why/why-3.png') }}" alt=""></div>
+                                src="{{ asset('frontend/images/why/why-3.1.png') }}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -190,7 +190,7 @@
                 <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft text-end" data-wow-delay="0ms" data-wow-duration="1500ms"><img
-                                src="{{ asset('frontend/images/why/why-4.png') }}" alt=""></div>
+                                src="{{ asset('frontend/images/why/why-4.1.png') }}" alt=""></div>
                     </div>
                 </div>
                 <!--Text Column-->
