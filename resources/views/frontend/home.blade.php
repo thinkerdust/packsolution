@@ -320,7 +320,7 @@
                                     {{-- <div class="count-outer count-box">
                                         <span class="count-text" data-speed="4000" data-stop="8705">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-1.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-1.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">1. Order</div>
                                 </div>
                             </div>
@@ -333,7 +333,7 @@
                                     {{-- <div class="count-outer count-box alternate">
                                         <span class="count-text" data-speed="3000" data-stop="480">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-2.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-2.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">2. Pembuatan Invoice & Preview Desain</div>
                                 </div>
                             </div>
@@ -346,7 +346,7 @@
                                     {{-- <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-3.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-3.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">3. Pembayaran DP 50%</div>
                                 </div>
                             </div>
@@ -358,7 +358,7 @@
                                     {{-- <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-4.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-4.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">4. Proses Produksi</div>
                                 </div>
                             </div>
@@ -370,7 +370,7 @@
                                     {{-- <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-5.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-5.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">5. Pelunasan</div>
                                 </div>
                             </div>
@@ -382,7 +382,7 @@
                                     {{-- <div class="count-outer count-box">
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
-                                    <img src="{{ asset('frontend/images/icons/alur-6.png') }}" style="width: 190px; height: auto;" alt="">
+                                    <img src="{{ asset('frontend/images/icons/alur-6.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">6. Pengiriman</div>
                                 </div>
                             </div>
