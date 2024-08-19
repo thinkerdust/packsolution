@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Panel\BaseController as BaseController;
 use Illuminate\Http\Request;
-use App\Models\Pelanggan;
+use App\Models\Katalog;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
@@ -15,21 +15,21 @@ class KatalogController extends BaseController
 {
     function __construct()
     {
-        $this->pelanggan = new Pelanggan();
+        $this->katalog = new Katalog();
     }
 
     public function index()
     {
-        $js_library = js_summernote();
-        $css_library = css_summernote();
-        $title = 'Pelanggan';
-        $js = 'panel/js/apps/pelanggan/index.js?_='.rand();
-        return view('panel.pelanggan.index', compact('js', 'title', 'js_library', 'css_library'));
+        $js_library     = js_summernote();
+        $css_library    = css_summernote();
+        $title          = 'Katalog';
+        $js             = 'panel/js/apps/katalog/index.js?_='.rand();
+        return view('panel.katalog.index', compact('js', 'title', 'js_library', 'css_library'));
     }
 
-    public function datatable_pelanggan(Request $request)
-    {
-        $data = $this->pelanggan->dataTablePelanggan();
+    public function datatable_katalog(Request $request) {
+
+        $data = $this->katalog->dataTableKatalog();
         return Datatables::of($data)->addIndexColumn()
             ->addColumn('action', function($row) {
                 
@@ -48,26 +48,24 @@ class KatalogController extends BaseController
             ->make(true);
     }
 
-    public function store_pelanggan(Request $request)
-    {
+    public function store_katalog(Request $request) {
+
         $uid = $request->input('uid');
 
         $validator = Validator::make($request->all(), [
-            'nama' => 'required',
-            'alamat' => 'required',
-            'deskripsi' => 'required',
-            'gambar' => 'required_if:uid, 0'
+            'kategori_produk'   => 'required',
+            'judul'             => 'required',
+            'deskripsi'         => 'required',
         ]);
 
         if($validator->stopOnFirstFailure()->fails()){
-            return $this->ajaxResponse(false, $validator->errors()->first());        
+            return $this->ajaxResponse(false, $validator->errors()->first());
         }
 
         $data = [
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'deskripsi' => $request->deskripsi,
-            'link_button' => $request->link_button,
+            'produk_kategori_id'    => $request->kategori_produk,
+            'judul'                 => $request->judul,
+            'deskripsi'             => $request->deskripsi
         ];
 
         if(!empty($uid)) {
@@ -78,8 +76,8 @@ class KatalogController extends BaseController
 
         // remove old file
         if(!empty($uid) && $request->file('gambar')) {
-            $data_carousel = Carousel::where('id', $uid)->first();
-            $oldFile = $data_carousel->gambar;
+            $data_produk = Produk::where('id', $uid)->first();
+            $oldFile = $data_produk->gambar;
 
             if(!empty($oldFile)) {
                 if (Storage::disk('public')->exists($oldFile)) {
@@ -98,7 +96,7 @@ class KatalogController extends BaseController
             $fileName = str_replace(' ', '', $fileName);
 
             // Define a file path
-            $filePath = 'uploads/pelanggan/gambar/' . uniqid() . '_' . $fileName;
+            $filePath = 'uploads/katalog/gambar/' . uniqid() . '_' . $fileName;
 
             // Store the file in the local storage
             $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
@@ -107,7 +105,7 @@ class KatalogController extends BaseController
             } 
         }
 
-        $process = DB::table('pelanggan')->updateOrInsert(
+        $process = DB::table('katalog')->updateOrInsert(
             ['id' => $uid],
             $data
         );
@@ -119,17 +117,15 @@ class KatalogController extends BaseController
         }
     }
 
-    public function edit_pelanggan(Request $request) 
-    {
+    public function edit_katalog(Request $request) {
         $uid = $request->uid;
-        $data = Pelanggan::where('id', $uid)->first();
+        $data = Katalog::where('id', $uid)->first();
         return $this->ajaxResponse(true, 'Success!', $data);
     }
 
-    public function delete_pelanggan(Request $request)
-    {
+    public function delete_katalog(Request $request) {
         $uid = $request->uid;
-        $process = DB::table('pelanggan')->where('id', $uid)
+        $process = DB::table('katalog')->where('id', $uid)
             ->update(['status' => 0, 'updated_at' => Carbon::now()]);
 
         if($process) {

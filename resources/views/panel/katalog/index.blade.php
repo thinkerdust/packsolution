@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
-                <div class="components-preview wide-md mx-auto">
+                <div class="components-preview mx-auto">
                     <div class="nk-block-head nk-block-head-lg wide-sm">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">{{ $title }}</h3>
@@ -23,9 +23,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama</th> 
-                                            <th>Alamat</th> 
-                                            <th>Logo</th> 
+                                            <th>Judul</th> 
+                                            <th>Deskripsi</th> 
+                                            <th>Gambar</th> 
                                             <th>Action</th> 
                                         </tr>
                                     </thead>
@@ -48,7 +48,7 @@
                 <em class="icon ni ni-cross"></em>
             </a>
             <div class="modal-header">
-                <h5 class="modal-title">Form Pelanggan</h5>
+                <h5 class="modal-title">Form Katalog</h5>
             </div>
             <div class="modal-body">
                 <form class="form-validate is-alter" id="form-data">
@@ -56,24 +56,20 @@
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
                         <div class="form-group">
-                            <label class="form-label">Nama</label>
+                            <label class="form-label">Judul</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" name="nama" id="nama">
+                                <input type="text" class="form-control" name="judul" id="judul">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Alamat</label>
+                            <label class="form-label">Deskripsi</label>
                             <div class="form-control-wrap">
-                                <textarea class="form-control" id="alamat" name="alamat" rows="5" required></textarea>
+                                <input type="text" class="form-control" name="deskripsi" id="deskripsi">
                             </div>
-                        </div>
-                        <label class="form-label">Deskripsi</label>
-                        <div class="form-control-wrap">
-                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Upload Gambar Logo</label>
+                        <label>Upload Gambar</label>
                         <label class="cabinet center-block">
                             <figure>
                                 <img src="" class="img-responsive img-thumbnail" id="preview_image" />

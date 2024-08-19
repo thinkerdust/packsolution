@@ -131,3 +131,33 @@ function edit(uid) {
         }
     })
 }
+
+function aktivasi(id, status) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, save it!'
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                url: '/admin/tentang-kami/aktivasi',
+                dataType: 'JSON',
+                type: 'POST',
+                data: {'_token': token, 'id': id, 'status': status},
+                success: function(response) {
+                    if(response.status){
+                        $("#dt-table").DataTable().ajax.reload(null, false);
+                        NioApp.Toast(response.message, 'success', {position: 'top-right'});
+                    }else{
+                        NioApp.Toast(response.message, 'warning', {position: 'top-right'});
+                    }
+                },
+                error: function(error) {
+                    console.log(error)
+                    NioApp.Toast('Error while fetching data', 'error', {position: 'top-right'});
+                }
+            })
+        }
+    });
+}

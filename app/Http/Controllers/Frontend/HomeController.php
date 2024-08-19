@@ -12,23 +12,28 @@ class HomeController extends Controller
 
         $carousel   = DB::table('carousel')->where('status', 1)->where('flag', 1)->orderBy('id', 'asc')->get();   
         $kategori   = DB::table('produk_kategori')->where('status', 1)->limit(4)->orderBy('id', 'asc')->get();
-        // $katalog    = DB::table('produk_katalog')->where('status', 1)->limit(3)->orderBy('id', 'asc')->get();
+        $katalog = DB::table('katalog')
+                        ->where('status', 1)
+                        ->groupBy('produk_kategori_id')
+                        ->orderBy('id', 'asc')
+                        ->selectRaw('*, MIN(id) as min_id')
+                        ->limit(3)
+                        ->get();        
         // $customer   = DB::table('customer')->where('status', 1)->orderBy('id', 'asc')->get();
-        // $feedback   = DB::table('feedback')->where('status', 1)->orderBy('id', 'asc')->get();
 
         $data = [
             'js'        => '<script src="'.asset('frontend/js/home.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'home',
             'carousel'  => $carousel,
             'kategori'  => $kategori,
-            // 'katalog'   => $katalog,
+            'katalog'   => $katalog,
             // 'customer'  => $customer,
-            // 'feedback'  => $feedback
         ];
 
         return view('frontend.home', $data);
     }
 
+    // produk atau kategori
     public function produk() {
 
         $kategori   = DB::table('produk_kategori')->where('status', 1)->orderBy('id', 'asc')->get();
@@ -60,17 +65,29 @@ class HomeController extends Controller
         return view('frontend.produk-detail', $data);
     }
 
+    // portofolio atau katalog
     public function katalog() {
+
+        $kategori   = DB::table('produk_kategori')->where('status', 1)->orderBy('id', 'asc')->get();
+        $katalog    = DB::table('katalog K')
+                            ->join('produk_kategori pk', 'pk.id', '=', 'k.produk_kategori_id')
+                            ->select('katalog.*', 'pk.nama as kategori', DB::raw('COUNT(*) as total'))
+                            ->where('status', 1)
+                            ->groupBy('produk_kategori_id')
+                            ->get();
 
         $data = [
             'css'       => '<link href="'.asset('frontend/css/katalog.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/katalog.js?ver='.generateRandomString(5).'').'"></script>',
-            'page'      => 'katalog'
+            'page'      => 'katalog',
+            'kategori'  => $kategori,
+            'katalog'   => $katalog
         ];
 
         return view('frontend.katalog', $data);
     }
 
+    // tentang kami atau about
     public function about() {
 
         $about = DB::table('tentang_kami')->where('status', 1)->where('flag', 1)->orderBy('id', 'asc')->first();
