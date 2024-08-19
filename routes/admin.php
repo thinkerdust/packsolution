@@ -9,6 +9,7 @@ use App\Http\Controllers\Panel\ProdukKategoriController;
 use App\Http\Controllers\Panel\ProdukController;
 use App\Http\Controllers\Panel\PelangganController;
 use App\Http\Controllers\Panel\TentangKamiController;
+use App\Http\Controllers\Panel\KatalogController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/', 'login')->name('login');
@@ -80,6 +81,17 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             Route::get('/edit/{uid}', 'edit_tentang_kami');
             Route::get('/delete/{uid}', 'delete_tentang_kami');
             Route::post('/aktivasi', 'aktivasi_tentang_kami');
+        });
+    });
+
+    Route::group(['prefix' => 'katalog'], function () {
+        Route::controller(KatalogController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('/datatable', 'datatable_katalog');
+            Route::get('/add', 'add_katalog');
+            Route::post('/store', 'store_katalog');
+            Route::get('/edit/{uid}', 'edit_katalog');
+            Route::get('/delete/{uid}', 'delete_katalog');
         });
     });
 

@@ -1,15 +1,16 @@
 var table = NioApp.DataTable('#dt-table', {
     serverSide: true,
     processing: true,
-    responsive: true,
+    responsive: false,
+    scrollX: true,
     searchDelay: 500,
     ajax: {
-        url: '/admin/pelanggan/datatable'
+        url: '/admin/katalog/datatable'
     },
     columns: [
         {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-        {data: 'nama'},
-        {data: 'alamat', orderable: false},
+        {data: 'judul'},
+        {data: 'deskripsi', orderable: false},
         {data: 'gambar'},
         {data: 'action', orderable: false, searchable: false},
     ],
@@ -24,12 +25,6 @@ var table = NioApp.DataTable('#dt-table', {
         },
     ] 
 });
-
-$('#deskripsi').summernote({
-    tabsize: 2,
-    height: 120,
-});
-
 
 $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
 
@@ -92,7 +87,7 @@ function hapus(uid) {
     }).then((result) => {
         if (result.value) {
             $.ajax({
-                url: '/admin/pelanggan/delete/'+uid,
+                url: '/admin/katalog/delete/'+uid,
                 dataType: 'JSON',
                 success: function(response) {
                     if(response.status){
@@ -114,7 +109,7 @@ function hapus(uid) {
 function tambah() {
     $('#form-data')[0].reset();
     $('#uid').val('');
-    $("#deskripsi").summernote('code', '');
+    $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
     $('#modalForm').modal('show');
 }
 
@@ -124,7 +119,7 @@ $('#form-data').submit(function(e) {
     var btn = $('#btn-submit');
 
     $.ajax({
-        url : "/admin/pelanggan/store",  
+        url : "/admin/katalog/store",  
         data : formData,
         type : "POST",
         dataType : "JSON",
@@ -159,18 +154,17 @@ $('#form-data').submit(function(e) {
 
 function edit(uid) {
     $.ajax({
-        url: '/admin/pelanggan/edit/'+uid,
+        url: '/admin/katalog/edit/'+uid,
         dataType: 'JSON',
         success: function(response) {
             if(response.status) {
                 $('#modalForm').modal('show');
                 let data = response.data;
                 $('#uid').val(uid);
-                $('#nama').val(data.nama);
-                $('#alamat').val(data.alamat);
-                $('#deskripsi').summernote('code', data.deskripsi);
+                $('#judul').val(data.judul);
+                $('#deskripsi').val(data.deskripsi);
                 
-                if(data.logo) {
+                if(data.gambar) {
                     $('#preview_image').attr('src', 'storage/'+data.logo);
                 }
             }
