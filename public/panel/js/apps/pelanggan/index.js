@@ -1,7 +1,8 @@
 var table = NioApp.DataTable('#dt-table', {
     serverSide: true,
     processing: true,
-    responsive: true,
+    responsive: false,
+    scrollX: true,
     searchDelay: 500,
     ajax: {
         url: '/admin/pelanggan/datatable'
@@ -9,8 +10,8 @@ var table = NioApp.DataTable('#dt-table', {
     columns: [
         {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
         {data: 'nama'},
-        {data: 'alamat', orderable: false},
-        {data: 'gambar'},
+        {data: 'pic'},
+        {data: 'logo'},
         {data: 'action', orderable: false, searchable: false},
     ],
     columnDefs: [
@@ -116,6 +117,7 @@ function tambah() {
     $('#uid').val('');
     $("#deskripsi").summernote('code', '');
     $('#modalForm').modal('show');
+    $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
 }
 
 $('#form-data').submit(function(e) {
@@ -167,6 +169,7 @@ function edit(uid) {
                 let data = response.data;
                 $('#uid').val(uid);
                 $('#nama').val(data.nama);
+                $('#pic').val(data.pic);
                 $('#alamat').val(data.alamat);
                 $('#deskripsi').summernote('code', data.deskripsi);
                 
