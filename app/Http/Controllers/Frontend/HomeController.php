@@ -19,7 +19,7 @@ class HomeController extends Controller
                         ->selectRaw('*, MIN(id) as min_id')
                         ->limit(3)
                         ->get();        
-        // $customer   = DB::table('customer')->where('status', 1)->orderBy('id', 'asc')->get();
+        $customer   = DB::table('pelanggan')->where('status', 1)->orderBy('id', 'asc')->get();
 
         $data = [
             'js'        => '<script src="'.asset('frontend/js/home.js?ver='.generateRandomString(5).'').'"></script>',
@@ -27,7 +27,7 @@ class HomeController extends Controller
             'carousel'  => $carousel,
             'kategori'  => $kategori,
             'katalog'   => $katalog,
-            // 'customer'  => $customer,
+            'customer'  => $customer,
         ];
 
         return view('frontend.home', $data);

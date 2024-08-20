@@ -5795,7 +5795,7 @@ img.lazy-image.loaded {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .sponsors-outer .image-box img:hover {

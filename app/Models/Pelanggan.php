@@ -14,7 +14,7 @@ class Pelanggan extends Model
 
     public function dataTablePelanggan()
     {
-        $query = DB::table('pelanggan')->select('id', 'nama', 'alamat', 'deskripsi', 'logo', 'status');
+        $query = DB::table('pelanggan')->select('id', 'nama', 'pic', 'alamat', 'deskripsi', 'logo', 'status');
 
         return $query;
     }

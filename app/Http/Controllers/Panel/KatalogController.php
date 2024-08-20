@@ -76,8 +76,8 @@ class KatalogController extends BaseController
 
         // remove old file
         if(!empty($uid) && $request->file('gambar')) {
-            $data_produk = Produk::where('id', $uid)->first();
-            $oldFile = $data_produk->gambar;
+            $data_katalog = Katalog::where('id', $uid)->first();
+            $oldFile = $data_katalog->gambar;
 
             if(!empty($oldFile)) {
                 if (Storage::disk('public')->exists($oldFile)) {

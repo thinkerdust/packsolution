@@ -4,7 +4,7 @@
 
 <!-- Banner Section -->
 <section class="page-banner">
-    <div class="image-layer" style=""></div>
+    <div class="image-layer" style="background-image: url('frontend/images/Foto Hero Portfolio.jpg')"></div>
     <div class="shape-1"></div>
     <div class="shape-2"></div>
     <div class="banner-inner">
