@@ -119,7 +119,7 @@ class KatalogController extends BaseController
 
     public function edit_katalog(Request $request) {
         $uid = $request->uid;
-        $data = Katalog::where('id', $uid)->first();
+        $data = $this->katalog->editKatalog($uid);
         return $this->ajaxResponse(true, 'Success!', $data);
     }
 

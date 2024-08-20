@@ -34,7 +34,7 @@
                     <li class="active filter" data-role="button" data-filter="all">All<sup>[6]</sup></li>
 
                     @foreach ($kategori as $k)
-                        <li class="filter" data-role="button" data-filter=".{{ strtolower(trim($k->nama)) }}">{{ $k->nama }}<sup>[{{ $k->total }}]</sup></li>
+                        <li class="filter" data-role="button" data-filter=".{{ strtolower(str_replace(' ', '', $k->kategori)) }}">{{ $k->kategori }}<sup>[{{ $k->total }}]</sup></li>
                     @endforeach
 
                     {{-- <li class="filter" data-role="button" data-filter=".branding">Standing Pouch<sup>[3]</sup></li>
@@ -45,9 +45,9 @@
             </div>
             <div class="filter-list row">
 
-                @foreach ($katalog as $k)                    
+                @foreach ($katalog as $k)
                     <!-- Gallery Item -->
-                    <div class="gallery-item mix all {{ $k->kategori }} col-lg-6 col-md-6 col-sm-12">
+                    <div class="gallery-item mix all {{ strtolower(str_replace(' ', '', $k->kategori)) }} col-lg-6 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <figure class="image"><img src="{{ asset('storage/'.$k->gambar) }}" alt=""></figure>
                             <a href="{{ asset('storage/'.$k->gambar) }}" class="lightbox-image overlay-box"

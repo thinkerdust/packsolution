@@ -26,6 +26,32 @@ var table = NioApp.DataTable('#dt-table', {
     ] 
 });
 
+$('#kategori_produk').select2({
+    placeholder: 'Pilih Kategori',
+    allowClear: true,
+    dropdownParent: $('#modalForm'),
+    ajax: {
+        url: '/admin/data-produk-kategori',
+        dataType: "json",
+        type: "GET",
+        delay: 250,
+        data: function (params) {
+            return { q: params.term };
+        },
+        processResults: function (data, params) {
+            return {
+                results: $.map(data, function (item) {
+                    return {
+                        text: item.nama,
+                        id: item.id
+                    }
+                })
+            };
+        },
+        cache: true
+    }
+})
+
 $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
 
 const readURL = (input,el) => {
@@ -161,6 +187,7 @@ function edit(uid) {
                 $('#modalForm').modal('show');
                 let data = response.data;
                 $('#uid').val(uid);
+                $("#kategori_produk").empty().append(`<option value="${data.produk_kategori_id}">${data.kategori}</option>`).val(data.produk_kategori_id).trigger('change');
                 $('#judul').val(data.judul);
                 $('#deskripsi').val(data.deskripsi);
                 

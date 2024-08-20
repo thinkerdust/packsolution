@@ -10,11 +10,11 @@
     <div class="banner-inner">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>Kategori</h1>
+                <h1>Produk</h1>
                 <div class="page-nav">
                     <ul class="bread-crumb clearfix">
                         <li><a href="{{ route('/') }}">Home</a></li>
-                        <li class="active">Kategori</li>
+                        <li class="active">Produk</li>
                     </ul>
                 </div>
             </div>

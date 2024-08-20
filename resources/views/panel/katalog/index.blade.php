@@ -55,6 +55,12 @@
                     @csrf
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
+                        <label class="form-label">Kategori Produk</label>
+                        <div class="form-control-wrap">
+                            <select class="form-control" name="kategori_produk" id="kategori_produk" required></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="form-group">
                             <label class="form-label">Judul</label>
                             <div class="form-control-wrap">
