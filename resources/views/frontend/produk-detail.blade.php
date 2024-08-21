@@ -13,7 +13,8 @@
                 <h1>{{ strtoupper($kategori->nama) }}</h1>
                 <div class="page-nav">
                     <ul class="bread-crumb clearfix">
-                        <li><a href="index-main.html">Home</a></li>
+                        <li><a href="{{ route('/') }}">Home</a></li>
+                        <li><a href="{{ route('produk') }}">Produk</a></li>
                         <li class="active">Produk Detail</li>
                     </ul>
                 </div>
