@@ -12,7 +12,7 @@ class HomeController extends Controller
 
         $carousel   = DB::table('carousel')->where('status', 1)->where('flag', 1)->orderBy('id', 'asc')->get();   
         $kategori   = DB::table('produk_kategori')->where('status', 1)->limit(4)->orderBy('id', 'asc')->get();
-        $katalog = DB::table('katalog')
+        $katalog    = DB::table('katalog')
                         ->where('status', 1)
                         ->groupBy('produk_kategori_id')
                         ->orderBy('id', 'asc')
@@ -21,13 +21,30 @@ class HomeController extends Controller
                         ->get();        
         $customer   = DB::table('pelanggan')->where('status', 1)->orderBy('id', 'asc')->get();
 
+        // Optimize the counter queries by fetching all data in one query
+        $currentYear = date('Y');
+        $currentMonth = date('m');
+        $currentDay = date('d');
+
+        $counter = DB::table('counter')
+            ->selectRaw("
+                SUM(view) as total_views,
+                SUM(CASE WHEN YEAR(tanggal) = $currentYear THEN view ELSE 0 END) as counterTahun,
+                SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth THEN view ELSE 0 END) as counterBulan,
+                SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth AND DAY(tanggal) = $currentDay THEN view ELSE 0 END) as counterHari
+            ")
+            ->first();
+
         $data = [
-            'js'        => '<script src="'.asset('frontend/js/home.js?ver='.generateRandomString(5).'').'"></script>',
-            'page'      => 'home',
-            'carousel'  => $carousel,
-            'kategori'  => $kategori,
-            'katalog'   => $katalog,
-            'customer'  => $customer,
+            'js'            => '<script src="' . asset('frontend/js/home.js?ver=' . generateRandomString(5)) . '"></script>',
+            'page'          => 'home',
+            'carousel'      => $carousel,
+            'kategori'      => $kategori,
+            'katalog'       => $katalog,
+            'customer'      => $customer,
+            'counterTahun'  => $counter->counterTahun ?? 0,
+            'counterBulan'  => $counter->counterBulan ?? 0,
+            'counterHari'   => $counter->counterHari ?? 0,
         ];
 
         return view('frontend.home', $data);

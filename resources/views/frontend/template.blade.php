@@ -300,17 +300,15 @@
                                         <div class="col-md-6 col-6">
                                             <ul>
                                                 <li><span style="color: #999b9f" href="#">Harian</span></li>
-                                                <li><span style="color: #999b9f" href="#">Mingguan</span></li>
                                                 <li><span style="color: #999b9f" href="#">Bulanan</span></li>
                                                 <li><span style="color: #999b9f" href="#">Tahunan</span></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 col-6">
                                             <ul>
-                                                <li><span style="color: #999b9f" href="#">88</span></li>
-                                                <li><span style="color: #999b9f" href="#">88</span></li>
-                                                <li><span style="color: #999b9f" href="#">88</span></li>
-                                                <li><span style="color: #999b9f" href="#">88</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $counterHari }}</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $counterBulan }}</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $counterTahun }}</span></li>
                                             </ul>
                                         </div>
                                     </div>
