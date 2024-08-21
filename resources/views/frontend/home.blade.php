@@ -301,7 +301,7 @@
     <!-- Funfacts Section -->
     <section class="facts-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
         <!-- <div class="image-layer" style="background-image: url(images/background/image-1.jpg);"></div> -->
-        <img src="{{ asset('frontend/images/parallax.png') }}" alt="" class="jarallax-img">
+        <img src="{{ asset('frontend/images/background/bg-alur.jpg') }}" alt="" class="jarallax-img">
         <div class="section-alur">
             <div class="inner-container">
 
