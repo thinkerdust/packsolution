@@ -633,7 +633,7 @@
             <div class="inner clearfix">
                 <div class="shape-1 wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                 <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
-                <h2>HUBUNGI KAMI & KONSULTASIKAN KEBUTUHAN KEMASAN ANDA <br>Sekarang !</h2>
+                <h2>HUBUNGI KAMI & KONSULTASIKAN <br> PRODUKMU SEKARANG !</h2>
                 <div class="link-box">
                     <a class="theme-btn btn-style-two" href="https://wa.me/081952727888">
                         <i class="btn-curve"></i>
