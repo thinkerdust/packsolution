@@ -32,3 +32,7 @@
 .gallery-item:hover {
     cursor: pointer;
 }
+
+.service-block-two .inner-box {
+    height: 450px;
+}

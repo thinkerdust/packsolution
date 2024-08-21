@@ -301,7 +301,7 @@
     <!-- Funfacts Section -->
     <section class="facts-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
         <!-- <div class="image-layer" style="background-image: url(images/background/image-1.jpg);"></div> -->
-        <img src="{{ asset('frontend/images/parallax.png') }}" alt="" class="jarallax-img">
+        <img src="{{ asset('frontend/images/background/bg-alur.jpg') }}" alt="" class="jarallax-img">
         <div class="section-alur">
             <div class="inner-container">
 
@@ -633,7 +633,7 @@
             <div class="inner clearfix">
                 <div class="shape-1 wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                 <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
-                <h2>HUBUNGI KAMI & KONSULTASIKAN KEBUTUHAN KEMASAN ANDA <br>Sekarang !</h2>
+                <h2>HUBUNGI KAMI & KONSULTASIKAN <br> PRODUKMU SEKARANG !</h2>
                 <div class="link-box">
                     <a class="theme-btn btn-style-two" href="https://wa.me/081952727888">
                         <i class="btn-curve"></i>

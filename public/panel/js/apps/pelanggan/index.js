@@ -20,7 +20,7 @@ var table = NioApp.DataTable('#dt-table', {
             orderable: false,
             searchable: false,
             render: function(data, type, full, meta) {
-                return `<a target="_blank" href="storage/${full['gambar']}" class="btn btn-outline-info btn-sm">File</a>`;
+                return `<a target="_blank" href="storage/${full['logo']}" class="btn btn-outline-info btn-sm">File</a>`;
             }
         },
     ] 

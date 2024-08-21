@@ -4800,10 +4800,10 @@ img.lazy-image.loaded {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
+  filter: grayscale(100%); */
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   border-radius: 7px;
@@ -7448,7 +7448,6 @@ img.lazy-image.loaded {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  height: 450px;
 }
 
 .service-block-two .inner-box:before {
@@ -11124,10 +11123,10 @@ img.lazy-image.loaded {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  -webkit-filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
+  filter: grayscale(100%); */
 }
 
 .page-banner .shape-1 {
@@ -23256,10 +23255,10 @@ img.lazy-image.loaded {
 .service-nine__image img {
   /* mix-blend-mode: luminosity; */
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  width: 350px;
-  left: 60%;
+  width: 490px;
+  left: 59%;
 }
 
 .service-nine__content {
@@ -23279,7 +23278,7 @@ img.lazy-image.loaded {
 
 .service-nine__title {
   margin: 0;
-  font-size: 100px;
+  font-size: 80px;
   color: var(--thm-black);
   line-height: 1.05;
   text-transform: uppercase;
