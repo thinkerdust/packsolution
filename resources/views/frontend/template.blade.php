@@ -306,9 +306,9 @@
                                         </div>
                                         <div class="col-md-6 col-6">
                                             <ul>
-                                                <li><span style="color: #999b9f" href="#">{{ $counterHari }}</span></li>
-                                                <li><span style="color: #999b9f" href="#">{{ $counterBulan }}</span></li>
-                                                <li><span style="color: #999b9f" href="#">{{ $counterTahun }}</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $statistik->counterHari }}</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $statistik->counterBulan }}</span></li>
+                                                <li><span style="color: #999b9f" href="#">{{ $statistik->counterTahun }}</span></li>
                                             </ul>
                                         </div>
                                     </div>

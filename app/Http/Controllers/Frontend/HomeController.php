@@ -8,6 +8,26 @@ use DB;
 
 class HomeController extends Controller
 {
+
+    public function __construct() {
+
+        // Optimize the counter queries by fetching all data in one query
+        $currentYear    = date('Y');
+        $currentMonth   = date('m');
+        $currentDay     = date('d');
+
+        $statistik = DB::table('counter')
+                        ->selectRaw("
+                            SUM(view) as totalView,
+                            SUM(CASE WHEN YEAR(tanggal) = $currentYear THEN view ELSE 0 END) as counterTahun,
+                            SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth THEN view ELSE 0 END) as counterBulan,
+                            SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth AND DAY(tanggal) = $currentDay THEN view ELSE 0 END) as counterHari
+                        ")
+                        ->first();  
+
+        $this->statistik = $statistik;
+    }
+
     public function index() {
 
         $carousel   = DB::table('carousel')->where('status', 1)->where('flag', 1)->orderBy('id', 'asc')->get();   
@@ -21,20 +41,6 @@ class HomeController extends Controller
                         ->get();        
         $customer   = DB::table('pelanggan')->where('status', 1)->orderBy('id', 'asc')->get();
 
-        // Optimize the counter queries by fetching all data in one query
-        $currentYear = date('Y');
-        $currentMonth = date('m');
-        $currentDay = date('d');
-
-        $counter = DB::table('counter')
-            ->selectRaw("
-                SUM(view) as total_views,
-                SUM(CASE WHEN YEAR(tanggal) = $currentYear THEN view ELSE 0 END) as counterTahun,
-                SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth THEN view ELSE 0 END) as counterBulan,
-                SUM(CASE WHEN YEAR(tanggal) = $currentYear AND MONTH(tanggal) = $currentMonth AND DAY(tanggal) = $currentDay THEN view ELSE 0 END) as counterHari
-            ")
-            ->first();
-
         $data = [
             'js'            => '<script src="' . asset('frontend/js/home.js?ver=' . generateRandomString(5)) . '"></script>',
             'page'          => 'home',
@@ -42,9 +48,7 @@ class HomeController extends Controller
             'kategori'      => $kategori,
             'katalog'       => $katalog,
             'customer'      => $customer,
-            'counterTahun'  => $counter->counterTahun ?? 0,
-            'counterBulan'  => $counter->counterBulan ?? 0,
-            'counterHari'   => $counter->counterHari ?? 0,
+            'statistik'     => $this->statistik
         ];
 
         return view('frontend.home', $data);
@@ -59,7 +63,8 @@ class HomeController extends Controller
             'css'       => '<link href="'.asset('frontend/css/produk.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/produk.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk',
-            'kategori'  => $kategori
+            'kategori'  => $kategori,
+            'statistik'     => $this->statistik
         ];
 
         return view('frontend.produk', $data);
@@ -76,7 +81,8 @@ class HomeController extends Controller
             'js'        => '<script src="'.asset('frontend/js/produk-detail.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk',
             'kategori'  => $kategori,
-            'produk'    => $produk
+            'produk'    => $produk,
+            'statistik'     => $this->statistik
         ];
 
         return view('frontend.produk-detail', $data);
@@ -104,7 +110,8 @@ class HomeController extends Controller
             'js'        => '<script src="'.asset('frontend/js/katalog.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'katalog',
             'kategori'  => $kategori,
-            'katalog'   => $katalog
+            'katalog'   => $katalog,
+            'statistik'     => $this->statistik
         ];
 
         return view('frontend.katalog', $data);
@@ -119,7 +126,8 @@ class HomeController extends Controller
             'css'       => '<link href="'.asset('frontend/css/about.css?ver='.generateRandomString(5).'').'" rel="stylesheet">',
             'js'        => '<script src="'.asset('frontend/js/about.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'about',
-            'about'     => $about
+            'about'     => $about,
+            'statistik'     => $this->statistik
         ];
 
         return view('frontend.about', $data);
