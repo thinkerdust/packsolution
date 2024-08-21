@@ -19,7 +19,7 @@
     <link href="{{ asset('frontend/css/hover.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/custom-animate.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/css/jarallax.css') }}">
-    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/style.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
 
     {{-- Custom CSS --}}
     {!! $css ?? '' !!}

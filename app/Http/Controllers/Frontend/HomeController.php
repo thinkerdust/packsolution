@@ -19,7 +19,7 @@ class HomeController extends Controller
                         ->selectRaw('*, MIN(id) as min_id')
                         ->limit(3)
                         ->get();        
-        // $customer   = DB::table('customer')->where('status', 1)->orderBy('id', 'asc')->get();
+        $customer   = DB::table('pelanggan')->where('status', 1)->orderBy('id', 'asc')->get();
 
         $data = [
             'js'        => '<script src="'.asset('frontend/js/home.js?ver='.generateRandomString(5).'').'"></script>',
@@ -27,7 +27,7 @@ class HomeController extends Controller
             'carousel'  => $carousel,
             'kategori'  => $kategori,
             'katalog'   => $katalog,
-            // 'customer'  => $customer,
+            'customer'  => $customer,
         ];
 
         return view('frontend.home', $data);
@@ -68,12 +68,18 @@ class HomeController extends Controller
     // portofolio atau katalog
     public function katalog() {
 
-        $kategori   = DB::table('produk_kategori')->where('status', 1)->orderBy('id', 'asc')->get();
-        $katalog    = DB::table('katalog K')
-                            ->join('produk_kategori pk', 'pk.id', '=', 'k.produk_kategori_id')
-                            ->select('katalog.*', 'pk.nama as kategori', DB::raw('COUNT(*) as total'))
-                            ->where('status', 1)
-                            ->groupBy('produk_kategori_id')
+        $katalog    = DB::table('katalog as k')
+                            ->select('k.*', 'pk.nama as kategori')
+                            ->join('produk_kategori as pk', 'pk.id', '=', 'k.produk_kategori_id')
+                            ->where('k.status', 1)
+                            ->orderBy('k.id', 'asc')
+                            ->get();
+
+        $kategori   = DB::table('katalog as k')
+                            ->join('produk_kategori as pk', 'pk.id', '=', 'k.produk_kategori_id')
+                            ->select('k.produk_kategori_id', 'k.judul', 'k.deskripsi', 'k.gambar', 'k.status', 'pk.nama as kategori', DB::raw('COUNT(*) as total'))
+                            ->where('k.status', 1)
+                            ->groupBy('k.produk_kategori_id')
                             ->get();
 
         $data = [

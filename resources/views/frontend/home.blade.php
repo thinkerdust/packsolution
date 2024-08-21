@@ -454,36 +454,13 @@
 
                 <!--Sponsors Carousel-->
                 <div class="sponsors-carousel owl-theme owl-carousel">
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/1.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/2.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/3.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/4.png') }}" alt=""></a></figure>
-                    </div>
-                    <div class="slide-item">
-                        <figure class="image-box"><a href="#"><img src="{{ asset('frontend/images/clients/5.png') }}" alt=""></a></figure>
-                    </div>
+
+                    @foreach ($customer as $c)
+                        <div class="slide-item">
+                            <figure class="image-box"><a href="#" onclick="event.preventDefault();"><img src="{{ asset('storage') . '/' . $c->logo }}" alt=""></a></figure>
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -498,159 +475,18 @@
             <div class="carousel-box">
                 <div class="testimonials-carousel owl-theme owl-carousel">
 
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Andi Wijaya</div>
-                                <div class="designation">Mellynd Care</div>
+                    @foreach ($customer as $c)                        
+                        <div class="testi-block">
+                            <div class="inner">
+                                <div class="icon"><span>“</span></div>
+                                <div class="info">
+                                    <div class="name">{{ $c->pic }}</div>
+                                    <div class="designation">{{ $c->nama }}</div>
+                                </div>
+                                <div class="text">{{ $c->deskripsi }}</div>
                             </div>
-                            <div class="text">Packsolution.id selalu memberikan solusi terbaik untuk kebutuhan kemasan kami. Dengan desain inovatif dan kualitas material yang tinggi, produk kami selalu tampil lebih menarik dan terlindungi dengan baik.</div>
                         </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Siti Rahma</div>
-                                <div class="designation">Seblak Baraka</div>
-                            </div>
-                            <div class="text">Kami sangat puas dengan layanan dari packsolution.id. Desain kemasan yang mereka buat selalu sesuai dengan yang kami inginkan, dan free design untuk pesanan besar sangat membantu bisnis kami.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Budi Santoso</div>
-                                <div class="designation">Aroma Biji</div>
-                            </div>
-                            <div class="text">Packsolution.id telah menjadi mitra terpercaya kami dalam menyediakan kemasan berkualitas tinggi. Mereka benar-benar mengerti bagaimana membuat kemasan yang menarik dan fungsional.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Rina Amelia</div>
-                                <div class="designation">Teh Nusantara</div>
-                            </div>
-                            <div class="text">Kerjasama dengan packsolution.id selalu memuaskan. Kualitas kemasan yang mereka sediakan sangat bagus, dan layanan desainnya sangat membantu kami dalam memperkuat brand kami.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Dedi Kurniawan</div>
-                                <div class="designation">Croma</div>
-                            </div>
-                            <div class="text">Kami sangat merekomendasikan packsolution.id. Desain kemasan yang mereka buat selalu sesuai dengan konsep kami, dan kualitasnya selalu konsisten.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Fitri Sari</div>
-                                <div class="designation">Potami</div>
-                            </div>
-                            <div class="text">Packsolution.id selalu memberikan yang terbaik dalam setiap pesanan kami. Kami sangat puas dengan kemasan yang inovatif dan pelayanan yang mereka tawarkan.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Irwan Setiawan</div>
-                                <div class="designation">Makripau</div>
-                            </div>
-                            <div class="text">Packsolution.id selalu menjadi pilihan utama kami untuk kebutuhan kemasan. Kualitas dan desainnya luar biasa, sangat membantu kami dalam menjaga kualitas produk.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Yulia Pratama</div>
-                                <div class="designation">Solok Radjo</div>
-                            </div>
-                            <div class="text">Kami sangat senang dengan hasil kerja packsolution.id. Kemasan yang mereka buat tidak hanya melindungi produk kami, tetapi juga memperkuat brand kami di mata konsumen.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Arif Hidayat</div>
-                                <div class="designation">Sensa Coffee</div>
-                            </div>
-                            <div class="text">Layanan dari packsolution.id sangat memuaskan. Desain kemasan yang mereka sediakan sangat profesional dan membantu kami dalam memasarkan produk dengan lebih baik.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Dian Kartika</div>
-                                <div class="designation">Dika Bakery</div>
-                            </div>
-                            <div class="text">Kami sangat puas dengan kemasan yang dibuat oleh packsolution.id. Mereka selalu memahami kebutuhan kami dan memberikan hasil yang sesuai dengan ekspektasi.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Agus Saputra</div>
-                                <div class="designation">Joy Bakery</div>
-                            </div>
-                            <div class="text">Packsolution.id selalu memberikan solusi kemasan yang tepat. Desain yang mereka buat sangat menarik dan selalu on time.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Tika Ramadhani</div>
-                                <div class="designation">Gujati</div>
-                            </div>
-                            <div class="text">Kami sangat menghargai kerja sama dengan packsolution.id. Kemasan yang mereka buat sangat membantu kami dalam meningkatkan citra produk kami.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Anwar Fahmi</div>
-                                <div class="designation">Susu Almond</div>
-                            </div>
-                            <div class="text">Packsolution.id memberikan layanan yang luar biasa. Kami sangat puas dengan kualitas kemasan dan desain yang mereka tawarkan.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="testi-block">
-                        <div class="inner">
-                            <div class="icon"><span>“</span></div>
-                            <div class="info">
-                                <div class="name">Indah Lestari</div>
-                                <div class="designation">Susu Etawa</div>
-                            </div>
-                            <div class="text">Packsolution.id selalu menghadirkan kemasan berkualitas tinggi yang sesuai dengan kebutuhan kami. Desainnya kreatif dan materialnya tahan lama.</div>
-                        </div>
-                    </div>
+                    @endforeach
                     
                 </div>
             </div>
@@ -674,7 +510,8 @@
                             <div class="acc-btn active"><span class="count">1.</span> Apa itu Packsolution.id ?</div>
                             <div class="acc-content current">
                                 <div class="content">
-                                    <div class="text">Packsolution.id adalah solusi terpercaya untuk kebutuhan kemasan Anda, menawarkan material berkualitas tinggi dan desain inovatif yang melindungi produk dan memperkuat citra merek Anda.</div>
+                                    <div class="text">Packsolution.id adalah penyedia jasa pembuatan kemasan produk, seperti standing pouch, sachet,center seal, dan gusset. Kami akan membuat kemasan produk Anda menjadi menarik dan berkualitas.
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -684,43 +521,41 @@
                             <div class="acc-btn"><span class="count">2.</span> Kenapa Harus Packsolution.id ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">Kami menyediakan kemasan berkualitas tinggi dengan pilihan desain tidak terbatas, produksi cepat, dan bahan food grade yang aman untuk produk makanan Anda.</div>
+                                    <div class="text">Kami menawarkan pembuatan kemasan dengan kualitas terbaik, desain menarik, harga terjangkau, dan proses produksi yang cepat. Selain itu, kami juga memberikan konsultasi gratis untuk membantu Anda memilih tipe kemasan yang tepat.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">3.</span> We help to achieve mutual goals</div>
+                            <div class="acc-btn"><span class="count">3.</span> Dimana Lokasi Packsolution.id ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Workshop Packsolution.id berlokasi di Jl. Agus Salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah, 57147.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">4.</span> What happend to my design code</div>
+                            <div class="acc-btn"><span class="count">4.</span> Kemasan Apa saja yang tersedia di Packsolution.id ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Kami menyediakan berbagai jenis kemasan, seperti standing pouch, sachet,center seal, dan gusset dengan berbagai variasi. Semua kemasan dapat disesuaikan dengan kebutuhan Anda.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">5.</span> what will be the cost of code</div>
+                            <div class="acc-btn"><span class="count">5.</span> Bagaimana saya tahu ukuran yang cocok untuk produk saya ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Jika Anda tidak yakin dengan ukuran kemasan yang tersedia, Anda dapat mengukur ukuran kemasan yang biasa Anda gunakan saat ini. Anda juga bisa berkonsultasi dengan tim Packsolution.id
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -731,62 +566,57 @@
                     <ul class="accordion-box clearfix">
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">1.</span> We help to create visual strategies
+                            <div class="acc-btn"><span class="count">6.</span> Berapa desain per order ?
                             </div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Anda bisa langsung tanyakan ke tim Packsolution.id dengan klik tombol "Hubungi kami"
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">2.</span> Motion Graphics & Animations</div>
+                            <div class="acc-btn"><span class="count">7.</span> Apa format desain yang harus saya sediakan ?
+                            </div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Format desain yang dapat kami terima hanya dalam bentuk format PDF, JPG, PNG, AI, dan CDR.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">3.</span> We help to achieve mutual goals</div>
+                            <div class="acc-btn"><span class="count">8.</span> Bagaimana jika saya tidak memiliki desain ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Tidak perlu khawatir. Packsolution.id menyediakan jasa desain kemasan untuk membantu Anda memperoleh desain kemasan yang menarik dan berkualitas.Bahkan Anda bisa mendapatkan free 1 desain untuk order 1000pcs.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block active-block">
-                            <div class="acc-btn active"><span class="count">4.</span> What happend to my design code
+                            <div class="acc-btn active"><span class="count">9.</span> Berapa lama Waktu pengerjaan ?
                             </div>
                             <div class="acc-content current">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Estimasi waktu pengerjaan di Packsolution.id adalah sekitar 10 hari kerja. Kami akan mengusahakan yang terbaik untuk kepuasan customer kami.
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
                         <!--Block-->
                         <li class="accordion block">
-                            <div class="acc-btn"><span class="count">5.</span> what will be the cost of code</div>
+                            <div class="acc-btn"><span class="count">10.</span> Berapa lama Waktu pengiriman ?</div>
                             <div class="acc-content">
                                 <div class="content">
-                                    <div class="text">There are many variations of passages the majority have
-                                        suffered alteration in some fo injected humour, or randomised words
-                                        believable.</div>
+                                    <div class="text">Estimasi waktu pengiriman akan disesuaikan dengan jasa ekspedisi dan tipe pengiriman yang Anda pilih. Kemasan akan kami kirimkan dari lokasi produksi kami di Surakarta.</div>
                                 </div>
                             </div>
                         </li>
@@ -803,7 +633,7 @@
             <div class="inner clearfix">
                 <div class="shape-1 wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                 <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
-                <h2>Mari Mulai Proyek Anda <br>Sekarang !</h2>
+                <h2>HUBUNGI KAMI & KONSULTASIKAN KEBUTUHAN KEMASAN ANDA <br>Sekarang !</h2>
                 <div class="link-box">
                     <a class="theme-btn btn-style-two" href="https://wa.me/081952727888">
                         <i class="btn-curve"></i>

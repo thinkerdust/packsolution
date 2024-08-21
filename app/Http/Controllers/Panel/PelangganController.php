@@ -53,10 +53,11 @@ class PelangganController extends BaseController
         $uid = $request->input('uid');
 
         $validator = Validator::make($request->all(), [
-            'nama' => 'required',
-            'alamat' => 'required',
+            'nama'      => 'required',
+            'pic'       => 'required',
+            'alamat'    => 'required',
             'deskripsi' => 'required',
-            'gambar' => 'required_if:uid, 0'
+            'gambar'    => 'required_if:uid, 0'
         ]);
 
         if($validator->stopOnFirstFailure()->fails()){
@@ -64,10 +65,10 @@ class PelangganController extends BaseController
         }
 
         $data = [
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
+            'nama'      => $request->nama,
+            'pic'       => $request->pic,
+            'alamat'    => $request->alamat,
             'deskripsi' => $request->deskripsi,
-            'link_button' => $request->link_button,
         ];
 
         if(!empty($uid)) {
@@ -78,8 +79,8 @@ class PelangganController extends BaseController
 
         // remove old file
         if(!empty($uid) && $request->file('gambar')) {
-            $data_carousel = Carousel::where('id', $uid)->first();
-            $oldFile = $data_carousel->gambar;
+            $data_pelanggan = Pelanggan::where('id', $uid)->first();
+            $oldFile = $data_pelanggan->logo;
 
             if(!empty($oldFile)) {
                 if (Storage::disk('public')->exists($oldFile)) {
@@ -103,7 +104,7 @@ class PelangganController extends BaseController
             // Store the file in the local storage
             $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
             if ($upload) {
-                $data['gambar'] = $filePath;
+                $data['logo'] = $filePath;
             } 
         }
 

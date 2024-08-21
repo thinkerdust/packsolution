@@ -16,4 +16,15 @@ class Katalog extends Model
         $query = DB::table('katalog')->select('id', 'produk_kategori_id', 'judul', 'deskripsi', 'gambar', 'status');
         return $query;
     }
+
+    public function editKatalog($id)
+    {
+        $data = DB::table('katalog as k')
+                    ->join('produk_kategori as pk', 'k.produk_kategori_id', '=', 'pk.id')
+                    ->where([['k.status', 1], ['pk.status', 1], ['k.id', $id]])
+                    ->select('k.id', 'k.produk_kategori_id', 'k.judul', 'k.status', 'pk.nama as kategori', 'k.gambar', 'k.deskripsi')
+                    ->first();
+
+        return $data;
+    }
 }

@@ -24,7 +24,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th> 
-                                            <th>Alamat</th> 
+                                            <th>PIC</th> 
                                             <th>Logo</th> 
                                             <th>Action</th> 
                                         </tr>
@@ -56,9 +56,15 @@
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
                         <div class="form-group">
-                            <label class="form-label">Nama</label>
+                            <label class="form-label">Nama Pelanggan</label>
                             <div class="form-control-wrap">
                                 <input type="text" class="form-control" name="nama" id="nama">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Pelanggan (PIC)</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" name="pic" id="pic">
                             </div>
                         </div>
                         <div class="form-group">
