@@ -16,25 +16,25 @@
     <link href="{{ asset('frontend/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/jquery.fancybox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/hover.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/custom-animate.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('frontend/css/jarallax.css') }}">
+    <link href="{{ asset('frontend/css/hover.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/custom-animate.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/css/jarallax.css?ver='.generateRandomString(5).'') }}">
     <link href="{{ asset('frontend/css/style.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
 
     {{-- Custom CSS --}}
     {!! $css ?? '' !!}
     
     <!-- Custom Packsolution -->
-    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/custom.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
     <!-- End Custom Packsolution -->
     
     <!-- rtl css -->
     <link href="{{ asset('frontend/css/rtl.css') }}" rel="stylesheet">
     <!-- Responsive File -->
-    <link href="{{ asset('frontend/css/responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/responsive.css?ver='.generateRandomString(5).'') }}" rel="stylesheet">
 
     <!-- Color css -->
-    <link rel="stylesheet" id="jssDefault" href="{{ asset('frontend/css/colors/color-default.css') }}">
+    <link rel="stylesheet" id="jssDefault" href="{{ asset('frontend/css/colors/color-default.css?ver='.generateRandomString(5).'') }}">
 
     <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" id="fav-shortcut" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
