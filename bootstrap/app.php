@@ -19,17 +19,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'ajax.request'      => AjaxRequest::class,
-            // 'counterStatistik'  => IncrementViewCounter::class
+            'view-counter'  => IncrementViewCounter::class
         ]);
     })
-
-    // ->withMiddleware(function (Middleware $middleware) {
-    //     $middleware->group('web', [
-    //         // load IncrementViewCounter middleware
-    //         'counterStatistik' => IncrementViewCounter::class
-    //     ]);
-    // })
-
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
