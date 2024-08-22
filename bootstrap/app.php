@@ -5,6 +5,7 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AjaxRequest;
+use App\Http\Middleware\IncrementViewCounter;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -17,9 +18,18 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'ajax.request' => AjaxRequest::class
+            'ajax.request'      => AjaxRequest::class,
+            // 'counterStatistik'  => IncrementViewCounter::class
         ]);
     })
+
+    // ->withMiddleware(function (Middleware $middleware) {
+    //     $middleware->group('web', [
+    //         // load IncrementViewCounter middleware
+    //         'counterStatistik' => IncrementViewCounter::class
+    //     ]);
+    // })
+
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
