@@ -44,7 +44,7 @@
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <h3 class="service-nine__title">
-                                            <a href="#">{{ $p->kategori_judul }}</a>
+                                            <a href="javascript:;">{{ $p->kategori_judul }}</a>
                                         </h3>
 
                                         <img src="{{ base_asset("/storage/" . $p->gambar) }}" alt="" class="produk-detail-image-1 d-none">

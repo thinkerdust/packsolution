@@ -31,7 +31,7 @@
             <!--Filter-->
             <div class="filters centered clearfix">
                 <ul class="filter-tabs filter-btns clearfix">
-                    <li class="active filter" data-role="button" data-filter="all">All<sup>[6]</sup></li>
+                    <li class="active filter" data-role="button" data-filter="all">All<sup>[{{ $total }}]</sup></li>
 
                     @foreach ($kategori as $k)
                         <li class="filter" data-role="button" data-filter=".{{ strtolower(str_replace(' ', '', $k->kategori)) }}">{{ $k->kategori }}<sup>[{{ $k->total }}]</sup></li>
@@ -47,7 +47,7 @@
 
                 @foreach ($katalog as $k)
                     <!-- Gallery Item -->
-                    <div class="gallery-item mix all {{ strtolower(str_replace(' ', '', $k->kategori)) }} col-lg-6 col-md-6 col-sm-12">
+                    <div class="gallery-item mix {{ strtolower(str_replace(' ', '', $k->kategori)) }} col-lg-6 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <figure class="image"><img src="{{ asset('storage/'.$k->gambar) }}" alt=""></figure>
                             <a href="{{ asset('storage/'.$k->gambar) }}" class="lightbox-image overlay-box"

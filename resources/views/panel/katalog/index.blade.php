@@ -74,11 +74,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <label>Upload Gambar</label>
                         <label class="cabinet center-block">
                             <figure>
-                                <img src="" class="img-responsive img-thumbnail" id="preview_image" />
+                                <img src="" class="img-responsive img-thumbnail preview_image" id="preview_image_gambar" />
                                 <figcaption>
                                     <ul>
                                         <li>*)Leave blank if you don't want to replace</li>
@@ -87,6 +88,22 @@
                                 </figcaption>
                             </figure>
                             <input type="file" class="item-img file center-block" id="gambar" name="gambar" accept=".png,.jpg,.jpeg" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Ukuran</label>
+                        <label class="cabinet center-block">
+                            <figure>
+                                <img src="" class="img-responsive img-thumbnail preview_image" id="preview_image_gambar_ukuran" />
+                                <figcaption>
+                                    <ul>
+                                        <li>*)Leave blank if you don't want to replace</li>
+                                        <li>*)Max size file 10 MB</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+                            <input type="file" class="item-img file center-block" id="gambar_ukuran" name="gambar_ukuran" accept=".png,.jpg,.jpeg" />
                         </label>
                     </div>
                     
@@ -114,7 +131,7 @@
         margin-top:-30px;
     }
 
-    #preview_image {
+    .preview_image {
         width: 100%;
         height: 380px;
         object-fit: contain;

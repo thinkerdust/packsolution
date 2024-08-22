@@ -75,9 +75,22 @@ class KatalogController extends BaseController
         }
 
         // remove old file
+        $data_katalog = Katalog::where('id', $uid)->first();
+
         if(!empty($uid) && $request->file('gambar')) {
-            $data_katalog = Katalog::where('id', $uid)->first();
             $oldFile = $data_katalog->gambar;
+
+            if(!empty($oldFile)) {
+                if (Storage::disk('public')->exists($oldFile)) {
+                    // Delete the file
+                    Storage::disk('public')->delete($oldFile);
+                }
+            }
+            
+        }
+
+        if(!empty($uid) && $request->file('ukuran')) {
+            $oldFile = $data_katalog->ukuran;
 
             if(!empty($oldFile)) {
                 if (Storage::disk('public')->exists($oldFile)) {
@@ -102,6 +115,23 @@ class KatalogController extends BaseController
             $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
             if ($upload) {
                 $data['gambar'] = $filePath;
+            } 
+        }
+
+        // upload ukuran
+        if($request->file('ukuran')) {
+
+            $file = $request->file('ukuran');
+            $fileName = $file->getClientOriginalName();
+            $fileName = str_replace(' ', '', $fileName);
+
+            // Define a file path
+            $filePath = 'uploads/katalog/ukuran/' . uniqid() . '_' . $fileName;
+
+            // Store the file in the local storage
+            $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
+            if ($upload) {
+                $data['ukuran'] = $filePath;
             } 
         }
 

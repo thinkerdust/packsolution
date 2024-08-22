@@ -111,7 +111,8 @@ class HomeController extends Controller
             'page'      => 'katalog',
             'kategori'  => $kategori,
             'katalog'   => $katalog,
-            'statistik'     => $this->statistik
+            'statistik' => $this->statistik,
+            'total'     => count($katalog)
         ];
 
         return view('frontend.katalog', $data);
