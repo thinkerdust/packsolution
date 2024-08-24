@@ -252,9 +252,11 @@
                                     </div>
                                     <div class="text">Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</div>
                                     <ul class="social-links clearfix">
-                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><span class="fab fa-facebook-square"></span></a></li>
-                                        <li><a href="https://www.instagram.com/packsolution.id/"><span class="fab fa-instagram"></span></a></li>
-                                        <li><a href="https://www.tiktok.com/@packsolution.id"><span class="fab fa-tiktok"></span></a></li>
+                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.instagram.com/packsolution.id/"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
