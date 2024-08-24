@@ -26580,6 +26580,15 @@ img.lazy-image.loaded {
   filter: invert(75%) sepia(0%) saturate(380%) hue-rotate(-50deg) brightness(90%);
 }
 
+#footer-sosmed.invert {
+  width: 16px !important; 
+  filter: invert(25%) sepia(0%) saturate(380%) hue-rotate(-50deg) brightness(90%);
+}
+
 .main-footer .social-links li a:hover #footer-sosmed {
   filter: invert(1) !important;
+}
+
+.main-footer .social-links li a:hover #footer-sosmed.invert {
+  filter: invert(0) !important;
 }
