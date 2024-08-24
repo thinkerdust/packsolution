@@ -44,7 +44,7 @@
                                 <div class="row">
                                     <div class="col-lg-8">
                                         <h3 class="service-nine__title">
-                                            <a href="#">{{ $p->kategori_judul }}</a>
+                                            <a href="javascript:;">{{ $p->kategori_judul }}</a>
                                         </h3>
 
                                         <img src="{{ base_asset("/storage/" . $p->gambar) }}" alt="" class="produk-detail-image-1 d-none">
@@ -52,12 +52,23 @@
                                         <p class="service-nine__text service-nine__text-1 fw-bold">{{ $p->judul }}</p>
                                         <p class="service-nine__text service-nine__text-2">{{ $p->deskripsi }}</p>
                                     
-                                        <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <div class="detail d-flex justify-content-between" style="border-left: 11px solid #CE1717; padding-left: 20px;">
                                             <ul>
-                                                <li>Warna : Full Color</li>
-                                                <li>Ukuran Custom : Ya</li>
-                                                <li>Lamonasi : Glossy/Doff</li>
+                                                <li>Warna : {{ $p->warna }}</li>
+                                                <li>Ukuran Custom : {{ $p->ukuran_custom }}</li>
+                                                <li>Laminasi : {{ $p->laminasi }}</li>
                                             </ul>
+                                            
+                                            {{-- button size chart --}}
+                                            <div class="link-box d-flex align-items-end">
+                                                <figure class="image">
+                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery">
+                                                        <i class="btn-curve"></i>
+                                                        <span class="btn-title">Lihat Ukuran & Harga</span>
+                                                    </a>
+                                                </figure>
+                                            </div>
+
                                         </div>
                                     
                                     </div>

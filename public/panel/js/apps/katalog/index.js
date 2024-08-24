@@ -52,7 +52,7 @@ $('#kategori_produk').select2({
     }
 })
 
-$('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
+$('.preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
 
 const readURL = (input,el) => {
 	if (input.files && input.files[0]) {
@@ -192,7 +192,7 @@ function edit(uid) {
                 $('#deskripsi').val(data.deskripsi);
                 
                 if(data.gambar) {
-                    $('#preview_image').attr('src', 'storage/'+data.logo);
+                    $('#preview_image').attr('src', 'storage/'+data.gambar);
                 }
             }
         },

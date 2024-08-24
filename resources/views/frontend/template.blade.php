@@ -244,7 +244,7 @@
                     <div class="row clearfix">
 
                         <!--Column-->
-                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget logo-widget">
                                 <div class="widget-content">
                                     <div class="logo">
@@ -276,7 +276,7 @@
                         </div> --}}
 
                         <!--Column-->
-                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12 offset-lg-3 offset-0">
+                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget info-widget">
                                 <div class="widget-content">
                                     <h6>Contact</h6>

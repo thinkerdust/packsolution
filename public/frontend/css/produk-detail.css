@@ -1,0 +1,4 @@
+.disabled-link {
+    pointer-events: none; /* Disable click */
+    cursor: default;      /* Change cursor to default */
+}
