@@ -250,13 +250,13 @@
                                     <div class="logo">
                                         <a href="index.html"><img id="fLogo" src="{{ base_asset('/frontend/images/logo-white.png') }}" alt="" /></a>
                                     </div>
-                                    <div class="text">Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</div>
+                                    <div class="text">Percayakan kebutuhan kemasan bisnis Anda kepada kami, dan nikmati layanan unggulan serta kualitas terbaik yang membuat bisnis Anda tampil lebih menonjol dan profesional, Kami hadir untuk memberikan hasil terbaik !</div>
                                     <ul class="social-links clearfix">
-                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ base_asset('/frontend/images/icons/fb.png') }}" id="footer-sosmed" alt=""></a></li>
                                         <li><a href="https://www.instagram.com/packsolution.id/"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ base_asset('/frontend/images/icons/tiktok.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ base_asset('/frontend/images/icons/shopee.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
+                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ base_asset('/frontend/images/icons/tokped.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
