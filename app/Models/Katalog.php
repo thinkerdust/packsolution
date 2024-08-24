@@ -13,7 +13,7 @@ class Katalog extends Model
     protected $table = 'katalog';
 
     public function dataTableKatalog() {
-        $query = DB::table('katalog')->select('id', 'produk_kategori_id', 'judul', 'deskripsi', 'gambar', 'ukuran', 'status');
+        $query = DB::table('katalog')->select('id', 'produk_kategori_id', 'judul', 'deskripsi', 'gambar', 'status');
         return $query;
     }
 
@@ -22,7 +22,7 @@ class Katalog extends Model
         $data = DB::table('katalog as k')
                     ->join('produk_kategori as pk', 'k.produk_kategori_id', '=', 'pk.id')
                     ->where([['k.status', 1], ['pk.status', 1], ['k.id', $id]])
-                    ->select('k.id', 'k.produk_kategori_id', 'k.judul', 'k.status', 'pk.nama as kategori', 'k.gambar', 'k.ukuran', 'k.deskripsi')
+                    ->select('k.id', 'k.produk_kategori_id', 'k.judul', 'k.status', 'pk.nama as kategori', 'k.gambar', 'k.deskripsi')
                     ->first();
 
         return $data;

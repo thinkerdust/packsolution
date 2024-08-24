@@ -94,48 +94,10 @@ $('#gambar').on('change', function() {
 
             // Clear the value
             $('#gambar').val('');
-            $('#preview_image_gambar').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
+            $('#preview_image').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
             $('#gambar').next('label').html('Choose file');
         }else{
-        	readURL(this,'preview_image_gambar');
-        }
-    }
-
-});
-
-$('#gambar_ukuran').on('change', function() {
-
-    // The recommended plugin to animate custom file input: bs-custom-file-input, is what bootstrap using currently
-    // bsCustomFileInput.init();
-
-    // Set maximum filesize
-    var maxSizeMb = 10;
-
-    // Get the file by using JQuery's selector
-    var file = $('#gambar_ukuran')[0].files[0];
-
-    // Make sure that a file has been selected before attempting to get its size.
-    if(file !== undefined) {
-
-        // Get the filesize
-        var totalSize = file.size;
-
-        // Convert bytes into MB
-        var totalSizeMb = totalSize  / Math.pow(1024,2);
-
-        // Check to see if it is too large.
-        if(totalSizeMb > maxSizeMb) {
-
-            // Create an error message
-            var errorMsg = 'File too large. Maximum file size is ' + maxSizeMb + ' MB. Selected file is ' + totalSizeMb.toFixed(2) + ' MB';
-            toastr.warning(errorMsg);
-
-            // Clear the value
-            $('#gambar_ukuran').val('');
-            $('#preview_image_gambar_ukuran').attr('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.png");
-            $('#gambar_ukuran').next('label').html('Choose file');
-        }else{
-        	readURL(this,'preview_image_gambar_ukuran');
+        	readURL(this,'preview_image');
         }
     }
 
@@ -230,11 +192,7 @@ function edit(uid) {
                 $('#deskripsi').val(data.deskripsi);
                 
                 if(data.gambar) {
-                    $('#preview_image_gambar').attr('src', 'storage/'+data.logo);
-                }
-
-                if(data.ukuran) {
-                    $('#preview_image_gambar_ukuran').attr('src', 'storage/'+data.logo);
+                    $('#preview_image').attr('src', 'storage/'+data.gambar);
                 }
             }
         },

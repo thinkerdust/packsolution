@@ -64,7 +64,7 @@ class HomeController extends Controller
             'js'        => '<script src="'.asset('frontend/js/produk.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk',
             'kategori'  => $kategori,
-            'statistik'     => $this->statistik
+            'statistik' => $this->statistik
         ];
 
         return view('frontend.produk', $data);
@@ -75,14 +75,30 @@ class HomeController extends Controller
         // get data kategori
         // query kategori
         $kategori   = DB::table('produk_kategori')->where('id', $idKategori)->first();
-        $produk     = DB::table('produk')->where('produk_kategori_id', $idKategori)->where('status', 1)->orderBy('id', 'asc')->get();
+        $produk = DB::table('produk')
+                    ->select('produk.*',
+                        DB::raw('CASE 
+                                    WHEN produk.custom = 1 THEN "Ya" 
+                                    ELSE "Tidak" 
+                                END as ukuran_custom'),
+                        DB::raw('CASE 
+                                    WHEN produk.laminasi = 1 THEN "Glossy" 
+                                    WHEN produk.laminasi = 2 THEN "Doff" 
+                                    WHEN produk.laminasi = 3 THEN "Glossy/Doff" 
+                                    ELSE "Tidak ada laminasi"
+                                END as laminasi')
+                    )
+                    ->where('produk_kategori_id', $idKategori)
+                    ->where('status', 1)
+                    ->orderBy('id', 'asc')
+                    ->get();
 
         $data = [
             'js'        => '<script src="'.asset('frontend/js/produk-detail.js?ver='.generateRandomString(5).'').'"></script>',
             'page'      => 'produk',
             'kategori'  => $kategori,
             'produk'    => $produk,
-            'statistik'     => $this->statistik
+            'statistik' => $this->statistik
         ];
 
         return view('frontend.produk-detail', $data);

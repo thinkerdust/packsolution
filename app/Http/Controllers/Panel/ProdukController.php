@@ -56,6 +56,9 @@ class ProdukController extends BaseController
             'kategori_judul'    => 'required',
             'judul'             => 'required',
             'deskripsi'         => 'required',
+            'warna'             => 'required',
+            'ukuran_custom'     => 'required',
+            'laminasi'          => 'required'
         ]);
 
         if($validator->stopOnFirstFailure()->fails()){
@@ -66,7 +69,10 @@ class ProdukController extends BaseController
             'produk_kategori_id'    => $request->kategori_produk,
             'kategori_judul'        => $request->kategori_judul,
             'judul'                 => $request->judul,
-            'deskripsi'             => $request->deskripsi
+            'deskripsi'             => $request->deskripsi,
+            'warna'                 => $request->warna,
+            'custom'                => $request->ukuran_custom,
+            'laminasi'              => $request->laminasi
         ];
 
         if(!empty($uid)) {
@@ -75,8 +81,8 @@ class ProdukController extends BaseController
             $data['created_at'] = Carbon::now();
         }
 
-        // remove old file
-        if(!empty($uid) && $request->file('gambar')) {
+        // remove old file gambar
+        if(!empty($uid) && $request->file('gambar') ) {
             $data_produk = Produk::where('id', $uid)->first();
             $oldFile = $data_produk->gambar;
 
@@ -86,7 +92,6 @@ class ProdukController extends BaseController
                     Storage::disk('public')->delete($oldFile);
                 }
             }
-            
         }
 
         // upload gambar
@@ -103,6 +108,36 @@ class ProdukController extends BaseController
             $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
             if ($upload) {
                 $data['gambar'] = $filePath;
+            } 
+        }
+
+        // remove old file ukuran
+        if(!empty($uid) && $request->file('gambar_ukuran') ) {
+            $data_produk = Produk::where('id', $uid)->first();
+            $oldFile = $data_produk->ukuran;
+
+            if(!empty($oldFile)) {
+                if (Storage::disk('public')->exists($oldFile)) {
+                    // Delete the file
+                    Storage::disk('public')->delete($oldFile);
+                }
+            }
+        }
+
+        // upload ukuran
+        if($request->file('gambar_ukuran')) {
+
+            $file = $request->file('gambar_ukuran');
+            $fileName = $file->getClientOriginalName();
+            $fileName = str_replace(' ', '', $fileName);
+
+            // Define a file path
+            $filePath = 'uploads/produk/ukuran/' . uniqid() . '_' . $fileName;
+
+            // Store the file in the local storage
+            $upload = Storage::disk('public')->put($filePath, file_get_contents($file));
+            if ($upload) {
+                $data['ukuran'] = $filePath;
             } 
         }
 

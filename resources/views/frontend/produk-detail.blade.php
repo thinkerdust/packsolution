@@ -52,12 +52,23 @@
                                         <p class="service-nine__text service-nine__text-1 fw-bold">{{ $p->judul }}</p>
                                         <p class="service-nine__text service-nine__text-2">{{ $p->deskripsi }}</p>
                                     
-                                        <div class="detail" style="border-left: 11px solid #CE1717; padding-left: 20px;">
+                                        <div class="detail d-flex justify-content-between" style="border-left: 11px solid #CE1717; padding-left: 20px;">
                                             <ul>
-                                                <li>Warna : Full Color</li>
-                                                <li>Ukuran Custom : Ya</li>
-                                                <li>Lamonasi : Glossy/Doff</li>
+                                                <li>Warna : {{ $p->warna }}</li>
+                                                <li>Ukuran Custom : {{ $p->ukuran_custom }}</li>
+                                                <li>Laminasi : {{ $p->laminasi }}</li>
                                             </ul>
+                                            
+                                            {{-- button size chart --}}
+                                            <div class="link-box d-flex align-items-end">
+                                                <figure class="image">
+                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery">
+                                                        <i class="btn-curve"></i>
+                                                        <span class="btn-title">Lihat Ukuran & Harga</span>
+                                                    </a>
+                                                </figure>
+                                            </div>
+
                                         </div>
                                     
                                     </div>

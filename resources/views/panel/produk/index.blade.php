@@ -78,11 +78,42 @@
                             <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" required></textarea>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label class="form-label">Warna</label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" name="warna" id="warna" required placeholder="Full Color">
+                            </div>
+                        </div>
+    
+                        <div class="form-group col-md-4">
+                            <label class="form-label">Ukuran Custom</label>
+                            <div class="form-control-wrap">
+                                <select class="form-control" name="ukuran_custom" id="ukuran_custom" required>
+                                    <option value="1">Ya</option>
+                                    <option value="0">Tidak</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="form-group col-md-4">
+                            <label class="form-label">Laminasi</label>
+                            <div class="form-control-wrap">
+                                <select class="form-control" name="laminasi" id="laminasi" required>
+                                    <option value="1">Glossy</option>
+                                    <option value="2">Doff</option>
+                                    <option value="3">Glossy/Doff</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label>Upload Gambar</label>
                         <label class="cabinet center-block">
                             <figure>
-                                <img src="" class="img-responsive img-thumbnail" id="preview_image" />
+                                <img src="" class="img-responsive img-thumbnail preview_image" id="preview_image_gambar" />
                                 <figcaption>
                                     <ul>
                                         <li>*)Leave blank if you don't want to replace</li>
@@ -91,6 +122,22 @@
                                 </figcaption>
                             </figure>
                             <input type="file" class="item-img file center-block" id="gambar" name="gambar" accept=".png,.jpg,.jpeg" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Upload Ukuran Size Chart</label>
+                        <label class="cabinet center-block">
+                            <figure>
+                                <img src="" class="img-responsive img-thumbnail preview_image" id="preview_image_gambar_ukuran" />
+                                <figcaption>
+                                    <ul>
+                                        <li>*)Leave blank if you don't want to replace</li>
+                                        <li>*)Max size file 10 MB</li>
+                                    </ul>
+                                </figcaption>
+                            </figure>
+                            <input type="file" class="item-img file center-block" id="gambar_ukuran" name="gambar_ukuran" accept=".png,.jpg,.jpeg" />
                         </label>
                     </div>
                     
@@ -118,7 +165,7 @@
         margin-top:-30px;
     }
 
-    #preview_image {
+    .preview_image {
         width: 100%;
         height: 380px;
         object-fit: contain;
