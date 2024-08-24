@@ -66,6 +66,40 @@
   .main-header .other-links .link-box {
     padding: 27px 0px !important;
   }
+
+  .section-alur {
+    padding: 0px;
+  }
+
+  .jarallax .sec-title h2 {
+    font-size: 80px;
+  }
+
+  .fact-counter .column .inner .counter-title {
+    position: relative;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: var(--thm-font);
+    text-transform: uppercase;
+    margin-top: 36px;
+  }
+
+  .icon-alur {
+    width: 130px;
+    height: auto;
+  }
+
+  .why-section .sec-title h2 {
+    font-size: 100px;
+  }
+
+  .why-section .image-column img {
+    width: 50%;
+    display: flex;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 1340px) {

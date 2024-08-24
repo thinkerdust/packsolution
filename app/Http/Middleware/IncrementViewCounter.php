@@ -16,11 +16,7 @@ class IncrementViewCounter
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Increment the view counter
-        DB::table('counter')->insert([
-            'view' => 1,
-            'tanggal' => now(),
-        ]);
+        DB::table('counter')->where(['tanggal' => date('Y-m-d')])->increment('view', 1);
 
         return $next($request);
     }
