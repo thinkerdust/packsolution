@@ -787,7 +787,11 @@
   }
 
   .about-section .text-column .sec-title {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+  }
+
+  .about-section .text-column .text p {
+    text-align: justify;
   }
 
   .about-section .text-column .text .since {
