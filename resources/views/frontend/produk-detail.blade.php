@@ -58,11 +58,11 @@
                                                 <li>Ukuran Custom : {{ $p->ukuran_custom }}</li>
                                                 <li>Laminasi : {{ $p->laminasi }}</li>
                                             </ul>
-                                            
+
                                             {{-- button size chart --}}
                                             <div class="link-box d-flex align-items-end">
                                                 <figure class="image">
-                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery">
+                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery" style="margin-bottom: -11px;">
                                                         <i class="btn-curve"></i>
                                                         <span class="btn-title">Lihat Ukuran & Harga</span>
                                                     </a>

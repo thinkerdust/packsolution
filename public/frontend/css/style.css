@@ -26574,3 +26574,12 @@ img.lazy-image.loaded {
   width: 190px; 
   height: auto;
 }
+
+#footer-sosmed {
+  width: 16px; 
+  filter: invert(75%) sepia(0%) saturate(380%) hue-rotate(-50deg) brightness(90%);
+}
+
+.main-footer .social-links li a:hover #footer-sosmed {
+  filter: invert(1) !important;
+}
