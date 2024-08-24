@@ -210,12 +210,12 @@
                     <p>Percayakan kebutuhan kemasan Anda kepada kami dan rasakan perbedaannya !</p>
                     {{-- <p><a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a> <br> <a href="tel:888-999-0000">888
                             999 0000</a></p> --}}
-                    <div class="side-menu__social">
+                    {{-- <div class="side-menu__social">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
+                    </div> --}}
                 </div><!-- /.side-menu__content -->
             </div><!-- /.side-menu__block-inner -->
         </div><!-- /.side-menu__block -->
@@ -247,16 +247,16 @@
                         <div class="column col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget logo-widget">
                                 <div class="widget-content">
-                                    <div class="logo">
-                                        <a href="index.html"><img id="fLogo" src="{{ base_asset('/frontend/images/logo-white.png') }}" alt="" /></a>
+                                    <div class="logo text-center text-md-start">
+                                        <a href="index.html"><img id="fLogo" src="{{ asset('/frontend/images/logo-white.png') }}" alt="" /></a>
                                     </div>
-                                    <div class="text">Percayakan kebutuhan kemasan bisnis Anda kepada kami, dan nikmati layanan unggulan serta kualitas terbaik yang membuat bisnis Anda tampil lebih menonjol dan profesional, Kami hadir untuk memberikan hasil terbaik !</div>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ base_asset('/frontend/images/icons/fb.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.instagram.com/packsolution.id/"><img src="{{ base_asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ base_asset('/frontend/images/icons/tiktok.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ base_asset('/frontend/images/icons/shopee.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
-                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ base_asset('/frontend/images/icons/tokped.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
+                                    <div class="text text-md-start">Percayakan kebutuhan kemasan bisnis Anda kepada kami, dan nikmati layanan unggulan serta kualitas terbaik yang membuat bisnis Anda tampil lebih menonjol dan profesional, Kami hadir untuk memberikan hasil terbaik !</div>
+                                    <ul class="social-links clearfix text-center text-md-start">
+                                        <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ asset('/frontend/images/icons/fb.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.instagram.com/packsolution.id/"><img src="{{ asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ asset('/frontend/images/icons/tiktok.png') }}" id="footer-sosmed" alt=""></a></li>
+                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ asset('/frontend/images/icons/shopee.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
+                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ asset('/frontend/images/icons/tokped.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -280,9 +280,9 @@
                         <!--Column-->
                         <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget info-widget">
-                                <div class="widget-content">
+                                <div class="widget-content text-center text-md-start">
                                     <h6>Contact</h6>
-                                    <ul class="contact-info">
+                                    <ul class="contact-info text-start">
                                         <li class="address"><span class="icon flaticon-pin-1"></span> Jl agus salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah 57147</li>
                                         <li><span class="icon flaticon-call"></span><a href="https://wa.me/081952727888">081952727888</a></li>
                                         <li><span class="icon flaticon-insta"></span><a
@@ -295,18 +295,18 @@
                         <!--Column-->
                         <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
                             <div class="footer-widget newsletter-widget">
-                                <div class="widget-content">
+                                <div class="widget-content text-center text-md-start">
                                     <h6>Pengunjung</h6>
 
-                                    <div class="row clearfix">
-                                        <div class="col-md-6 col-6">
+                                    <div class="row clearfix text-center text-md-start justify-content-center justify-content-md-start">
+                                        <div class="col-md-6 col-3 text-start">
                                             <ul>
                                                 <li><span style="color: #999b9f" href="#">Harian</span></li>
                                                 <li><span style="color: #999b9f" href="#">Bulanan</span></li>
                                                 <li><span style="color: #999b9f" href="#">Tahunan</span></li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6 col-6">
+                                        <div class="col-md-6 col-3">
                                             <ul>
                                                 <li><span style="color: #999b9f" href="#">{{ $statistik->counterHari }}</span></li>
                                                 <li><span style="color: #999b9f" href="#">{{ $statistik->counterBulan }}</span></li>
