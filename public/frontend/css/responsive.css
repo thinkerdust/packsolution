@@ -52,7 +52,7 @@
   }
 
   .main-header .header-upper .logo-box {
-    padding: 33px 0px !important;
+    padding: 25px 0px !important;
   }
 
   .main-header .header-upper .logo-box .logo img {
@@ -60,11 +60,11 @@
   }
 
   .main-menu .navigation>li {
-    padding: 23px 0px !important;
+    padding: 15px 0px !important;
   }
 
   .main-header .other-links .link-box {
-    padding: 27px 0px !important;
+    padding: 15px 0px !important;
   }
 
   .section-alur {
@@ -75,9 +75,14 @@
     font-size: 80px;
   }
 
+  .icon-alur {
+    width: 105px;
+    height: auto;
+  }
+
   .fact-counter .column .inner .counter-title {
     position: relative;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 400;
     color: #fff;
     letter-spacing: 1px;
@@ -86,19 +91,146 @@
     margin-top: 36px;
   }
 
-  .icon-alur {
-    width: 130px;
-    height: auto;
-  }
-
   .why-section .sec-title h2 {
-    font-size: 100px;
+    font-size: 80px;
   }
 
   .why-section .image-column img {
-    width: 50%;
+    width: 45%;
     display: flex;
     margin: auto;
+  }
+
+  .why-section .sec-title h4 {
+    font-size: 42px !important;
+  }
+
+  .why-section .sec-title .lower-text {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: var(--thm-text);
+    font-family: var(--font-montserrat);
+    padding: 0px;
+  }
+
+  .banner-one-page .banner-carousel .content-box h1 {
+    font-size: 80px;
+  }
+
+  .banner-carousel .content-box .sub-title {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+    transform: translateY(80px);
+    font-family: var(--thm-font);
+  }
+
+  .btn-style-one .btn-title {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding: 15px 40px 12px;
+    z-index: 1;
+  }
+
+  .sec-title h2 {
+    position: relative;
+    display: block;
+    font-size: 80px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    color: var(--thm-black);
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+
+  .we-do-section .sec-title h2 {
+    position: relative;
+    display: block;
+    font-size: 115px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    color: var(--thm-black);
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+
+  .call-to-section h2 {
+    position: relative;
+    float: left;
+    display: block;
+    font-size: 50px;
+    line-height: 0.85em;
+    text-transform: uppercase;
+    color: var(--thm-black);
+    font-weight: 500;
+    margin: 0px 0px 25px;
+    z-index: 3;
+  }
+
+  .about-section .sec-title h2 {
+    font-size: 60px;
+  }
+
+  .services-section-three__one-page {
+    position: relative;
+    padding: 90px 0px;
+    background-color: var(--thm-black);
+    background-image: url(../images/background/contact-bg-1-1.png);
+    background-size: cover;
+    color: #999b9f;
+  }
+
+  .page-banner h1 {
+    position: relative;
+    font-size: 80px;
+    color: #ffffff;
+    line-height: 0.9em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .service-nine__content {
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid #D3D3D3;
+    border-right: 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    min-height: 450px;
+  }
+
+  .service-nine__title {
+    margin: 0;
+    font-size: 60px;
+    color: var(--thm-black);
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .service-nine__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--thm-text);
+    margin-bottom: 20px;
   }
 }
 
