@@ -4,7 +4,7 @@
 
 <!-- Banner Section -->
 <section class="page-banner">
-    <div class="image-layer" style=""></div>
+    <div class="image-layer" style="background-image: url('/frontend/images/Foto Hero Produk.jpg')"></div>
     <div class="shape-1"></div>
     <div class="shape-2"></div>
     <div class="banner-inner">
@@ -42,7 +42,7 @@
                                 <div class="shape-2"></div>
 
                                 <div class="row">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8 produk-card">
                                         <h3 class="service-nine__title">
                                             <a href="javascript:;">{{ $p->kategori_judul }}</a>
                                         </h3>
@@ -52,17 +52,17 @@
                                         <p class="service-nine__text service-nine__text-1 fw-bold">{{ $p->judul }}</p>
                                         <p class="service-nine__text service-nine__text-2">{{ $p->deskripsi }}</p>
                                     
-                                        <div class="detail d-flex justify-content-between" style="border-left: 11px solid #CE1717; padding-left: 20px;">
-                                            <ul>
+                                        <div class="row detail d-flex justify-content-between ms-0" style="border-left: 11px solid #CE1717; padding-left: 10px;">
+                                            <ul class="produk-detail col-md-6">
                                                 <li>Warna : {{ $p->warna }}</li>
                                                 <li>Ukuran Custom : {{ $p->ukuran_custom }}</li>
                                                 <li>Laminasi : {{ $p->laminasi }}</li>
                                             </ul>
-                                            
+
                                             {{-- button size chart --}}
-                                            <div class="link-box d-flex align-items-end">
+                                            <div class="col-md-6 link-box d-flex align-items-end mt-3 mt-md-0">
                                                 <figure class="image">
-                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery">
+                                                    <a class="theme-btn btn-style-one lightbox-image overlay-box" href="{{ base_asset('/storage/' . $p->ukuran) }}" data-fancybox="gallery" style="margin-bottom: -11px;">
                                                         <i class="btn-curve"></i>
                                                         <span class="btn-title">Lihat Ukuran & Harga</span>
                                                     </a>

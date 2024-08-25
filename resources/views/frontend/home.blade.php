@@ -42,7 +42,7 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Image Column-->
-                <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12 d-none d-md-block">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
                                 src="{{ asset('frontend/images/about/about-1.png') }}" alt=""></div>
@@ -61,16 +61,16 @@
                         <div class="text">
                             <p>Packsolution.id hadir sebagai solusi terpercaya untuk semua kebutuhan kemasan Anda. Dengan berbagai pilihan material berkualitas tinggi dan desain yang inovatif, kami siap membantu Anda menciptakan kemasan yang tidak hanya melindungi produk, tetapi juga memperkuat citra merek Anda.</p>
                         </div>
-                        <div class="text clearfix">
-                            <ul>
+                        <div class="text clearfix d-flex justify-content-between">
+                            <ul class="col-8 ">
                                 <li>Kualitas Terbaik.</li>
                                 <li>Produksi Cepat.</li>
                                 <li>Pilihan Desain Tidak Terbatas.</li>
                                 <li>Food Grade.</li>
                             </ul>
-                            <div class="since"><span class="txt">Sejak <br>2020</span></div>
+                            <div class="since col-3"><span class="txt">Sejak <br>2020</span></div>
                         </div>
-                        <div class="link-box">
+                        <div class="link-box text-center text-md-start">
                             <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
                                 <i class="btn-curve"></i>
                                 <span class="btn-title">Pesan Sekarang</span>
@@ -94,7 +94,7 @@
                     @foreach ($kategori as $k)
                         <!--Service Block-->
                         <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                            <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="inner-box wow fadeInUp text-center" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="bottom-curve"></div>
                                 <div class="icon-box"><img src="{{ asset('storage') . '/' . $k->gambar }}" alt=""></div>
                                 <h5><a href="{{ url('produk-detail/'.$k->id)}}">{{ $k->nama }}</a></h5>
