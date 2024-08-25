@@ -42,7 +42,7 @@
         <div class="auto-container">
             <div class="row clearfix">
                 <!--Image Column-->
-                <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12 d-none d-md-block">
                     <div class="inner">
                         <div class="image-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img
                                 src="{{ asset('frontend/images/about/about-1.png') }}" alt=""></div>
@@ -62,7 +62,7 @@
                             <p>Packsolution.id hadir sebagai solusi terpercaya untuk semua kebutuhan kemasan Anda. Dengan berbagai pilihan material berkualitas tinggi dan desain yang inovatif, kami siap membantu Anda menciptakan kemasan yang tidak hanya melindungi produk, tetapi juga memperkuat citra merek Anda.</p>
                         </div>
                         <div class="text clearfix d-flex justify-content-between">
-                            <ul class="col-8">
+                            <ul class="col-8 ">
                                 <li>Kualitas Terbaik.</li>
                                 <li>Produksi Cepat.</li>
                                 <li>Pilihan Desain Tidak Terbatas.</li>

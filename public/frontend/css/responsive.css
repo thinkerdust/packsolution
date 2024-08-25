@@ -765,7 +765,7 @@
   }
 
   .banner-carousel .content-box .sub-title {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 0px;
   }
 
@@ -778,8 +778,17 @@
     margin-top: 20px;
   }
 
+  .icon.flaticon-menu-2 {
+    color: #fff;
+  }
+  
+  .nav-white .icon.flaticon-menu-2 {
+    color: #111;
+  }
+
   .about-section {
     padding-top: 50px;
+    padding-bottom: 10px;
   }
 
   .about-section .sec-title h2 {
@@ -802,6 +811,10 @@
     border: none;
   }
 
+  .about-section .text-column .text {
+    font-size: 15px;
+  }
+
   .why-section {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -818,7 +831,7 @@
   }
 
   .why-section .sec-title .lower-text {
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
   }
 
@@ -866,8 +879,16 @@
   }
 
   .faqs-section .sec-title .lower-text {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
+  }
+
+  .accordion-box .block .acc-btn {
+    font-size: 18px;
+  }
+
+  .accordion-box .block .content .text {
+    font-size: 15px;
   }
 
   .main-footer .widgets-section {
@@ -875,9 +896,63 @@
     padding-bottom: 30px;
   }
 
+  .main-footer h6 {
+    font-size: 24px;
+  }
+
   .main-footer .logo-widget .text {
     text-align: justify;
+    font-size: 15px;
   }
+
+  .footer-text {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+
+  .contact-section h3 {
+    font-size: 42px;
+  }
+
+  /* produk */
+  .service-block-two .inner-box {
+    text-align: center;
+  }
+
+  .service-block-two .text {
+    padding-top: 10px;
+  }
+
+  .service-nine {
+    padding-top: 30px;
+  }
+
+  .service-nine__title a {
+    font-size: 42px;
+  }
+
+  .service-nine__text-1 {
+    font-size: 18x;
+    margin-top: -70px;
+    text-align: center;
+  }
+
+  .service-nine__text-2 {
+    margin-top: 0;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .produk-card .produk-detail {
+    font-size: 15px;
+  }
+
+  .service-nine__content {
+    border: 2px solid #D3D3D3 !important;
+    padding: 20px 15px 50px 15px !important;
+    border-radius: 15px;
+  }
+  /* end produk */
 }
 
 @media only screen and (max-width: 767px) {
@@ -1482,11 +1557,6 @@
     margin-top: 10px;
   }
 
-  .service-nine__content {
-    border: 2px solid #D3D3D3 !important;
-    padding: 20px 15px 50px 15px !important;
-  }
-
   .service-nine__title {
     text-align: center;
     margin-top: 0;
@@ -1494,33 +1564,16 @@
     margin-bottom: 30px;
   }
 
-  .service-nine__title a {
-    font-size: 50px;
-  }
-
   .produk-detail-image-1 {
     display: block !important;
-    width: 80%;
+    width: 100%;
     text-align: center;
     margin: auto;
+    margin-top: -50px;
   }
    
   .produk-detail-image-2 {
     display: none;
-  }
-
-  .service-nine__text-1 {
-    font-size: 16px;
-    margin-top: 30px;
-    text-align: center;
-  }
-  .service-nine__text-2 {
-    margin-top: 0;
-    font-size: 16px;
-  }
-
-  .footer-text {
-    font-size: 16px !important;
   }
 }
 

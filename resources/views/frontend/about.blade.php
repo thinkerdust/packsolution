@@ -28,7 +28,7 @@
     <div class="auto-container">
         <div class="footer-text">{!! $about->deskripsi !!}</div>
 
-        <h3>Lokasi Kami</h3>
+        <h3 class="mt-5 m-md-0">Lokasi Kami</h3>
         <div class="footer-text">Jl agus salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah 57147</div>
         <div class="map-box">
             <iframe class="map-iframe"
