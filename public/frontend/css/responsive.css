@@ -905,6 +905,10 @@
     font-size: 15px;
   }
 
+  .main-footer .info-widget ul li.address {
+     margin-bottom: 8px;
+  }
+
   .footer-text {
     margin-bottom: 30px;
     font-size: 15px;
