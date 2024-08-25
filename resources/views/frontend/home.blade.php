@@ -253,8 +253,7 @@
 
                                 <!--Block-->
                                 <li class="accordion block">
-                                    <div class="acc-btn"><span class="count">2.</span> Informasi Produk
-                                    </div>
+                                    <div class="acc-btn"><span class="count">2.</span> Informasi Produk</div>
                                     <div class="acc-content">
                                         <div class="content">
                                             <div class="text">
@@ -266,8 +265,7 @@
 
                                 <!--Block-->
                                 <li class="accordion block">
-                                    <div class="acc-btn"><span class="count">3.</span> Membentuk Persepsi
-                                        goals</div>
+                                    <div class="acc-btn"><span class="count">3.</span> Membentuk Persepsi</div>
                                     <div class="acc-content">
                                         <div class="content">
                                             <div class="text">
@@ -279,8 +277,7 @@
 
                                 <!--Block-->
                                 <li class="accordion block">
-                                    <div class="acc-btn"><span class="count">3.</span> Perlindungan Produk
-                                        goals</div>
+                                    <div class="acc-btn"><span class="count">3.</span> Perlindungan Produk</div>
                                     <div class="acc-content">
                                         <div class="content">
                                             <div class="text">
