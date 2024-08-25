@@ -36,8 +36,7 @@
     <!-- Color css -->
     <link rel="stylesheet" id="jssDefault" href="{{ asset('frontend/css/colors/color-default.css?ver='.generateRandomString(5).'') }}">
 
-    <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" id="fav-shortcut" type="image/x-icon">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/x-icon">
 
     <!-- Responsive Settings -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

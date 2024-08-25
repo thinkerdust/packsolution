@@ -10,7 +10,7 @@
     <div class="banner-inner">
         <div class="auto-container">
             <div class="inner-container clearfix">
-                <h1>{{ strtoupper($kategori->nama) }}</h1>
+                <h1>{{ $kategori ? strtoupper($kategori->nama) : '' }}</h1>
                 <div class="page-nav">
                     <ul class="bread-crumb clearfix">
                         <li><a href="{{ route('/') }}">Home</a></li>
