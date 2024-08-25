@@ -311,7 +311,7 @@
                     <div class="row clearfix d-flex justify-content-center">
 
                         <!--Column-->
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box">
@@ -324,7 +324,7 @@
                         </div>
 
                         <!--Column-->
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box alternate">
@@ -337,7 +337,7 @@
                         </div>
 
                         <!--Column-->
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box">
@@ -349,7 +349,7 @@
                             </div>
                         </div>
 
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box">
@@ -361,7 +361,7 @@
                             </div>
                         </div>
 
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box">
@@ -373,7 +373,7 @@
                             </div>
                         </div>
 
-                        <div class="column counter-column col-lg-2 col-md-6 col-4">
+                        <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
                                     {{-- <div class="count-outer count-box">

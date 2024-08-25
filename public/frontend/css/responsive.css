@@ -427,7 +427,7 @@
   .about-section-two,
   .sponsors-section-two,
   .sidebar-page-container {
-    padding: 90px 0px 60px;
+    padding: 90px 20px 60px;
   }
 
   .live-section,
@@ -460,7 +460,7 @@
 
   .team-section,
   .contact-section {
-    padding: 90px 0px 60px;
+    padding: 90px 20px 60px;
   }
 
   .team-section.no-padd-top {
@@ -476,6 +476,12 @@
     padding: 90px 0px 70px;
   }
 
+  .faqs-section {
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .parallax-section,
   .testimonials-section,
   .error-section {
@@ -489,10 +495,12 @@
   .services-section-three,
   .testimonials-page {
     padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .sponsors-section {
-    padding: 70px 0px;
+    padding: 70px 20px;
   }
 
   .call-to-section .inner {
@@ -524,6 +532,10 @@
 
   .fluid-section .column .inner {
     padding: 90px 20px;
+  }
+
+  .section-alur {
+    padding: 0px 20px;
   }
 
   /* .about-section .text-column .text ul {
@@ -709,6 +721,11 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .main-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .main-footer__demo .footer-widget h3 {
     font-size: 55px;
   }
@@ -787,8 +804,7 @@
   }
 
   .about-section {
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding: 50px 20px 10px;
   }
 
   .about-section .sec-title h2 {
@@ -816,8 +832,7 @@
   }
 
   .why-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 20px;
   }
 
   .why-section .sec-title h2 {
@@ -851,6 +866,8 @@
 
   .we-do-section {
     padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .we-do-section .sec-title {
@@ -867,7 +884,8 @@
   }
 
   .facts-section, .facts-section.alternate {
-    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .fact-counter .column .inner .counter-title {
@@ -929,6 +947,8 @@
 
   .service-nine {
     padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .service-nine__title a {
@@ -1620,6 +1640,7 @@
   .call-to-section h2,
   .call-to-section-two h2 {
     font-size: 32px;
+    color: #fdeaea;
   }
 
   .why-us-section .left-col .image-box:before {
