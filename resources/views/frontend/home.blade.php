@@ -473,7 +473,7 @@
                 <div class="testimonials-carousel owl-theme owl-carousel">
 
                     @foreach ($customer as $c)     
-                        @if ($c->deskripsi == null || $c->deskripsi == '' || !empty($c->deskripsi))
+                        @if ($c->deskripsi == null || $c->deskripsi == '' || empty($c->deskripsi))
                             @continue
                         @endif                   
                         <div class="testi-block">
