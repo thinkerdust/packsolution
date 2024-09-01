@@ -71,7 +71,7 @@
                             <div class="since col-3"><span class="txt">Sejak <br>2020</span></div>
                         </div>
                         <div class="link-box text-center text-md-start">
-                            <a class="theme-btn btn-style-one" href="https://wa.me/081952727888">
+                            <a class="theme-btn btn-style-one" href="https://wa.me/6281952727888?text=Halo%20Packsolution.id,%20saya%20ingin%20order%20kemasan%20untuk%20produk%20saya">
                                 <i class="btn-curve"></i>
                                 <span class="btn-title">Pesan Sekarang</span>
                             </a>
@@ -446,7 +446,7 @@
             <div class="auto-container">
 
                 <div class="sec-title centered">
-                    <h2>Customer Kami</h2>
+                    <h2>Customer</h2>
                 </div>
 
                 <!--Sponsors Carousel-->
@@ -464,7 +464,7 @@
     </section>
 
     <!--Testimonials Section-->
-    <section class="testimonials-section" id="testimonials">
+    {{-- <section class="testimonials-section" id="testimonials">
         <div class="auto-container">
             <div class="sec-title">
                 <h2>Customer feedbacks<span class="dot">.</span></h2>
@@ -488,7 +488,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!--Faqs Section-->
     <section class="faqs-section">
