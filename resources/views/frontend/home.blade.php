@@ -635,7 +635,7 @@
                 <div class="shape-2 wow fadeInDown" data-wow-delay="0ms" data-wow-duration="1500ms"></div>
                 <h2>HUBUNGI KAMI & KONSULTASIKAN <br> PRODUKMU SEKARANG !</h2>
                 <div class="link-box">
-                    <a class="theme-btn btn-style-two" href="https://wa.me/081952727888">
+                    <a class="theme-btn btn-style-two" href="https://wa.me/6281952727888?text=Halo%20Packsolution.id,%20saya%20ingin%20order%20kemasan%20untuk%20produk%20saya">
                         <i class="btn-curve"></i>
                         <span class="btn-title">Hubungi Kami</span>
                     </a>

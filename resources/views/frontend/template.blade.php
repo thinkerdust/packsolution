@@ -174,7 +174,7 @@
                         </div> --}}
                         <div class="link-box">
                             <div class="call-us">
-                                <a class="link" href="https://wa.me/081952727888">
+                                <a class="link" href="https://wa.me/6281952727888?text=Halo%20Packsolution.id,%20saya%20ingin%20order%20kemasan%20untuk%20produk%20saya">
                                     <span class="icon"></span>
                                     <span class="sub-text">Hubungi Kami</span>
                                     <span class="number">0819 5272 7888</span>
@@ -259,8 +259,8 @@
                                         <li><a href="https://web.facebook.com/packsolution.id/?_rdc=1&_rdr"><img src="{{ asset('/frontend/images/icons/fb.png') }}" id="footer-sosmed" alt=""></a></li>
                                         <li><a href="https://www.instagram.com/packsolution.id/"><img src="{{ asset('/frontend/images/icons/ig.png') }}" id="footer-sosmed" alt=""></a></li>
                                         <li><a href="https://www.tiktok.com/@packsolution.id"><img src="{{ asset('/frontend/images/icons/tiktok.png') }}" id="footer-sosmed" alt=""></a></li>
-                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ asset('/frontend/images/icons/shopee.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
-                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ asset('/frontend/images/icons/tokped.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
+                                        <li><a href="https://shopee.co.id/packsolution.id"><img src="{{ asset('/frontend/images/icons/shopee.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
+                                        <li><a href="https://www.tokopedia.com/packsolution"><img src="{{ asset('/frontend/images/icons/tokped.png') }}" id="footer-sosmed" class="invert" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -290,7 +290,7 @@
                                         <li class="address"><span class="icon flaticon-pin-1"></span> Jl agus salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah 57147</li>
                                         <li><span class="icon flaticon-call"></span><a href="https://wa.me/6281952727888?text=Halo%20Packsolution.id,%20saya%20ingin%20order%20kemasan%20untuk%20produk%20saya">081952727888</a></li>
                                         <li><span class="icon flaticon-email"></span><a
-                                                href="mailto:packsolution.id@gmail.com">@packsolution.id</a></li>
+                                                href="mailto:packsolution.id@gmail.com">packsolution.id@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>
