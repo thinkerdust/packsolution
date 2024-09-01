@@ -464,7 +464,7 @@
     </section>
 
     <!--Testimonials Section-->
-    {{-- <section class="testimonials-section" id="testimonials">
+    <section class="testimonials-section" id="testimonials">
         <div class="auto-container">
             <div class="sec-title">
                 <h2>Customer feedbacks<span class="dot">.</span></h2>
@@ -472,7 +472,10 @@
             <div class="carousel-box">
                 <div class="testimonials-carousel owl-theme owl-carousel">
 
-                    @foreach ($customer as $c)                        
+                    @foreach ($customer as $c)     
+                        @if ($c->deskripsi == null || $c->deskripsi == '' || !empty($c->deskripsi))
+                            @continue
+                        @endif                   
                         <div class="testi-block">
                             <div class="inner">
                                 <div class="icon"><span>“</span></div>
@@ -488,7 +491,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
     <!--Faqs Section-->
     <section class="faqs-section">
