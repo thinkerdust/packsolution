@@ -64,18 +64,18 @@
                         <div class="form-group">
                             <label class="form-label">Nama Pelanggan (PIC)</label>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" name="pic" id="pic">
+                                <input type="text" class="form-control" name="pic" id="pic" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Alamat</label>
                             <div class="form-control-wrap">
-                                <textarea class="form-control" id="alamat" name="alamat" rows="5" required></textarea>
+                                <textarea class="form-control" id="alamat" name="alamat" rows="5"></textarea>
                             </div>
                         </div>
                         <label class="form-label">Deskripsi</label>
                         <div class="form-control-wrap">
-                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5" required></textarea>
+                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="5"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
