@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Nama Pelanggan (PIC)</label>
+                            <label class="form-label">Nama Pelanggan (PIC) <span class="text-danger">*</span></label>
                             <div class="form-control-wrap">
                                 <input type="text" class="form-control" name="pic" id="pic" required>
                             </div>
