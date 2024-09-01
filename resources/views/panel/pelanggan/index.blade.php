@@ -56,7 +56,7 @@
                     <input type="hidden" name="uid" id="uid">
                     <div class="form-group">
                         <div class="form-group">
-                            <label class="form-label">Nama Pelanggan</label>
+                            <label class="form-label">Nama Pelanggan <span class="text-danger">*</span></label>
                             <div class="form-control-wrap">
                                 <input type="text" class="form-control" name="nama" id="nama">
                             </div>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Upload Gambar Logo</label>
+                        <label>Upload Gambar Logo <span class="text-danger">*</span></label>
                         <label class="cabinet center-block">
                             <figure>
                                 <img src="" class="img-responsive img-thumbnail" id="preview_image" />

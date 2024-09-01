@@ -11242,7 +11242,7 @@ img.lazy-image.loaded {
 ***/
 .faqs-section {
   position: relative;
-  padding: 0px 0px 100px;
+  padding: 100px 0px 100px;
   background: #ffffff url(../images/background/pattern-2.png) left top repeat;
   overflow: hidden;
 }

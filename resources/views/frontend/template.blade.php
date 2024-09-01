@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
+    <meta name="author" content="packsolution.id">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Packsolution.id menyediakan solusi kemasan custom berkualitas tinggi dengan desain inovatif untuk memperkuat citra merek Anda, produksi cepat, pilihan desain tak terbatas, dan bahan food grade yang aman.">
+
     <title>Packsolution.id - Custom Packaging Solutions</title>
     <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -283,9 +288,9 @@
                                     <h6>Contact</h6>
                                     <ul class="contact-info text-start">
                                         <li class="address"><span class="icon flaticon-pin-1"></span> Jl agus salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah 57147</li>
-                                        <li><span class="icon flaticon-call"></span><a href="https://wa.me/081952727888">081952727888</a></li>
-                                        <li><span class="icon flaticon-insta"></span><a
-                                                href="https://www.instagram.com/packsolution.id/">@packsolution.id</a></li>
+                                        <li><span class="icon flaticon-call"></span><a href="https://wa.me/6281952727888?text=Halo%20Packsolution.id,%20saya%20ingin%20order%20kemasan%20untuk%20produk%20saya">081952727888</a></li>
+                                        <li><span class="icon flaticon-email"></span><a
+                                                href="mailto:packsolution.id@gmail.com">@packsolution.id</a></li>
                                     </ul>
                                 </div>
                             </div>

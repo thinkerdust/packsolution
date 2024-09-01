@@ -54,9 +54,6 @@ class PelangganController extends BaseController
 
         $validator = Validator::make($request->all(), [
             'nama'      => 'required',
-            'pic'       => 'required',
-            'alamat'    => 'required',
-            'deskripsi' => 'required',
             'gambar'    => 'required_if:uid, 0'
         ]);
 
