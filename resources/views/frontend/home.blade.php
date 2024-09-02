@@ -331,7 +331,7 @@
                                         <span class="count-text" data-speed="3000" data-stop="480">0</span>
                                     </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-2.png') }}" class="icon-alur" alt="icon alur">
-                                    <div class="counter-title">2. Pembuatan Invoice & Preview Desain</div>
+                                    <div class="counter-title">2. Pembayaran DP 50%</div>
                                 </div>
                             </div>
                         </div>
@@ -344,7 +344,7 @@
                                         <span class="count-text" data-speed="3000" data-stop="626">0</span>
                                     </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-3.png') }}" class="icon-alur" alt="icon alur">
-                                    <div class="counter-title">3. Pembayaran DP 50%</div>
+                                    <div class="counter-title">3. Pembuatan Invoice & Preview Desain</div>
                                 </div>
                             </div>
                         </div>
