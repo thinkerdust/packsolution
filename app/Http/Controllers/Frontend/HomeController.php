@@ -40,6 +40,7 @@ class HomeController extends Controller
                         ->limit(3)
                         ->get();        
         $customer   = DB::table('pelanggan')->where('status', 1)->orderBy('id', 'asc')->get();
+        $faq        = DB::table('faq')->where('status', 1)->orderBy('id', 'asc')->get();
 
         $data = [
             'js'            => '<script src="' . asset('frontend/js/home.js?ver=' . generateRandomString(5)) . '"></script>',
@@ -48,6 +49,7 @@ class HomeController extends Controller
             'kategori'      => $kategori,
             'katalog'       => $katalog,
             'customer'      => $customer,
+            'faq'           => $faq,
             'statistik'     => $this->statistik
         ];
 

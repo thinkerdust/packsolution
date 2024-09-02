@@ -58,6 +58,12 @@
                             <span class="nk-menu-text">Tentang Kami</span>
                         </a>
                     </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="/admin/faq" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-question"></em></span>
+                            <span class="nk-menu-text">Faq</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
                 </ul>
             </div><!-- .nk-sidebar-menu -->
         </div><!-- .nk-sidebar-content -->

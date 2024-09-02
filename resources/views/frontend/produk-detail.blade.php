@@ -31,7 +31,7 @@
             @foreach ($produk as $p)                
                 <div class="col-md-6 col-lg-12 my-md-5">
                     <div class="service-nine__card">
-                        <div class="service-nine__card__inner row justify-content-center">
+                    <div class="service-nine__card__inner row justify-content-center">
 
                             <div class="shape-1"></div>
                             <div class="shape-2"></div>
