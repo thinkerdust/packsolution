@@ -503,66 +503,32 @@
             </div>
 
             <div class="row clearfix">
-                <div class="faq-block col-lg-6 col-md-12 col-sm-12">
-                    <ul class="accordion-box clearfix">
-                        <!--Block-->
-                        <li class="accordion block active-block">
-                            <div class="acc-btn active"><span class="count">1.</span> Apa itu Packsolution.id ?</div>
-                            <div class="acc-content current">
-                                <div class="content">
-                                    <div class="text">Packsolution.id adalah penyedia jasa pembuatan kemasan produk, seperti standing pouch, sachet,center seal, dan gusset. Kami akan membuat kemasan produk Anda menjadi menarik dan berkualitas.
+                @php
+                    $chunks = $faq->chunk(ceil($faq->count() / 2)); // Split the FAQ into two chunks
+                    $urutan = 1; // Initialize the counter
+                @endphp
+            
+                @foreach ($chunks as $chunk)
+                    <div class="faq-block col-lg-6 col-md-12 col-sm-12">
+                        <ul class="accordion-box clearfix">
+                            @foreach ($chunk as $f)
+                                <!--Block-->
+                                <li class="accordion block {{ $loop->first ? 'active-block' : '' }}">
+                                    <div class="acc-btn {{ $loop->first ? 'active' : '' }}">
+                                        <span class="count">{{ $urutan++ }}.</span> 
+                                        {{ $f->pertanyaan }}
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--Block-->
-                        <li class="accordion block">
-                            <div class="acc-btn"><span class="count">2.</span> Kenapa Harus Packsolution.id ?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Kami menawarkan pembuatan kemasan dengan kualitas terbaik, desain menarik, harga terjangkau, dan proses produksi yang cepat. Selain itu, kami juga memberikan konsultasi gratis untuk membantu Anda memilih tipe kemasan yang tepat.
+                                    <div class="acc-content {{ $loop->first ? 'current' : '' }}">
+                                        <div class="content">
+                                            <div class="text">{{ $f->jawaban }}</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--Block-->
-                        <li class="accordion block">
-                            <div class="acc-btn"><span class="count">3.</span> Dimana Lokasi Packsolution.id ?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Workshop Packsolution.id berlokasi di Jl. Agus Salim Ruko laweyan square no 8, Kota Surakarta, Jawa Tengah, 57147.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--Block-->
-                        <li class="accordion block">
-                            <div class="acc-btn"><span class="count">4.</span> Kemasan Apa saja yang tersedia di Packsolution.id ?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Kami menyediakan berbagai jenis kemasan, seperti standing pouch, sachet,center seal, dan gusset dengan berbagai variasi. Semua kemasan dapat disesuaikan dengan kebutuhan Anda.
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!--Block-->
-                        <li class="accordion block">
-                            <div class="acc-btn"><span class="count">5.</span> Bagaimana saya tahu ukuran yang cocok untuk produk saya ?</div>
-                            <div class="acc-content">
-                                <div class="content">
-                                    <div class="text">Jika Anda tidak yakin dengan ukuran kemasan yang tersedia, Anda dapat mengukur ukuran kemasan yang biasa Anda gunakan saat ini. Anda juga bisa berkonsultasi dengan tim Packsolution.id
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="faq-block col-lg-6 col-md-12 col-sm-12">
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
+                {{-- <div class="faq-block col-lg-6 col-md-12 col-sm-12">
                     <ul class="accordion-box clearfix">
                         <!--Block-->
                         <li class="accordion block">
@@ -622,7 +588,7 @@
                         </li>
 
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

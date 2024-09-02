@@ -10,6 +10,7 @@ use App\Http\Controllers\Panel\ProdukController;
 use App\Http\Controllers\Panel\PelangganController;
 use App\Http\Controllers\Panel\TentangKamiController;
 use App\Http\Controllers\Panel\KatalogController;
+use App\Http\Controllers\Panel\FaqController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('/', 'login')->name('login');
@@ -92,6 +93,17 @@ Route::group(['middleware' => ['web', 'auth']], function () {
             Route::post('/store', 'store_katalog');
             Route::get('/edit/{uid}', 'edit_katalog');
             Route::get('/delete/{uid}', 'delete_katalog');
+        });
+    });
+
+    Route::group(['prefix' => 'faq'], function () {
+        Route::controller(FaqController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('/datatable', 'datatable_faq');
+            Route::get('/add', 'add_faq');
+            Route::post('/store', 'store_faq');
+            Route::get('/edit/{uid}', 'edit_faq');
+            Route::get('/delete/{uid}', 'delete_faq');
         });
     });
 
