@@ -314,11 +314,8 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="4000" data-stop="8705">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-1.png') }}" class="icon-alur" alt="icon alur">
-                                    <div class="counter-title">1. Order</div>
+                                    <div class="counter-title">1. Konsultasi Kemasan</div>
                                 </div>
                             </div>
                         </div>
@@ -327,11 +324,8 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box alternate">
-                                        <span class="count-text" data-speed="3000" data-stop="480">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-3.png') }}" class="icon-alur" alt="icon alur">
-                                    <div class="counter-title">2. Pembayaran DP 50%</div>
+                                    <div class="counter-title">2. Pembuatan Invoice dan Pembayaran DP</div>
                                 </div>
                             </div>
                         </div>
@@ -340,9 +334,6 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="3000" data-stop="626">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-2.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">3. Pembuatan Preview / Brief Design</div>
                                 </div>
@@ -352,9 +343,6 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="3000" data-stop="626">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-4.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">4. Proses Produksi</div>
                                 </div>
@@ -364,9 +352,6 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="3000" data-stop="626">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-5.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">5. Pelunasan</div>
                                 </div>
@@ -376,9 +361,6 @@
                         <div class="column counter-column col-lg-2 col-md-6 col-6">
                             <div class="inner">
                                 <div class="content">
-                                    {{-- <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="3000" data-stop="626">0</span>
-                                    </div> --}}
                                     <img src="{{ asset('frontend/images/icons/alur-6.png') }}" class="icon-alur" alt="icon alur">
                                     <div class="counter-title">6. Pengiriman</div>
                                 </div>
