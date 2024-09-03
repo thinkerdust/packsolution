@@ -3020,12 +3020,6 @@ img.lazy-image.loaded {
   }
 }
 
-@media (min-width: 1200px) {
-  .banner-one-page .banner-carousel .content-box h1 {
-    font-size: 150px;
-  }
-}
-
 .banner-one-page .banner-carousel .content-box .link-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11242,7 +11236,7 @@ img.lazy-image.loaded {
 ***/
 .faqs-section {
   position: relative;
-  padding: 100px 0px 100px;
+  padding: 0px 0px 100px;
   background: #ffffff url(../images/background/pattern-2.png) left top repeat;
   overflow: hidden;
 }

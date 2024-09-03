@@ -80,6 +80,10 @@
     height: auto;
   }
 
+  .fact-counter {
+    padding: 0 50px;
+  }
+
   .fact-counter .column .inner .counter-title {
     position: relative;
     font-size: 25px;
