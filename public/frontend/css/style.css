@@ -12677,19 +12677,19 @@ img.lazy-image.loaded {
 
 @media (max-width: 575px) {
   .side-menu__block-inner {
-    max-width: 480px;
+    /* max-width: 480px; */
   }
 }
 
 @media (max-width: 480px) {
   .side-menu__block-inner {
-    max-width: 400px;
+    /* max-width: 400px; */
   }
 }
 
 @media (max-width: 375px) {
   .side-menu__block-inner {
-    max-width: 300px;
+    /* max-width: 300px; */
   }
 }
 
