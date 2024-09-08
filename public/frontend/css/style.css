@@ -12666,7 +12666,7 @@ img.lazy-image.loaded {
   left: 0;
   top: 0;
   width: 100%;
-  max-width: 520px;
+  /* max-width: 520px; */
   height: 100%;
   overflow-y: auto;
   background-color: #eceeef;
