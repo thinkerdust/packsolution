@@ -248,6 +248,11 @@
     color: var(--thm-text);
     margin-bottom: 20px;
   }
+
+  .service-nine__image img {
+    width: 400px;
+    left: 61%;
+  }
 }
 
 @media only screen and (max-width: 1340px) {
