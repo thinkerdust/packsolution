@@ -683,7 +683,7 @@
   }
 
   .section-alur {
-    padding: 0px 20px;
+    padding: 0px;
   }
 
   /* .about-section .text-column .text ul {
@@ -722,6 +722,10 @@
 
   .mixitup-gallery .filters li {
     margin: 0 15px 10px;
+  }
+
+  .fact-counter {
+    padding: 0;
   }
 
   .facts-section,

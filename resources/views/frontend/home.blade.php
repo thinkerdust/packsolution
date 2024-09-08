@@ -303,7 +303,7 @@
             <div class="inner-container">
 
                 <div class="sec-title">
-                    <h2 class="text-white text-center pt-5">ALur Pemesanan</h2>
+                    <h2 class="text-white text-center pt-md-5">ALur Pemesanan</h2>
                 </div>
 
                 <!-- Fact Counter -->
